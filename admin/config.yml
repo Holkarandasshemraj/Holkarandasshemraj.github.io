@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: Holkarandasshemraj/Holkarandasshemraj.github.io
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Website"
+    files:
+      - name: "content"
+        label: "Website Content"
+        file: "content.yml"
+        fields:
+
+          - label: "Shop Name"
+            name: "shop_name"
+            widget: "string"
+
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+            required: false
+
+          - label: "Primary Color"
+            name: "primary_color"
+            widget: "color"
+            default: "#061B49"
+
+          - label: "Secondary Color"
+            name: "secondary_color"
+            widget: "color"
+            default: "#0D347D"
+
+          - label: "Accent Color"
+            name: "accent_color"
+            widget: "color"
+            default: "#D8AD45"
+
+          - label: "Background Color"
+            name: "background_color"
+            widget: "color"
+            default: "#F7F8FC"
+
+          - label: "About Us"
+            name: "about"
+            widget: "text"
+
+          - label: "Address"
+            name: "address"
+            widget: "text"
+
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+
+          - label: "WhatsApp Number"
+            name: "whatsapp"
+            widget: "string"
+
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "string"
+
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            fields:
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                required: false
+              - label: "Description"
+                name: "description"
+                widget: "text"
