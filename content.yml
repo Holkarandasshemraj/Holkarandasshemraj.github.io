@@ -1,0 +1,69 @@
+shop_name: "Holkaran Dass Hem Raj"
+
+tagline: "Everything You Need, All Under One Roof — Books, Stationery, Sports, Gifts & Science Goods."
+
+logo: ""
+
+primary_color: "#061B49"
+secondary_color: "#0D347D"
+accent_color: "#D8AD45"
+background_color: "#F7F8FC"
+
+about: |
+  Welcome to Holkaran Dass Hem Raj.
+  We offer a wide range of books, stationery, sports goods,
+  gifts, toys and science goods for students, families
+  and everyday needs.
+
+address: |
+  Holkaran Dass Hem Raj
+  Singhana Road, Opposite Vinayak Hospital,
+  Narnaul, Haryana, District Mohindergarh – 123001
+
+phone: "8053721234"
+
+whatsapp: "918053721234"
+
+categories:
+  - name: "Books"
+    icon: "📚"
+
+  - name: "Stationery"
+    icon: "✏️"
+
+  - name: "Sports"
+    icon: "⚽"
+
+  - name: "Gifts"
+    icon: "🎁"
+
+  - name: "Toys"
+    icon: "🧸"
+
+  - name: "Science Goods"
+    icon: "🔬"
+
+products:
+  - name: "Books"
+    image: ""
+    description: "Books for students, learning and everyday reading."
+
+  - name: "Stationery"
+    image: ""
+    description: "Quality stationery and school essentials."
+
+  - name: "Sports"
+    image: ""
+    description: "Sports goods and equipment."
+
+  - name: "Gifts"
+    image: ""
+    description: "Gift items for every occasion."
+
+  - name: "Toys"
+    image: ""
+    description: "Fun and engaging toys for children."
+
+  - name: "Science Goods"
+    image: ""
+    description: "Science equipment and educational goods."
