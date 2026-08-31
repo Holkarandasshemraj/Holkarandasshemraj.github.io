@@ -5,6 +5,15 @@ primary_color: "#155e9a"
 secondary_color: "#2e8b57"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
+text_color: "#17233c"
+heading_color: "#123b73"
+font_family: Poppins
+hero_images:
+  - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
+  - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
+  - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
+  - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
+  - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
@@ -21,6 +30,7 @@ address: |
   Narnaul, Haryana, District Mohindergarh – 123001
 phone: "8053721234"
 whatsapp: "918053721234"
+maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
 categories:
   - name: Stationery
     icon: ✏️
@@ -42,6 +52,7 @@ products:
       all ages. From educational and academic books to storybooks and general
       reading, we offer books for every interest and need.
 
+    category: Books
   - name: Stationery
     image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
     description: >+
@@ -49,6 +60,7 @@ products:
       notebooks, pens, pencils, school supplies, art materials, and other useful
       stationery products for students, offices, and everyday use.
 
+    category: Stationery
   - name: Sports
     image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
     description: >+
@@ -57,6 +69,7 @@ products:
       equipment for different games and activities, find everything you need to
       stay active and enjoy the game.
 
+    category: Sports
   - name: Science Goods
     image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
     description: >+
@@ -64,6 +77,7 @@ products:
       and curious minds. Find useful items for science projects, experiments,
       models, and practical learning.
 
+    category: Science Goods
   - name: Gifts
     image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >+
@@ -71,6 +85,7 @@ products:
       attractive gifts. Discover fun, useful, and unique gift items perfect for
       birthdays, celebrations, festivals, and special moments.
 
+    category: Gifts
   - name: Toys
     image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
     description: >+
@@ -78,3 +93,7 @@ products:
       entertaining play items to creative and educational toys, our collection
       is designed to make playtime more enjoyable and engaging.
 
+    category: Toys
+seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
+seo_description: Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery,
+  gifts, toys, science goods and sports products, all under one roof.
