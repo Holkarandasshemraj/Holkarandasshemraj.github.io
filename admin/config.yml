@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Holkarandasshemraj/Holkarandasshemraj.github.io
   branch: main
+  base_url: https://hdhr-cms-auth.hishigoyal22.workers.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
