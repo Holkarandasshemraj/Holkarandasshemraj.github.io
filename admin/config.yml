@@ -12,6 +12,7 @@ collections:
       - name: "content"
         label: "Website Content"
         file: "content.yml"
+
         fields:
 
           - label: "Shop Name"
@@ -30,22 +31,52 @@ collections:
           - label: "Primary Color"
             name: "primary_color"
             widget: "color"
-            default: "#061B49"
+            default: "#123B73"
 
           - label: "Secondary Color"
             name: "secondary_color"
             widget: "color"
-            default: "#0D347D"
+            default: "#1F6B9C"
 
           - label: "Accent Color"
             name: "accent_color"
             widget: "color"
-            default: "#D8AD45"
+            default: "#F4A51C"
 
           - label: "Background Color"
             name: "background_color"
             widget: "color"
-            default: "#F7F8FC"
+            default: "#F8FAFC"
+
+          - label: "Text Color"
+            name: "text_color"
+            widget: "color"
+            default: "#17233C"
+
+          - label: "Heading Color"
+            name: "heading_color"
+            widget: "color"
+            default: "#123B73"
+
+          - label: "Font Family"
+            name: "font_family"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+            default: "Poppins"
+
+          - label: "Hero Slider Images"
+            name: "hero_images"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
 
           - label: "About Us"
             name: "about"
@@ -63,6 +94,16 @@ collections:
             name: "whatsapp"
             widget: "string"
 
+          - label: "Google Maps Link"
+            name: "maps_link"
+            widget: "string"
+            required: false
+
+          - label: "Shop Timings"
+            name: "timings"
+            widget: "text"
+            required: false
+
           - label: "Categories"
             name: "categories"
             widget: "list"
@@ -70,6 +111,7 @@ collections:
               - label: "Name"
                 name: "name"
                 widget: "string"
+
               - label: "Icon"
                 name: "icon"
                 widget: "string"
@@ -78,13 +120,52 @@ collections:
             name: "products"
             widget: "list"
             fields:
+
               - label: "Product Name"
                 name: "name"
                 widget: "string"
+
+              - label: "Category"
+                name: "category"
+                widget: "string"
+
               - label: "Photo"
                 name: "image"
                 widget: "image"
                 required: false
+
               - label: "Description"
                 name: "description"
                 widget: "text"
+
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+
+          - label: "Why Choose Us"
+            name: "why_choose_us"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+
+          - label: "SEO Title"
+            name: "seo_title"
+            widget: "string"
+            required: false
+
+          - label: "SEO Description"
+            name: "seo_description"
+            widget: "text"
+            required: false
