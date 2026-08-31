@@ -185,4 +185,1990 @@ nav a:hover{
   position:absolute;
   inset:0;
 
-  background:linear
+  background:linear-gradient(
+    rgba(5,24,65,.78),
+    rgba(8,45,105,.86)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  max-width:900px;
+  padding:50px 20px;
+}
+
+.gold-line{
+  width:75px;
+  height:4px;
+
+  background:var(--accent-color);
+
+  margin:18px auto;
+  border-radius:20px;
+}
+
+.hero h1{
+  font-family:var(--heading-font);
+  font-size:clamp(38px,6vw,68px);
+  line-height:1.15;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#ffe08a;
+  font-size:clamp(17px,2.5vw,22px);
+  margin-bottom:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.hero-btn{
+  display:inline-block;
+
+  background:var(--accent-color);
+  color:#102a50;
+
+  padding:13px 25px;
+  border-radius:30px;
+
+  font-weight:700;
+  transition:.25s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  background:white;
+}
+
+.hero-btn.secondary{
+  background:transparent;
+  border:2px solid white;
+  color:white;
+}
+
+.hero-btn.secondary:hover{
+  background:white;
+  color:var(--primary-color);
+}
+
+/* GENERAL */
+
+section{
+  padding:70px 7%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  color:var(--heading-color);
+  font-family:var(--heading-font);
+  font-size:var(--heading-size);
+}
+
+.section-title p{
+  color:#667085;
+  margin-top:8px;
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:20px;
+}
+
+.category{
+  background:white;
+  border-radius:18px;
+  padding:28px 15px;
+
+  text-align:center;
+
+  border-bottom:4px solid var(--category-color,var(--accent-color));
+
+  box-shadow:0 8px 25px rgba(13,45,100,.08);
+
+  cursor:pointer;
+  transition:.25s;
+
+  overflow:hidden;
+}
+
+.category:hover{
+  transform:translateY(-7px);
+  box-shadow:0 14px 30px rgba(13,45,100,.16);
+}
+
+.category-image{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.category .icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.category h3{
+  color:var(--heading-color);
+  font-family:var(--heading-font);
+}
+
+/* PRODUCTS */
+
+.products{
+  background:#eef3f9;
+}
+
+.product-controls{
+  max-width:800px;
+  margin:0 auto 30px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+
+.search-box{
+  flex:1;
+  min-width:230px;
+
+  padding:13px 18px;
+
+  border:1px solid #d8dee9;
+  border-radius:30px;
+
+  outline:none;
+  font-size:15px;
+  background:white;
+}
+
+.filter-btn{
+  border:none;
+  background:white;
+
+  padding:11px 18px;
+  border-radius:25px;
+
+  cursor:pointer;
+  color:var(--heading-color);
+
+  font-weight:600;
+
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:var(--accent-color);
+  color:#102a50;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:23px;
+}
+
+.product{
+  background:white;
+  border-radius:17px;
+  overflow:hidden;
+
+  box-shadow:0 7px 25px rgba(0,0,0,.08);
+
+  transition:.25s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+}
+
+.product-img{
+  height:200px;
+
+  background:linear-gradient(
+    135deg,
+    #dce5f5,
+    #fff4d9
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:60px;
+  overflow:hidden;
+}
+
+.product-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:18px;
+}
+
+.product-info h3{
+  color:var(--heading-color);
+  font-family:var(--heading-font);
+  margin-bottom:6px;
+}
+
+.product-category{
+  display:inline-block;
+
+  font-size:11px;
+  font-weight:700;
+
+  color:var(--secondary-color);
+
+  margin-bottom:7px;
+  text-transform:uppercase;
+}
+
+.product-info p{
+  color:#667085;
+  font-size:14px;
+  line-height:1.55;
+}
+
+.product-actions{
+  display:flex;
+  gap:8px;
+  margin-top:15px;
+}
+
+.small-btn{
+  flex:1;
+
+  text-align:center;
+
+  padding:9px 10px;
+  border-radius:22px;
+
+  font-size:13px;
+  font-weight:700;
+}
+
+.whatsapp-btn{
+  background:var(--enquire-color);
+  color:white;
+}
+
+.call-btn{
+  background:var(--call-color);
+  color:white;
+}
+
+/* WHY */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.why-card{
+  background:white;
+  padding:25px;
+  border-radius:17px;
+
+  box-shadow:0 7px 25px rgba(0,0,0,.07);
+
+  text-align:center;
+}
+
+.why-card .why-icon{
+  font-size:35px;
+  margin-bottom:8px;
+}
+
+.why-card h3{
+  color:var(--heading-color);
+  font-family:var(--heading-font);
+  margin-bottom:8px;
+}
+
+.why-card p{
+  color:#667085;
+  font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+  background:white;
+  text-align:center;
+}
+
+.about-box{
+  max-width:820px;
+  margin:auto;
+
+  color:#5d6878;
+  line-height:1.9;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.gallery-item{
+  height:230px;
+  border-radius:16px;
+  overflow:hidden;
+  background:#e9eef5;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.05);
+}
+
+/* MAP */
+
+.map-section{
+  background:#f3f6fa;
+  text-align:center;
+}
+
+.map-btn{
+  display:inline-block;
+
+  background:var(--primary-color);
+  color:white;
+
+  padding:14px 28px;
+  border-radius:30px;
+
+  font-weight:700;
+}
+
+/* CONTACT */
+
+.contact{
+  background:linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+
+  color:white;
+  text-align:center;
+}
+
+.contact h2{
+  color:white;
+}
+
+.contact-info{
+  max-width:750px;
+  margin:auto;
+
+  font-size:17px;
+  line-height:2;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+
+  margin-top:25px;
+}
+
+.contact-btn{
+  padding:12px 23px;
+  border-radius:30px;
+  font-weight:700;
+}
+
+.contact-btn.whatsapp{
+  background:var(--enquire-color);
+  color:white;
+}
+
+.contact-btn.call{
+  background:var(--call-color);
+  color:white;
+}
+
+.contact-btn.maps{
+  background:var(--accent-color);
+  color:#102a50;
+}
+
+/* FOOTER */
+
+footer{
+  background:#071b36;
+  color:#c4ccda;
+
+  text-align:center;
+  padding:25px 15px;
+
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  header{
+    padding:12px 5%;
+  }
+
+  .store-name{
+    font-size:17px;
+  }
+
+  .tagline-small{
+    font-size:10px;
+  }
+
+  nav{
+    display:none;
+
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+
+    background:var(--primary-color);
+
+    padding:20px;
+
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    min-height:510px;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+
+  .product-controls{
+    flex-direction:column;
+  }
+
+  .search-box{
+    width:100%;
+  }
+
+  .category-image{
+    height:100px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo-area">
+
+    <div class="logo" id="logo">H</div>
+
+    <div>
+      <div class="store-name" id="storeName">
+        Holkaran Dass Hem Raj
+      </div>
+
+      <div class="tagline-small" id="smallTagline">
+        Everything You Need, All Under One Roof.
+      </div>
+    </div>
+
+  </div>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div id="heroSlider"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="gold-line"></div>
+
+    <h1 id="heroStoreName">
+      Holkaran Dass Hem Raj
+    </h1>
+
+    <p id="heroTagline">
+      Learn. Create. Play. Celebrate.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#products" class="hero-btn">
+        Explore Products
+      </a>
+
+      <a href="#contact" class="hero-btn secondary">
+        Visit Our Store
+      </a>
+
+    </div>
+
+    <div class="gold-line"></div>
+
+  </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+  <div class="section-title">
+    <h2>Our Categories</h2>
+    <p>Everything you need, all in one place.</p>
+  </div>
+
+  <div class="categories" id="categoriesContainer"></div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+  <div class="section-title">
+    <h2>Our Products</h2>
+    <p>Find what you're looking for.</p>
+  </div>
+
+  <div class="product-controls">
+
+    <input
+      type="search"
+      id="productSearch"
+      class="search-box"
+      placeholder="🔎 Search products..."
+    >
+
+    <div id="filterButtons"></div>
+
+  </div>
+
+  <div class="product-grid" id="productsContainer"></div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section id="whySection">
+
+  <div class="section-title">
+
+    <h2>Why Choose Us?</h2>
+
+    <p>
+      Your trusted destination for learning, creativity and more.
+    </p>
+
+  </div>
+
+  <div class="why-grid" id="whyContainer"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="section-title">
+    <h2>About Our Store</h2>
+  </div>
+
+  <div class="about-box">
+
+    <p id="aboutText">
+      Welcome to Holkaran Dass Hem Raj — your trusted destination
+      for books, stationery, gifts, toys, science goods and sports
+      essentials.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <div class="section-title">
+
+    <h2>Our Gallery</h2>
+
+    <p>
+      Take a look at our store and collection.
+    </p>
+
+  </div>
+
+  <div class="gallery" id="galleryContainer"></div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="map-section">
+
+  <div class="section-title">
+
+    <h2>Find Us</h2>
+
+    <p id="mapAddress">
+      Holkaran Dass Hem Raj, Narnaul
+    </p>
+
+  </div>
+
+  <a
+    id="mapButton"
+    class="map-btn"
+    href="#"
+    target="_blank">
+
+    📍 Get Directions
+
+  </a>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section-title">
+
+    <h2>Visit Our Store</h2>
+
+  </div>
+
+  <div class="contact-info">
+
+    <p id="address">
+      📍 Holkaran Dass Hem Raj<br>
+      Singhana Road, Opposite Vinayak Hospital,<br>
+      Narnaul, Haryana, District Mohindergarh – 123001
+    </p>
+
+    <p style="margin-top:15px;">
+      📞 <strong id="phone">8053721234</strong>
+    </p>
+
+    <p id="timings" style="margin-top:10px;"></p>
+
+    <div class="contact-buttons">
+
+      <a
+        id="whatsappButton"
+        class="contact-btn whatsapp"
+        href="#"
+        target="_blank">
+        💬 WhatsApp
+      </a>
+
+      <a
+        id="callButton"
+        class="contact-btn call"
+        href="#">
+        📞 Call Now
+      </a>
+
+      <a
+        id="contactMapButton"
+        class="contact-btn maps"
+        href="#"
+        target="_blank">
+        📍 Get Directions
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  © <span id="year">2026</span>
+  <span id="footerShopName">Holkaran Dass Hem Raj</span>.
+  All Rights Reserved.
+
+  <span id="footerText"></span>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+<script>
+
+let websiteData = {};
+let selectedCategory = "All";
+
+/* MOBILE MENU */
+
+document.getElementById("menuBtn").addEventListener("click",function(){
+
+  document.getElementById("navigation").classList.toggle("open");
+
+});
+
+
+/* LOAD CONTENT */
+
+async function loadWebsiteContent(){
+
+  try{
+
+    const response = await fetch(
+      "/content.yml?cache=" + Date.now()
+    );
+
+    if(!response.ok){
+      throw new Error("content.yml not found");
+    }
+
+    const yamlText = await response.text();
+
+    websiteData = jsyaml.load(yamlText) || {};
+
+    applyWebsiteData();
+
+  }catch(error){
+
+    console.error(
+      "Website content error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* APPLY ALL WEBSITE DATA */
+
+function applyWebsiteData(){
+
+  const data = websiteData;
+
+  /* SHOP NAME */
+
+  if(data.shop_name){
+
+    document.title =
+      data.shop_name + " | Narnaul";
+
+    document.getElementById("storeName").textContent =
+      data.shop_name;
+
+    document.getElementById("heroStoreName").textContent =
+      data.shop_name;
+
+    document.getElementById("footerShopName").textContent =
+      data.shop_name;
+
+  }
+
+
+  /* TAGLINE */
+
+  if(data.tagline){
+
+    document.getElementById("smallTagline").textContent =
+      data.tagline;
+
+    document.getElementById("heroTagline").textContent =
+      data.tagline;
+
+  }
+
+
+  /* LOGO */
+
+  if(data.logo){
+
+    document.getElementById("logo").innerHTML =
+      `<img src="${safeUrl(data.logo)}" alt="${escapeHTML(data.shop_name || "Shop Logo")}">`;
+
+  }
+
+
+  /* COLORS */
+
+  setCSS("--primary-color",data.primary_color);
+  setCSS("--secondary-color",data.secondary_color);
+  setCSS("--accent-color",data.accent_color);
+  setCSS("--background-color",data.background_color);
+  setCSS("--text-color",data.text_color);
+  setCSS("--heading-color",data.heading_color);
+
+  /* FONT */
+
+  if(data.font_family){
+
+    setCSS(
+      "--font-family",
+      data.font_family + ", Arial, sans-serif"
+    );
+
+  }
+
+  if(data.heading_font){
+
+    setCSS(
+      "--heading-font",
+      data.heading_font + ", Arial, sans-serif"
+    );
+
+  }
+
+
+  /* FONT SIZE */
+
+  const headingSizes = {
+    "Small":"28px",
+    "Medium":"32px",
+    "Large":"38px",
+    "Extra Large":"46px"
+  };
+
+  const bodySizes = {
+    "Small":"14px",
+    "Medium":"16px",
+    "Large":"18px"
+  };
+
+  if(data.heading_size){
+
+    setCSS(
+      "--heading-size",
+      headingSizes[data.heading_size] || "34px"
+    );
+
+  }
+
+  if(data.body_size){
+
+    setCSS(
+      "--body-size",
+      bodySizes[data.body_size] || "16px"
+    );
+
+  }
+
+
+  /* BUTTON COLORS */
+
+  if(data.call_button_color){
+
+    setCSS(
+      "--call-color",
+      data.call_button_color
+    );
+
+  }
+
+  if(data.enquire_button_color){
+
+    setCSS(
+      "--enquire-color",
+      data.enquire_button_color
+    );
+
+  }
+
+
+  /* SEO */
+
+  if(data.seo_title){
+
+    document.title =
+      data.seo_title;
+
+  }
+
+  if(data.seo_description){
+
+    const description =
+      document.querySelector(
+        'meta[name="description"]'
+      );
+
+    if(description){
+
+      description.setAttribute(
+        "content",
+        data.seo_description
+      );
+
+    }
+
+  }
+
+
+  /* ABOUT */
+
+  if(data.about){
+
+    document.getElementById("aboutText").textContent =
+      data.about;
+
+  }
+
+  toggleSection(
+    "about",
+    data.show_about
+  );
+
+
+  /* CATEGORIES */
+
+  renderCategories();
+
+  toggleSection(
+    "categories",
+    data.show_categories
+  );
+
+
+  /* PRODUCTS */
+
+  renderProducts();
+
+  toggleSection(
+    "products",
+    data.show_products
+  );
+
+
+  /* HERO */
+
+  renderHeroSlider();
+
+  toggleSection(
+    "home",
+    data.show_hero
+  );
+
+
+  /* GALLERY */
+
+  renderGallery();
+
+  toggleSection(
+    "gallery",
+    data.show_gallery
+  );
+
+
+  /* WHY CHOOSE US */
+
+  renderWhyChooseUs();
+
+  toggleSection(
+    "whySection",
+    data.show_why_choose_us
+  );
+
+
+  /* CONTACT */
+
+  applyContactData();
+
+
+  /* FOOTER */
+
+  if(data.footer_text){
+
+    document.getElementById("footerText").textContent =
+      " " + data.footer_text;
+
+  }
+
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+}
+
+
+/* CONTACT */
+
+function applyContactData(){
+
+  const data = websiteData;
+
+
+  /* ADDRESS */
+
+  if(data.address){
+
+    document.getElementById("address").innerHTML =
+      "📍 " +
+      escapeHTML(data.address)
+      .replace(/\n/g,"<br>");
+
+    document.getElementById("mapAddress").textContent =
+      data.address;
+
+  }
+
+
+  /* PHONE */
+
+  let phone =
+    cleanPhone(data.phone);
+
+  if(phone){
+
+    document.getElementById("phone").textContent =
+      data.phone;
+
+    document.getElementById("callButton").href =
+      "tel:+" + phone;
+
+  }
+
+
+  /* WHATSAPP */
+
+  let whatsapp =
+    cleanPhone(data.whatsapp);
+
+  if(whatsapp){
+
+    document.getElementById("whatsappButton").href =
+      "https://wa.me/" + whatsapp;
+
+  }
+
+
+  /* MAP */
+
+  if(data.maps_link){
+
+    document.getElementById("mapButton").href =
+      safeUrl(data.maps_link);
+
+    document.getElementById("contactMapButton").href =
+      safeUrl(data.maps_link);
+
+  }
+
+
+  /* TIMINGS */
+
+  if(data.timings){
+
+    document.getElementById("timings").innerHTML =
+      "🕐 " +
+      escapeHTML(data.timings)
+      .replace(/\n/g,"<br>");
+
+  }
+
+
+  /* CALL BUTTON */
+
+  if(data.show_call_button === false){
+
+    document.getElementById("callButton").style.display =
+      "none";
+
+  }else{
+
+    document.getElementById("callButton").style.display =
+      "inline-block";
+
+  }
+
+
+  if(data.call_button_text){
+
+    document.getElementById("callButton").textContent =
+      "📞 " + data.call_button_text;
+
+  }
+
+
+  /* ENQUIRE BUTTON */
+
+  if(data.show_enquire_button === false){
+
+    document.getElementById("whatsappButton").style.display =
+      "none";
+
+  }else{
+
+    document.getElementById("whatsappButton").style.display =
+      "inline-block";
+
+  }
+
+
+  if(data.enquire_button_text){
+
+    document.getElementById("whatsappButton").textContent =
+      "💬 " + data.enquire_button_text;
+
+  }
+
+}
+
+
+/* CATEGORY RENDER */
+
+function renderCategories(){
+
+  const container =
+    document.getElementById(
+      "categoriesContainer"
+    );
+
+  container.innerHTML = "";
+
+  const categories =
+    websiteData.categories || [];
+
+
+  categories.forEach(function(category){
+
+    if(category.show === false){
+      return;
+    }
+
+    const card =
+      document.createElement("div");
+
+    card.className = "category";
+
+
+    if(category.color){
+
+      card.style.setProperty(
+        "--category-color",
+        category.color
+      );
+
+    }
+
+
+    let visual = "";
+
+    if(category.image){
+
+      visual =
+        `<img
+          class="category-image"
+          src="${safeUrl(category.image)}"
+          alt="${escapeHTML(category.name || "Category")}">`;
+
+    }else{
+
+      visual =
+        `<div class="icon">
+          ${escapeHTML(category.icon || "📌")}
+        </div>`;
+
+    }
+
+
+    card.innerHTML = `
+
+      ${visual}
+
+      <h3>
+        ${escapeHTML(category.name || "")}
+      </h3>
+
+    `;
+
+
+    card.addEventListener(
+      "click",
+      function(){
+
+        selectedCategory =
+          category.name;
+
+        document
+          .getElementById("products")
+          .scrollIntoView({
+            behavior:"smooth"
+          });
+
+        renderProducts();
+
+      }
+    );
+
+
+    container.appendChild(card);
+
+  });
+
+
+  if(!categories.length){
+
+    container.innerHTML = `
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:30px;
+        color:#667085;
+      ">
+        Categories will appear here soon.
+      </div>
+    `;
+
+  }
+
+}
+
+
+/* FILTER BUTTONS */
+
+function renderFilterButtons(){
+
+  const container =
+    document.getElementById(
+      "filterButtons"
+    );
+
+  container.innerHTML = "";
+
+  const products =
+    websiteData.products || [];
+
+  const categories = [
+    "All",
+    ...new Set(
+      products
+        .filter(p => p.show !== false)
+        .map(p => p.category)
+        .filter(Boolean)
+    )
+  ];
+
+
+  categories.forEach(function(category){
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "filter-btn" +
+      (
+        selectedCategory === category
+        ? " active"
+        : ""
+      );
+
+    button.textContent =
+      category;
+
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        selectedCategory =
+          category;
+
+        renderProducts();
+
+      }
+    );
+
+
+    container.appendChild(button);
+
+  });
+
+}
+
+
+/* PRODUCTS */
+
+function renderProducts(){
+
+  const container =
+    document.getElementById(
+      "productsContainer"
+    );
+
+  container.innerHTML = "";
+
+  renderFilterButtons();
+
+
+  const products =
+    (websiteData.products || [])
+      .filter(
+        product =>
+          product.show !== false
+      );
+
+
+  const search =
+    (
+      document
+        .getElementById("productSearch")
+        .value || ""
+    )
+      .toLowerCase()
+      .trim();
+
+
+  const filtered =
+    products.filter(function(product){
+
+      const matchesCategory =
+        selectedCategory === "All" ||
+        product.category === selectedCategory;
+
+
+      const matchesSearch =
+        !search ||
+
+        (
+          product.name || ""
+        )
+        .toLowerCase()
+        .includes(search) ||
+
+        (
+          product.description || ""
+        )
+        .toLowerCase()
+        .includes(search);
+
+
+      return (
+        matchesCategory &&
+        matchesSearch
+      );
+
+    });
+
+
+  if(!filtered.length){
+
+    container.innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:40px;
+        color:#667085;
+      ">
+
+        No products found.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  filtered.forEach(function(product){
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "product";
+
+
+    const image =
+      product.image
+
+      ? `<img
+          src="${safeUrl(product.image)}"
+          alt="${escapeHTML(product.name || "Product")}">`
+
+      : `<span>📦</span>`;
+
+
+    let whatsapp =
+      cleanPhone(
+        websiteData.whatsapp
+      );
+
+    if(!whatsapp){
+
+      whatsapp =
+        cleanPhone(
+          websiteData.phone
+        );
+
+    }
+
+
+    let actions = "";
+
+
+    if(websiteData.show_enquire_button !== false){
+
+      actions += `
+
+        <a
+          class="small-btn whatsapp-btn"
+          target="_blank"
+          href="https://wa.me/${whatsapp}?text=${encodeURIComponent(
+            "Hello, I would like to enquire about " +
+            (product.name || "this product")
+          )}">
+
+          💬 ${escapeHTML(
+            websiteData.enquire_button_text ||
+            "Enquire"
+          )}
+
+        </a>
+
+      `;
+
+    }
+
+
+    if(websiteData.show_call_button !== false){
+
+      actions += `
+
+        <a
+          class="small-btn call-btn"
+          href="tel:+${whatsapp}">
+
+          📞 ${
+            escapeHTML(
+              websiteData.call_button_text ||
+              "Call"
+            )
+          }
+
+        </a>
+
+      `;
+
+    }
+
+
+    card.innerHTML = `
+
+      <div class="product-img">
+        ${image}
+      </div>
+
+      <div class="product-info">
+
+        ${
+          product.category
+
+          ? `<span class="product-category">
+               ${escapeHTML(product.category)}
+             </span>`
+
+          : ""
+        }
+
+        <h3>
+          ${escapeHTML(product.name || "")}
+        </h3>
+
+        <p>
+          ${escapeHTML(
+            product.description || ""
+          )}
+        </p>
+
+        ${
+          actions
+
+          ? `<div class="product-actions">
+               ${actions}
+             </div>`
+
+          : ""
+        }
+
+      </div>
+
+    `;
+
+
+    container.appendChild(card);
+
+  });
+
+}
+
+
+/* SEARCH */
+
+document
+  .getElementById("productSearch")
+  .addEventListener(
+    "input",
+    function(){
+
+      renderProducts();
+
+    }
+  );
+
+
+/* HERO SLIDER */
+
+function renderHeroSlider(){
+
+  const container =
+    document.getElementById(
+      "heroSlider"
+    );
+
+  container.innerHTML = "";
+
+
+  let images =
+    websiteData.hero_images || [];
+
+
+  images =
+    images
+      .filter(item => item && item.image)
+      .map(item => item.image);
+
+
+  if(!images.length){
+
+    images = [
+
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80",
+
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80",
+
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"
+
+    ];
+
+  }
+
+
+  images.forEach(function(image,index){
+
+    const slide =
+      document.createElement("div");
+
+    slide.className =
+      "hero-slide" +
+      (
+        index === 0
+        ? " active"
+        : ""
+      );
+
+    slide.style.backgroundImage =
+      `url("${safeUrl(image)}")`;
+
+    container.appendChild(slide);
+
+  });
+
+
+  const slides =
+    document.querySelectorAll(
+      ".hero-slide"
+    );
+
+
+  if(slides.length <= 1){
+    return;
+  }
+
+
+  let current = 0;
+
+
+  setInterval(function(){
+
+    slides[current]
+      .classList
+      .remove("active");
+
+
+    current =
+      (current + 1) %
+      slides.length;
+
+
+    slides[current]
+      .classList
+      .add("active");
+
+
+  },5000);
+
+}
+
+
+/* GALLERY */
+
+function renderGallery(){
+
+  const container =
+    document.getElementById(
+      "galleryContainer"
+    );
+
+  container.innerHTML = "";
+
+
+  const gallery =
+    websiteData.gallery || [];
+
+
+  if(!gallery.length){
+
+    container.innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:25px;
+        color:#667085;
+      ">
+
+        Store photos will appear here soon.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  gallery.forEach(function(item){
+
+    if(!item.image){
+      return;
+    }
+
+
+    const div =
+      document.createElement("div");
+
+    div.className =
+      "gallery-item";
+
+
+    div.innerHTML = `
+
+      <img
+        src="${safeUrl(item.image)}"
+        alt="${escapeHTML(
+          item.caption ||
+          websiteData.shop_name ||
+          "Store"
+        )}">
+
+    `;
+
+
+    container.appendChild(div);
+
+  });
+
+}
+
+
+/* WHY CHOOSE US */
+
+function renderWhyChooseUs(){
+
+  const container =
+    document.getElementById(
+      "whyContainer"
+    );
+
+  container.innerHTML = "";
+
+
+  const items =
+    websiteData.why_choose_us || [];
+
+
+  if(!items.length){
+
+    const defaults = [
+
+      {
+        icon:"📚",
+        title:"Wide Range",
+        description:
+          "Books, stationery, gifts, toys, science goods and sports products under one roof."
+      },
+
+      {
+        icon:"🎯",
+        title:"For Every Need",
+        description:
+          "Products for students, families, children and everyday requirements."
+      },
+
+      {
+        icon:"🤝",
+        title:"Convenient Shopping",
+        description:
+          "Find what you need easily and contact us directly for enquiries."
+      }
+
+    ];
+
+
+    defaults.forEach(addWhyCard);
+
+  }else{
+
+    items.forEach(addWhyCard);
+
+  }
+
+
+  function addWhyCard(item){
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "why-card";
+
+
+    card.innerHTML = `
+
+      ${
+        item.icon
+
+        ? `<div class="why-icon">
+             ${escapeHTML(item.icon)}
+           </div>`
+
+        : ""
+      }
+
+      <h3>
+        ${escapeHTML(
+          item.title || ""
+        )}
+      </h3>
+
+      <p>
+        ${escapeHTML(
+          item.description || ""
+        )}
+      </p>
+
+    `;
+
+
+    container.appendChild(card);
+
+  }
+
+}
+
+
+/* SECTION SHOW / HIDE */
+
+function toggleSection(
+  id,
+  setting
+){
+
+  const element =
+    document.getElementById(id);
+
+
+  if(!element){
+    return;
+  }
+
+
+  if(setting === false){
+
+    element.style.display =
+      "none";
+
+  }else{
+
+    element.style.display =
+      "";
+
+  }
+
+}
+
+
+/* CSS HELPER */
+
+function setCSS(
+  property,
+  value
+){
+
+  if(value){
+
+    document.documentElement
+      .style
+      .setProperty(
+        property,
+        value
+      );
+
+  }
+
+}
+
+
+/* PHONE HELPER */
+
+function cleanPhone(value){
+
+  if(!value){
+    return "";
+  }
+
+
+  let phone =
+    String(value)
+      .replace(/\D/g,"");
+
+
+  if(phone.length === 10){
+
+    phone =
+      "91" + phone;
+
+  }
+
+
+  return phone;
+
+}
+
+
+/* HTML ESCAPE */
+
+function escapeHTML(value){
+
+  return String(value)
+
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* BASIC URL SAFETY */
+
+function safeUrl(value){
+
+  const url =
+    String(value || "");
+
+
+  if(
+    url.startsWith("/") ||
+    url.startsWith("https://") ||
+    url.startsWith("http://")
+  ){
+
+    return url;
+
+  }
+
+
+  return "";
+
+}
+
+
+/* START */
+
+loadWebsiteContent();
+
+</script>
+
+</body>
+</html>
