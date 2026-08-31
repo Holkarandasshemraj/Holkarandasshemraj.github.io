@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Holkaran Dass Hem Raj | Narnaul</title>
 
   <style>
@@ -14,12 +15,16 @@
     }
 
     body {
-      background: #f7f8fc;
+      background: var(--background-color, #f7f8fc);
       color: #17233c;
     }
 
     header {
-      background: linear-gradient(135deg, #061b49, #0d347d);
+      background: linear-gradient(
+        135deg,
+        var(--primary-color, #061b49),
+        var(--secondary-color, #0d347d)
+      );
       color: white;
       padding: 18px 7%;
       display: flex;
@@ -40,14 +45,21 @@
     .logo {
       width: 52px;
       height: 52px;
-      border: 2px solid #d8ad45;
+      border: 2px solid var(--accent-color, #d8ad45);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #d8ad45;
+      color: var(--accent-color, #d8ad45);
       font-size: 23px;
       font-weight: bold;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .store-name {
@@ -94,7 +106,7 @@
     .gold-line {
       width: 75px;
       height: 4px;
-      background: #d8ad45;
+      background: var(--accent-color, #d8ad45);
       margin: 20px auto;
       border-radius: 10px;
     }
@@ -112,7 +124,7 @@
 
     .hero-btn {
       display: inline-block;
-      background: #d8ad45;
+      background: var(--accent-color, #d8ad45);
       color: #071c48;
       padding: 14px 28px;
       border-radius: 30px;
@@ -135,7 +147,7 @@
     }
 
     .section-title h2 {
-      color: #082457;
+      color: var(--primary-color, #082457);
       font-size: 32px;
     }
 
@@ -155,7 +167,7 @@
       border-radius: 15px;
       padding: 28px 15px;
       text-align: center;
-      border-bottom: 4px solid #d8ad45;
+      border-bottom: 4px solid var(--accent-color, #d8ad45);
       box-shadow: 0 7px 25px rgba(13,45,100,.08);
       transition: .25s;
     }
@@ -171,7 +183,7 @@
     }
 
     .category h3 {
-      color: #082457;
+      color: var(--primary-color, #082457);
     }
 
     .products {
@@ -203,6 +215,13 @@
       justify-content: center;
       align-items: center;
       font-size: 55px;
+      overflow: hidden;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .product-info {
@@ -210,7 +229,7 @@
     }
 
     .product-info h3 {
-      color: #082457;
+      color: var(--primary-color, #082457);
       margin-bottom: 7px;
     }
 
@@ -233,7 +252,11 @@
     }
 
     .contact {
-      background: linear-gradient(135deg,#061b49,#0c347d);
+      background: linear-gradient(
+        135deg,
+        var(--primary-color, #061b49),
+        var(--secondary-color, #0c347d)
+      );
       color: white;
       text-align: center;
     }
@@ -291,198 +314,386 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-area">
-      <!-- LOGO: Replace this circle with your logo later -->
-      <div class="logo">H</div>
+<header>
+  <div class="logo-area">
 
-      <div>
-        <div class="store-name">Holkaran Dass Hem Raj</div>
-        <div class="tagline-small">Everything You Need, All Under One Roof.
-
-
-</div>
-      </div>
+    <div class="logo" id="logo">
+      H
     </div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <div>
+      <div class="store-name" id="storeName">
+        Holkaran Dass Hem Raj
+      </div>
 
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="gold-line"></div>
-
-      <!-- CHANGE YOUR STORE NAME HERE -->
-      <h1>Holkaran Dass Hem Raj</h1>
-
-      <!-- CHANGE YOUR TAGLINE HERE -->
-      <p>Books • Stationery • Gifts • Toys • Science Goods</p>
-
-      <a href="#products" class="hero-btn">Explore Products</a>
-      <a href="#contact" class="hero-btn">Visit Our Store</a>
-
-      <div class="gold-line"></div>
+      <div class="tagline-small" id="smallTagline">
+        Everything You Need, All Under One Roof.
+      </div>
     </div>
-  </section>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 
-  <!-- CATEGORIES -->
-  <section id="categories">
-    <div class="section-title">
-      <h2>Our Categories</h2>
-      <p>Everything you need, all in one place.</p>
-    </div>
+<section class="hero" id="home">
 
-    <div class="categories">
+  <div class="hero-content">
 
-      <div class="category">
-        <div class="icon">📚</div>
-        <h3>Books</h3>
-      </div>
+    <div class="gold-line"></div>
 
-      <div class="category">
-        <div class="icon">✏️</div>
-        <h3>Stationery</h3>
-      </div>
+    <h1 id="heroStoreName">
+      Holkaran Dass Hem Raj
+    </h1>
 
-      <div class="category">
-        <div class="icon">🎁</div>
-        <h3>Gifts</h3>
-      </div>
+    <p id="heroTagline">
+      Books • Stationery • Gifts • Toys • Science Goods • Sports
+    </p>
 
-      <div class="category">
-        <div class="icon">🧸</div>
-        <h3>Toys</h3>
-      </div>
+    <a href="#products" class="hero-btn">
+      Explore Products
+    </a>
 
-      <div class="category">
-        <div class="icon">🔬</div>
-        <h3>Science Goods</h3>
-      </div>
+    <a href="#contact" class="hero-btn">
+      Visit Our Store
+    </a>
 
-    </div>
-  </section>
+    <div class="gold-line"></div>
+
+  </div>
+
+</section>
 
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
+<section id="categories">
 
-    <div class="section-title">
-      <h2>Featured Products</h2>
-      <p>Product photos and details can be changed anytime.</p>
-    </div>
+  <div class="section-title">
 
-    <div class="product-grid">
+    <h2>Our Categories</h2>
 
-      <!-- PRODUCT 1 -->
-      <div class="product">
-        <div class="product-img">📚</div>
-        <div class="product-info">
-          <h3>Books</h3>
-          <p>Add your book photos and description here.</p>
-        </div>
-      </div>
+    <p>
+      Everything you need, all in one place.
+    </p>
 
-      <!-- PRODUCT 2 -->
-      <div class="product">
-        <div class="product-img">✏️</div>
-        <div class="product-info">
-          <h3>Stationery</h3>
-          <p>Add your stationery products and description here.</p>
-        </div>
-      </div>
+  </div>
 
-      <!-- PRODUCT 3 -->
-      <div class="product">
-        <div class="product-img">🎁</div>
-        <div class="product-info">
-          <h3>Gifts</h3>
-          <p>Add your gift items and description here.</p>
-        </div>
-      </div>
+  <div class="categories" id="categoriesContainer"></div>
 
-      <!-- PRODUCT 4 -->
-      <div class="product">
-        <div class="product-img">🧸</div>
-        <div class="product-info">
-          <h3>Toys</h3>
-          <p>Add your toys and description here.</p>
-        </div>
-      </div>
-
-      <!-- PRODUCT 5 -->
-      <div class="product">
-        <div class="product-img">🔬</div>
-        <div class="product-info">
-          <h3>Science Goods</h3>
-          <p>Add your science goods and description here.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
+</section>
 
 
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="section-title">
-      <h2>About Our Store</h2>
-    </div>
+<section class="products" id="products">
 
-    <div class="about-box">
-      <p>
-        Welcome to <strong>Holkaran Dass Hem Raj</strong>.
-        We offer a wide range of books, stationery, gifts, toys
-        and science goods for students, families and everyday needs.
-      </p>
-    </div>
-  </section>
+  <div class="section-title">
 
+    <h2>Featured Products</h2>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+    <p>
+      Explore our collection of products.
+    </p>
 
-    <div class="section-title">
-      <h2>Visit Our Store</h2>
-    </div>
+  </div>
 
-    <div class="contact-info">
+  <div class="product-grid" id="productsContainer"></div>
 
-      <p>
-        📍 Holkaran Dass Hem Raj<br>
-        Singhana Road, Opposite Vinayak Hospital,<br>
-        Narnaul, Haryana, District Mohindergarh – 123001
-      </p>
-
-      <p style="margin-top:15px;">
-        📞 <strong>8053721234</strong>
-      </p>
-
-      <a
-        class="whatsapp"
-        href="https://wa.me/918053721234"
-        target="_blank">
-        💬 Contact on WhatsApp
-      </a>
-
-    </div>
-  </section>
+</section>
 
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Holkaran Dass Hem Raj. All Rights Reserved.
-  </footer>
+<section class="about">
+
+  <div class="section-title">
+
+    <h2>About Our Store</h2>
+
+  </div>
+
+  <div class="about-box">
+
+    <p id="aboutText">
+      Welcome to Holkaran Dass Hem Raj.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="section-title">
+
+    <h2>Visit Our Store</h2>
+
+  </div>
+
+  <div class="contact-info">
+
+    <p id="address">
+      📍 Holkaran Dass Hem Raj<br>
+      Singhana Road, Opposite Vinayak Hospital,<br>
+      Narnaul, Haryana, District Mohindergarh – 123001
+    </p>
+
+    <p style="margin-top:15px;">
+      📞 <strong id="phone">8053721234</strong>
+    </p>
+
+    <a
+      class="whatsapp"
+      id="whatsappButton"
+      href="https://wa.me/918053721234"
+      target="_blank">
+      💬 Contact on WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Holkaran Dass Hem Raj. All Rights Reserved.
+</footer>
+
+
+<!-- YAML DATA LOADER -->
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+<script>
+
+async function loadWebsiteContent() {
+
+  try {
+
+    const response = await fetch("/content.yml");
+
+    if (!response.ok) {
+      throw new Error("content.yml could not be loaded");
+    }
+
+    const yamlText = await response.text();
+
+    const data = jsyaml.load(yamlText) || {};
+
+
+    /* SHOP NAME */
+
+    if (data.shop_name) {
+
+      document.title =
+        data.shop_name + " | Narnaul";
+
+      document.getElementById("storeName").textContent =
+        data.shop_name;
+
+      document.getElementById("heroStoreName").textContent =
+        data.shop_name;
+    }
+
+
+    /* TAGLINE */
+
+    if (data.tagline) {
+
+      document.getElementById("smallTagline").textContent =
+        data.tagline;
+
+      document.getElementById("heroTagline").textContent =
+        data.tagline;
+    }
+
+
+    /* LOGO */
+
+    if (data.logo) {
+
+      document.getElementById("logo").innerHTML =
+        '<img src="' + data.logo + '" alt="Shop Logo">';
+    }
+
+
+    /* COLORS */
+
+    if (data.primary_color) {
+
+      document.documentElement.style.setProperty(
+        "--primary-color",
+        data.primary_color
+      );
+
+    }
+
+    if (data.secondary_color) {
+
+      document.documentElement.style.setProperty(
+        "--secondary-color",
+        data.secondary_color
+      );
+
+    }
+
+    if (data.accent_color) {
+
+      document.documentElement.style.setProperty(
+        "--accent-color",
+        data.accent_color
+      );
+
+    }
+
+    if (data.background_color) {
+
+      document.documentElement.style.setProperty(
+        "--background-color",
+        data.background_color
+      );
+
+    }
+
+
+    /* ABOUT */
+
+    if (data.about) {
+
+      document.getElementById("aboutText").textContent =
+        data.about;
+    }
+
+
+    /* ADDRESS */
+
+    if (data.address) {
+
+      document.getElementById("address").innerHTML =
+        "📍 " + data.address.replace(/\n/g, "<br>");
+    }
+
+
+    /* PHONE */
+
+    if (data.phone) {
+
+      document.getElementById("phone").textContent =
+        data.phone;
+    }
+
+
+    /* WHATSAPP */
+
+    if (data.whatsapp) {
+
+      let number =
+        data.whatsapp.replace(/\D/g, "");
+
+      if (number.length === 10) {
+        number = "91" + number;
+      }
+
+      document.getElementById("whatsappButton").href =
+        "https://wa.me/" + number;
+    }
+
+
+    /* CATEGORIES */
+
+    const categoriesContainer =
+      document.getElementById("categoriesContainer");
+
+    categoriesContainer.innerHTML = "";
+
+    if (Array.isArray(data.categories)) {
+
+      data.categories.forEach(function(category) {
+
+        const div =
+          document.createElement("div");
+
+        div.className = "category";
+
+        div.innerHTML = `
+          <div class="icon">
+            ${category.icon || "📌"}
+          </div>
+
+          <h3>
+            ${category.name || ""}
+          </h3>
+        `;
+
+        categoriesContainer.appendChild(div);
+
+      });
+
+    }
+
+
+    /* PRODUCTS */
+
+    const productsContainer =
+      document.getElementById("productsContainer");
+
+    productsContainer.innerHTML = "";
+
+    if (Array.isArray(data.products)) {
+
+      data.products.forEach(function(product) {
+
+        const div =
+          document.createElement("div");
+
+        div.className = "product";
+
+        let imageHTML = product.image
+          ? `<img src="${product.image}" alt="${product.name || ""}">`
+          : `<span>📦</span>`;
+
+        div.innerHTML = `
+
+          <div class="product-img">
+            ${imageHTML}
+          </div>
+
+          <div class="product-info">
+
+            <h3>
+              ${product.name || ""}
+            </h3>
+
+            <p>
+              ${product.description || ""}
+            </p>
+
+          </div>
+        `;
+
+        productsContainer.appendChild(div);
+
+      });
+
+    }
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "Website content loading error:",
+      error
+    );
+
+  }
+
+}
+
+
+loadWebsiteContent();
+
+</script>
 
 </body>
 </html>
-
-
