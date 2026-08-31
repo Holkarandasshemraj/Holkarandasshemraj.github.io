@@ -1,7 +1,7 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: “Learn. Create. Play. Celebrate.”
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
-primary_color: "#155e9a"
+primary_color: "#7b1f36"
 secondary_color: "#2e8b57"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
@@ -26,6 +26,7 @@ about: >+
 
 address: |
   Holkaran Dass Hem Raj
+
   Singhana Road, Opposite Vinayak Hospital,
   Narnaul, Haryana, District Mohindergarh – 123001
 phone: "8053721234"
