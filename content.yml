@@ -1,69 +1,76 @@
-shop_name: "Holkaran Dass Hem Raj"
-
-tagline: "Everything You Need, All Under One Roof — Books, Stationery, Sports, Gifts & Science Goods."
-
+shop_name: Holkaran Dass Hem Raj
+tagline: Everything You Need, All Under One Roof — Books, Stationery, Sports,
+  Gifts & Science Goods.
 logo: ""
-
 primary_color: "#061B49"
 secondary_color: "#0D347D"
 accent_color: "#D8AD45"
 background_color: "#F7F8FC"
-
 about: |
   Welcome to Holkaran Dass Hem Raj.
   We offer a wide range of books, stationery, sports goods,
   gifts, toys and science goods for students, families
   and everyday needs.
-
 address: |
   Holkaran Dass Hem Raj
   Singhana Road, Opposite Vinayak Hospital,
   Narnaul, Haryana, District Mohindergarh – 123001
-
 phone: "8053721234"
-
 whatsapp: "918053721234"
-
 categories:
-  - name: "Books"
-    icon: "📚"
-
-  - name: "Stationery"
-    icon: "✏️"
-
-  - name: "Sports"
-    icon: "⚽"
-
-  - name: "Gifts"
-    icon: "🎁"
-
-  - name: "Toys"
-    icon: "🧸"
-
-  - name: "Science Goods"
-    icon: "🔬"
-
+  - name: Stationery
+    icon: ✏️
+  - name: Books
+    icon: 📚
+  - name: Sports
+    icon: ⚽
+  - name: Gifts
+    icon: 🎁
+  - name: Toys
+    icon: 🧸
+  - name: Science Goods
+    icon: 🔬
 products:
-  - name: "Books"
-    image: ""
-    description: "Books for students, learning and everyday reading."
+  - name: Books
+    image: /images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
+    description: >+
+      Explore a wide collection of books for students, children, and readers of
+      all ages. From educational and academic books to storybooks and general
+      reading, we offer books for every interest and need.
 
-  - name: "Stationery"
-    image: ""
-    description: "Quality stationery and school essentials."
+  - name: Stationery
+    image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
+    description: >+
+      Find all your everyday stationery essentials in one place. We offer
+      notebooks, pens, pencils, school supplies, art materials, and other useful
+      stationery products for students, offices, and everyday use.
 
-  - name: "Sports"
-    image: ""
-    description: "Sports goods and equipment."
+  - name: Sports
+    image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
+    description: >+
+      Discover a range of sports products and accessories for students,
+      beginners, and sports enthusiasts. From everyday sports essentials to
+      equipment for different games and activities, find everything you need to
+      stay active and enjoy the game.
 
-  - name: "Gifts"
-    image: ""
-    description: "Gift items for every occasion."
+  - name: Gifts
+    image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
+    description: >+
+      Make every occasion special with our collection of thoughtful and
+      attractive gifts. Discover fun, useful, and unique gift items perfect for
+      birthdays, celebrations, festivals, and special moments.
 
-  - name: "Toys"
-    image: ""
-    description: "Fun and engaging toys for children."
+  - name: Toys
+    image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
+    description: >+
+      Discover a fun range of toys for children of different ages. From
+      entertaining play items to creative and educational toys, our collection
+      is designed to make playtime more enjoyable and engaging.
 
-  - name: "Science Goods"
-    image: ""
-    description: "Science equipment and educational goods."
+  - name: Science Goods
+    image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
+    description: >+
+      Explore a range of science products and educational materials for students
+      and curious minds. Find useful items for science projects, experiments,
+      models, and practical learning.
+
