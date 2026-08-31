@@ -6,34 +6,78 @@
 
   <title>Holkaran Dass Hem Raj | Narnaul</title>
 
+  <meta name="description"
+        content="Holkaran Dass Hem Raj, Narnaul – Books, Stationery, Gifts, Toys, Science Goods and Sports products.">
+
+  <meta name="keywords"
+        content="Holkaran Dass Hem Raj, Narnaul, books, stationery, gifts, toys, science goods, sports">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
   <style>
+
+    :root {
+      --primary-color: #123B73;
+      --secondary-color: #1F6B9C;
+      --accent-color: #F4A51C;
+      --background-color: #F8FAFC;
+      --text-color: #17233C;
+      --heading-color: #123B73;
+      --font-family: Poppins, Arial, sans-serif;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: var(--font-family);
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: var(--background-color, #f7f8fc);
-      color: #17233c;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
 
     header {
       background: linear-gradient(
         135deg,
-        var(--primary-color, #061b49),
-        var(--secondary-color, #0d347d)
+        var(--primary-color),
+        var(--secondary-color)
       );
+
       color: white;
-      padding: 18px 7%;
+      padding: 14px 6%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       position: sticky;
       top: 0;
-      z-index: 10;
-      box-shadow: 0 3px 15px rgba(0,0,0,.2);
+      z-index: 1000;
+
+      box-shadow: 0 3px 18px rgba(0,0,0,.18);
     }
 
     .logo-area {
@@ -45,15 +89,20 @@
     .logo {
       width: 52px;
       height: 52px;
-      border: 2px solid var(--accent-color, #d8ad45);
+
+      border: 2px solid var(--accent-color);
       border-radius: 50%;
+
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: var(--accent-color, #d8ad45);
+      align-items: center;
+
+      color: var(--accent-color);
       font-size: 23px;
-      font-weight: bold;
+      font-weight: 700;
+
       overflow: hidden;
+      background: rgba(255,255,255,.08);
     }
 
     .logo img {
@@ -63,144 +112,280 @@
     }
 
     .store-name {
-      font-size: 21px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: 700;
     }
 
     .tagline-small {
-      color: #e7c86b;
+      color: #ffe08a;
       font-size: 12px;
-      margin-top: 4px;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     nav a {
       color: white;
-      text-decoration: none;
-      margin-left: 20px;
       font-size: 14px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #e7c86b;
+      color: var(--accent-color);
     }
 
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
     .hero {
-      background:
-        linear-gradient(rgba(5,24,65,.88), rgba(8,45,105,.90)),
-        url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      min-height: 520px;
+      min-height: 560px;
+
+      position: relative;
+      overflow: hidden;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 50px 20px;
       color: white;
     }
 
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+
+      background-size: cover;
+      background-position: center;
+
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          rgba(5,24,65,.78),
+          rgba(8,45,105,.86)
+        );
+    }
+
     .hero-content {
-      max-width: 850px;
+      position: relative;
+      z-index: 2;
+
+      max-width: 900px;
+      padding: 50px 20px;
     }
 
     .gold-line {
       width: 75px;
       height: 4px;
-      background: var(--accent-color, #d8ad45);
-      margin: 20px auto;
-      border-radius: 10px;
+
+      background: var(--accent-color);
+
+      margin: 18px auto;
+      border-radius: 20px;
     }
 
     .hero h1 {
       font-size: clamp(38px, 6vw, 68px);
-      margin-bottom: 12px;
+      line-height: 1.15;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      color: #f3d67d;
-      font-size: 20px;
+      color: #ffe08a;
+      font-size: clamp(17px, 2.5vw, 22px);
       margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .hero-btn {
       display: inline-block;
-      background: var(--accent-color, #d8ad45);
-      color: #071c48;
-      padding: 14px 28px;
+
+      background: var(--accent-color);
+      color: #102a50;
+
+      padding: 13px 25px;
       border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 6px;
+
+      font-weight: 700;
+
+      transition: .25s;
     }
 
     .hero-btn:hover {
+      transform: translateY(-3px);
       background: white;
     }
 
+    .hero-btn.secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .hero-btn.secondary:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    /* SECTIONS */
+
     section {
-      padding: 65px 7%;
+      padding: 70px 7%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 38px;
+      margin-bottom: 40px;
     }
 
     .section-title h2 {
-      color: var(--primary-color, #082457);
-      font-size: 32px;
+      color: var(--heading-color);
+      font-size: 34px;
     }
 
     .section-title p {
-      margin-top: 8px;
       color: #667085;
+      margin-top: 8px;
     }
+
+    /* CATEGORIES */
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 18px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(170px, 1fr));
+
+      gap: 20px;
     }
 
     .category {
       background: white;
-      border-radius: 15px;
+
+      border-radius: 18px;
       padding: 28px 15px;
+
       text-align: center;
-      border-bottom: 4px solid var(--accent-color, #d8ad45);
-      box-shadow: 0 7px 25px rgba(13,45,100,.08);
+
+      border-bottom: 4px solid var(--accent-color);
+
+      box-shadow: 0 8px 25px rgba(13,45,100,.08);
+
+      cursor: pointer;
+
       transition: .25s;
     }
 
     .category:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(13,45,100,.15);
+      transform: translateY(-7px);
+      box-shadow: 0 14px 30px rgba(13,45,100,.16);
     }
 
     .category .icon {
-      font-size: 38px;
-      margin-bottom: 12px;
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     .category h3 {
-      color: var(--primary-color, #082457);
+      color: var(--heading-color);
     }
 
+    /* PRODUCTS */
+
     .products {
-      background: #eef2f8;
+      background: #eef3f9;
+    }
+
+    .product-controls {
+      max-width: 700px;
+      margin: 0 auto 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 230px;
+
+      padding: 13px 18px;
+
+      border: 1px solid #d8dee9;
+      border-radius: 30px;
+
+      outline: none;
+      font-size: 15px;
+      background: white;
+    }
+
+    .filter-btn {
+      border: none;
+      background: white;
+
+      padding: 11px 18px;
+      border-radius: 25px;
+
+      cursor: pointer;
+      color: var(--heading-color);
+
+      font-weight: 600;
+
+      box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--accent-color);
+      color: #102a50;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+      gap: 23px;
     }
 
     .product {
       background: white;
-      border-radius: 16px;
+
+      border-radius: 17px;
       overflow: hidden;
+
       box-shadow: 0 7px 25px rgba(0,0,0,.08);
+
       transition: .25s;
     }
 
@@ -209,12 +394,19 @@
     }
 
     .product-img {
-      height: 190px;
-      background: linear-gradient(135deg,#dce5f5,#f8f3e3);
+      height: 200px;
+
+      background: linear-gradient(
+        135deg,
+        #dce5f5,
+        #fff4d9
+      );
+
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 55px;
+
+      font-size: 60px;
       overflow: hidden;
     }
 
@@ -229,15 +421,90 @@
     }
 
     .product-info h3 {
-      color: var(--primary-color, #082457);
+      color: var(--heading-color);
+      margin-bottom: 6px;
+    }
+
+    .product-category {
+      display: inline-block;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      color: var(--secondary-color);
+
       margin-bottom: 7px;
+      text-transform: uppercase;
     }
 
     .product-info p {
       color: #667085;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
+
+    .product-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .small-btn {
+      flex: 1;
+
+      text-align: center;
+
+      padding: 9px 10px;
+      border-radius: 22px;
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .call-btn {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 20px;
+    }
+
+    .why-card {
+      background: white;
+
+      padding: 25px;
+
+      border-radius: 17px;
+
+      box-shadow: 0 7px 25px rgba(0,0,0,.07);
+
+      text-align: center;
+    }
+
+    .why-card h3 {
+      color: var(--heading-color);
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
 
     .about {
       background: white;
@@ -245,18 +512,56 @@
     }
 
     .about-box {
-      max-width: 800px;
+      max-width: 820px;
       margin: auto;
-      line-height: 1.8;
+
       color: #5d6878;
+      line-height: 1.9;
+
+      font-size: 16px;
     }
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 18px;
+    }
+
+    .gallery-item {
+      height: 230px;
+
+      border-radius: 16px;
+      overflow: hidden;
+
+      background: #e9eef5;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: .3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT */
 
     .contact {
       background: linear-gradient(
         135deg,
-        var(--primary-color, #061b49),
-        var(--secondary-color, #0c347d)
+        var(--primary-color),
+        var(--secondary-color)
       );
+
       color: white;
       text-align: center;
     }
@@ -266,55 +571,143 @@
     }
 
     .contact-info {
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
-      line-height: 2;
+
       font-size: 17px;
+      line-height: 2;
     }
 
-    .whatsapp {
-      display: inline-block;
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+
       margin-top: 25px;
+    }
+
+    .contact-btn {
+      padding: 12px 23px;
+      border-radius: 30px;
+
+      font-weight: 700;
+    }
+
+    .contact-btn.whatsapp {
       background: #25D366;
       color: white;
-      text-decoration: none;
-      padding: 13px 25px;
-      border-radius: 30px;
-      font-weight: bold;
     }
 
-    footer {
-      background: #04132f;
-      color: #b9c2d1;
+    .contact-btn.call {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    .contact-btn.maps {
+      background: var(--accent-color);
+      color: #102a50;
+    }
+
+    /* MAP */
+
+    .map-section {
+      background: #f3f6fa;
       text-align: center;
-      padding: 22px;
+    }
+
+    .map-btn {
+      display: inline-block;
+
+      background: var(--primary-color);
+      color: white;
+
+      padding: 14px 28px;
+      border-radius: 30px;
+
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #071b36;
+      color: #c4ccda;
+
+      text-align: center;
+      padding: 25px 15px;
+
       font-size: 13px;
     }
 
-    @media(max-width:700px) {
+    /* MOBILE */
+
+    @media(max-width: 760px) {
+
       header {
-        flex-direction: column;
-        gap: 12px;
+        padding: 12px 5%;
       }
 
-      nav a {
-        margin: 0 7px;
+      .store-name {
+        font-size: 17px;
+      }
+
+      .tagline-small {
+        font-size: 10px;
+      }
+
+      nav {
+        display: none;
+
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+
+        background: var(--primary-color);
+
+        padding: 20px;
+
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
       }
 
       .hero {
-        min-height: 450px;
+        min-height: 510px;
       }
 
       section {
-        padding: 50px 5%;
+        padding: 55px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .product-controls {
+        flex-direction: column;
+      }
+
+      .search-box {
+        width: 100%;
       }
     }
+
   </style>
 </head>
 
 <body>
 
 <header>
+
   <div class="logo-area">
 
     <div class="logo" id="logo">
@@ -330,18 +723,34 @@
         Everything You Need, All Under One Roof.
       </div>
     </div>
+
   </div>
 
-  <nav>
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <nav id="navigation">
+
     <a href="#home">Home</a>
     <a href="#categories">Categories</a>
     <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
+
   </nav>
+
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+
+  <div id="heroSlider"></div>
+
+  <div class="hero-overlay"></div>
 
   <div class="hero-content">
 
@@ -352,16 +761,20 @@
     </h1>
 
     <p id="heroTagline">
-      Books • Stationery • Gifts • Toys • Science Goods • Sports
+      Learn. Create. Play. Celebrate.
     </p>
 
-    <a href="#products" class="hero-btn">
-      Explore Products
-    </a>
+    <div class="hero-buttons">
 
-    <a href="#contact" class="hero-btn">
-      Visit Our Store
-    </a>
+      <a href="#products" class="hero-btn">
+        Explore Products
+      </a>
+
+      <a href="#contact" class="hero-btn secondary">
+        Visit Our Store
+      </a>
+
+    </div>
 
     <div class="gold-line"></div>
 
@@ -369,6 +782,8 @@
 
 </section>
 
+
+<!-- CATEGORIES -->
 
 <section id="categories">
 
@@ -387,15 +802,30 @@
 </section>
 
 
+<!-- PRODUCTS -->
+
 <section class="products" id="products">
 
   <div class="section-title">
 
-    <h2>Featured Products</h2>
+    <h2>Our Products</h2>
 
     <p>
-      Explore our collection of products.
+      Find what you're looking for.
     </p>
+
+  </div>
+
+  <div class="product-controls">
+
+    <input
+      type="search"
+      id="productSearch"
+      class="search-box"
+      placeholder="🔎 Search products..."
+    >
+
+    <div id="filterButtons"></div>
 
   </div>
 
@@ -404,7 +834,28 @@
 </section>
 
 
-<section class="about">
+<!-- WHY CHOOSE US -->
+
+<section id="whySection">
+
+  <div class="section-title">
+
+    <h2>Why Choose Us?</h2>
+
+    <p>
+      Your trusted destination for learning, creativity and more.
+    </p>
+
+  </div>
+
+  <div class="why-grid" id="whyContainer"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
 
   <div class="section-title">
 
@@ -415,13 +866,65 @@
   <div class="about-box">
 
     <p id="aboutText">
-      Welcome to Holkaran Dass Hem Raj.
+
+      Welcome to Holkaran Dass Hem Raj — your trusted destination
+      for books, stationery, gifts, toys, science goods and sports
+      essentials.
+
     </p>
 
   </div>
 
 </section>
 
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <div class="section-title">
+
+    <h2>Our Gallery</h2>
+
+    <p>
+      Take a look at our store and collection.
+    </p>
+
+  </div>
+
+  <div class="gallery" id="galleryContainer"></div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="map-section">
+
+  <div class="section-title">
+
+    <h2>Find Us</h2>
+
+    <p id="mapAddress">
+      Holkaran Dass Hem Raj, Narnaul
+    </p>
+
+  </div>
+
+  <a
+    id="mapButton"
+    class="map-btn"
+    href="#"
+    target="_blank">
+
+    📍 Get Directions
+
+  </a>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -434,22 +937,54 @@
   <div class="contact-info">
 
     <p id="address">
+
       📍 Holkaran Dass Hem Raj<br>
       Singhana Road, Opposite Vinayak Hospital,<br>
       Narnaul, Haryana, District Mohindergarh – 123001
+
     </p>
 
     <p style="margin-top:15px;">
       📞 <strong id="phone">8053721234</strong>
     </p>
 
-    <a
-      class="whatsapp"
-      id="whatsappButton"
-      href="https://wa.me/918053721234"
-      target="_blank">
-      💬 Contact on WhatsApp
-    </a>
+    <p
+      id="timings"
+      style="margin-top:10px;">
+    </p>
+
+    <div class="contact-buttons">
+
+      <a
+        id="whatsappButton"
+        class="contact-btn whatsapp"
+        href="https://wa.me/918053721234"
+        target="_blank">
+
+        💬 WhatsApp
+
+      </a>
+
+      <a
+        id="callButton"
+        class="contact-btn call"
+        href="tel:+918053721234">
+
+        📞 Call Now
+
+      </a>
+
+      <a
+        id="contactMapButton"
+        class="contact-btn maps"
+        href="#"
+        target="_blank">
+
+        📍 Get Directions
+
+      </a>
+
+    </div>
 
   </div>
 
@@ -457,232 +992,64 @@
 
 
 <footer>
-  © 2026 Holkaran Dass Hem Raj. All Rights Reserved.
+
+  © <span id="year">2026</span>
+  Holkaran Dass Hem Raj.
+  All Rights Reserved.
+
 </footer>
 
 
-<!-- YAML DATA LOADER -->
+<!-- YAML READER -->
+
 <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 
+
 <script>
+
+let websiteData = {};
+
+let selectedCategory = "All";
+
+
+/* MOBILE MENU */
+
+document
+  .getElementById("menuBtn")
+  .addEventListener("click", function() {
+
+    document
+      .getElementById("navigation")
+      .classList.toggle("open");
+
+  });
+
+
+/* LOAD CONTENT */
 
 async function loadWebsiteContent() {
 
   try {
 
-    const response = await fetch("/content.yml");
+    const response =
+      await fetch("/content.yml?cache=" + Date.now());
 
     if (!response.ok) {
-      throw new Error("content.yml could not be loaded");
+      throw new Error("content.yml not found");
     }
 
-    const yamlText = await response.text();
+    const yamlText =
+      await response.text();
 
-    const data = jsyaml.load(yamlText) || {};
+    websiteData =
+      jsyaml.load(yamlText) || {};
 
+    applyWebsiteData();
 
-    /* SHOP NAME */
-
-    if (data.shop_name) {
-
-      document.title =
-        data.shop_name + " | Narnaul";
-
-      document.getElementById("storeName").textContent =
-        data.shop_name;
-
-      document.getElementById("heroStoreName").textContent =
-        data.shop_name;
-    }
-
-
-    /* TAGLINE */
-
-    if (data.tagline) {
-
-      document.getElementById("smallTagline").textContent =
-        data.tagline;
-
-      document.getElementById("heroTagline").textContent =
-        data.tagline;
-    }
-
-
-    /* LOGO */
-
-    if (data.logo) {
-
-      document.getElementById("logo").innerHTML =
-        '<img src="' + data.logo + '" alt="Shop Logo">';
-    }
-
-
-    /* COLORS */
-
-    if (data.primary_color) {
-
-      document.documentElement.style.setProperty(
-        "--primary-color",
-        data.primary_color
-      );
-
-    }
-
-    if (data.secondary_color) {
-
-      document.documentElement.style.setProperty(
-        "--secondary-color",
-        data.secondary_color
-      );
-
-    }
-
-    if (data.accent_color) {
-
-      document.documentElement.style.setProperty(
-        "--accent-color",
-        data.accent_color
-      );
-
-    }
-
-    if (data.background_color) {
-
-      document.documentElement.style.setProperty(
-        "--background-color",
-        data.background_color
-      );
-
-    }
-
-
-    /* ABOUT */
-
-    if (data.about) {
-
-      document.getElementById("aboutText").textContent =
-        data.about;
-    }
-
-
-    /* ADDRESS */
-
-    if (data.address) {
-
-      document.getElementById("address").innerHTML =
-        "📍 " + data.address.replace(/\n/g, "<br>");
-    }
-
-
-    /* PHONE */
-
-    if (data.phone) {
-
-      document.getElementById("phone").textContent =
-        data.phone;
-    }
-
-
-    /* WHATSAPP */
-
-    if (data.whatsapp) {
-
-      let number =
-        data.whatsapp.replace(/\D/g, "");
-
-      if (number.length === 10) {
-        number = "91" + number;
-      }
-
-      document.getElementById("whatsappButton").href =
-        "https://wa.me/" + number;
-    }
-
-
-    /* CATEGORIES */
-
-    const categoriesContainer =
-      document.getElementById("categoriesContainer");
-
-    categoriesContainer.innerHTML = "";
-
-    if (Array.isArray(data.categories)) {
-
-      data.categories.forEach(function(category) {
-
-        const div =
-          document.createElement("div");
-
-        div.className = "category";
-
-        div.innerHTML = `
-          <div class="icon">
-            ${category.icon || "📌"}
-          </div>
-
-          <h3>
-            ${category.name || ""}
-          </h3>
-        `;
-
-        categoriesContainer.appendChild(div);
-
-      });
-
-    }
-
-
-    /* PRODUCTS */
-
-    const productsContainer =
-      document.getElementById("productsContainer");
-
-    productsContainer.innerHTML = "";
-
-    if (Array.isArray(data.products)) {
-
-      data.products.forEach(function(product) {
-
-        const div =
-          document.createElement("div");
-
-        div.className = "product";
-
-        let imageHTML = product.image
-          ? `<img src="${product.image}" alt="${product.name || ""}">`
-          : `<span>📦</span>`;
-
-        div.innerHTML = `
-
-          <div class="product-img">
-            ${imageHTML}
-          </div>
-
-          <div class="product-info">
-
-            <h3>
-              ${product.name || ""}
-            </h3>
-
-            <p>
-              ${product.description || ""}
-            </p>
-
-          </div>
-        `;
-
-        productsContainer.appendChild(div);
-
-      });
-
-    }
-
-  }
-
-  catch (error) {
+  } catch (error) {
 
     console.error(
-      "Website content loading error:",
+      "Website content error:",
       error
     );
 
@@ -690,6 +1057,841 @@ async function loadWebsiteContent() {
 
 }
 
+
+/* APPLY DATA */
+
+function applyWebsiteData() {
+
+  const data = websiteData;
+
+
+  /* SHOP NAME */
+
+  if (data.shop_name) {
+
+    document.title =
+      data.shop_name + " | Narnaul";
+
+    document
+      .getElementById("storeName")
+      .textContent =
+      data.shop_name;
+
+    document
+      .getElementById("heroStoreName")
+      .textContent =
+      data.shop_name;
+
+  }
+
+
+  /* TAGLINE */
+
+  if (data.tagline) {
+
+    document
+      .getElementById("smallTagline")
+      .textContent =
+      data.tagline;
+
+    document
+      .getElementById("heroTagline")
+      .textContent =
+      data.tagline;
+
+  }
+
+
+  /* LOGO */
+
+  if (data.logo) {
+
+    document
+      .getElementById("logo")
+      .innerHTML =
+      `<img src="${data.logo}" alt="Holkaran Dass Hem Raj Logo">`;
+
+  }
+
+
+  /* COLORS */
+
+  if (data.primary_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--primary-color",
+        data.primary_color
+      );
+
+  }
+
+  if (data.secondary_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--secondary-color",
+        data.secondary_color
+      );
+
+  }
+
+  if (data.accent_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--accent-color",
+        data.accent_color
+      );
+
+  }
+
+  if (data.background_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--background-color",
+        data.background_color
+      );
+
+  }
+
+  if (data.text_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--text-color",
+        data.text_color
+      );
+
+  }
+
+  if (data.heading_color) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--heading-color",
+        data.heading_color
+      );
+
+  }
+
+
+  /* FONT */
+
+  if (data.font_family) {
+
+    document.documentElement
+      .style
+      .setProperty(
+        "--font-family",
+        data.font_family + ", Arial, sans-serif"
+      );
+
+  }
+
+
+  /* SEO */
+
+  if (data.seo_title) {
+
+    document.title =
+      data.seo_title;
+
+  }
+
+  if (data.seo_description) {
+
+    let description =
+      document.querySelector(
+        'meta[name="description"]'
+      );
+
+    if (description) {
+
+      description.setAttribute(
+        "content",
+        data.seo_description
+      );
+
+    }
+
+  }
+
+
+  /* ABOUT */
+
+  if (data.about) {
+
+    document
+      .getElementById("aboutText")
+      .textContent =
+      data.about;
+
+  }
+
+
+  /* ADDRESS */
+
+  if (data.address) {
+
+    document
+      .getElementById("address")
+      .innerHTML =
+      "📍 " +
+      data.address
+        .replace(/\n/g, "<br>");
+
+    document
+      .getElementById("mapAddress")
+      .textContent =
+      data.address;
+
+  }
+
+
+  /* PHONE */
+
+  if (data.phone) {
+
+    document
+      .getElementById("phone")
+      .textContent =
+      data.phone;
+
+    let phone =
+      data.phone.replace(/\D/g, "");
+
+    if (phone.length === 10) {
+      phone = "91" + phone;
+    }
+
+    document
+      .getElementById("callButton")
+      .href =
+      "tel:+" + phone;
+
+  }
+
+
+  /* WHATSAPP */
+
+  if (data.whatsapp) {
+
+    let whatsapp =
+      data.whatsapp.replace(/\D/g, "");
+
+    if (whatsapp.length === 10) {
+      whatsapp = "91" + whatsapp;
+    }
+
+    document
+      .getElementById("whatsappButton")
+      .href =
+      "https://wa.me/" + whatsapp;
+
+  }
+
+
+  /* MAP */
+
+  if (data.maps_link) {
+
+    document
+      .getElementById("mapButton")
+      .href =
+      data.maps_link;
+
+    document
+      .getElementById("contactMapButton")
+      .href =
+      data.maps_link;
+
+  }
+
+
+  /* TIMINGS */
+
+  if (data.timings) {
+
+    document
+      .getElementById("timings")
+      .innerHTML =
+      "🕐 " +
+      data.timings
+        .replace(/\n/g, "<br>");
+
+  }
+
+
+  /* CATEGORIES */
+
+  renderCategories();
+
+
+  /* PRODUCTS */
+
+  renderProducts();
+
+
+  /* HERO SLIDER */
+
+  renderHeroSlider();
+
+
+  /* GALLERY */
+
+  renderGallery();
+
+
+  /* WHY CHOOSE US */
+
+  renderWhyChooseUs();
+
+
+  /* YEAR */
+
+  document
+    .getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+}
+
+
+/* CATEGORY RENDER */
+
+function renderCategories() {
+
+  const container =
+    document.getElementById(
+      "categoriesContainer"
+    );
+
+  container.innerHTML = "";
+
+  const categories =
+    websiteData.categories || [];
+
+  categories.forEach(function(category) {
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "category";
+
+    card.innerHTML = `
+
+      <div class="icon">
+        ${category.icon || "📌"}
+      </div>
+
+      <h3>
+        ${escapeHTML(category.name || "")}
+      </h3>
+
+    `;
+
+    card.addEventListener(
+      "click",
+      function() {
+
+        selectedCategory =
+          category.name;
+
+        document
+          .getElementById("products")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+        renderProducts();
+
+      }
+    );
+
+    container.appendChild(card);
+
+  });
+
+}
+
+
+/* FILTER BUTTONS */
+
+function renderFilterButtons() {
+
+  const container =
+    document.getElementById(
+      "filterButtons"
+    );
+
+  container.innerHTML = "";
+
+  const products =
+    websiteData.products || [];
+
+  const categories = [
+    "All",
+    ...new Set(
+      products
+        .map(p => p.category)
+        .filter(Boolean)
+    )
+  ];
+
+  categories.forEach(function(category) {
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "filter-btn" +
+      (selectedCategory === category
+        ? " active"
+        : "");
+
+    button.textContent =
+      category;
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        selectedCategory =
+          category;
+
+        renderProducts();
+
+      }
+    );
+
+    container.appendChild(button);
+
+  });
+
+}
+
+
+/* PRODUCTS */
+
+function renderProducts() {
+
+  const container =
+    document.getElementById(
+      "productsContainer"
+    );
+
+  container.innerHTML = "";
+
+  renderFilterButtons();
+
+  const products =
+    websiteData.products || [];
+
+  const search =
+    (
+      document
+        .getElementById("productSearch")
+        .value || ""
+    )
+      .toLowerCase()
+      .trim();
+
+
+  const filtered =
+    products.filter(function(product) {
+
+      const matchesCategory =
+        selectedCategory === "All" ||
+        product.category === selectedCategory;
+
+      const matchesSearch =
+        !search ||
+        (
+          product.name || ""
+        )
+          .toLowerCase()
+          .includes(search) ||
+
+        (
+          product.description || ""
+        )
+          .toLowerCase()
+          .includes(search);
+
+      return (
+        matchesCategory &&
+        matchesSearch
+      );
+
+    });
+
+
+  if (!filtered.length) {
+
+    container.innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:40px;
+        color:#667085;
+      ">
+
+        No products found.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  filtered.forEach(function(product) {
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "product";
+
+
+    const image =
+      product.image
+        ? `<img
+             src="${product.image}"
+             alt="${escapeHTML(product.name || "")}">
+           `
+        : `<span>📦</span>`;
+
+
+    const phone =
+      websiteData.whatsapp
+        ? websiteData.whatsapp
+            .replace(/\D/g, "")
+        : "918053721234";
+
+
+    card.innerHTML = `
+
+      <div class="product-img">
+        ${image}
+      </div>
+
+      <div class="product-info">
+
+        ${
+          product.category
+            ? `<span class="product-category">
+                 ${escapeHTML(product.category)}
+               </span>`
+            : ""
+        }
+
+        <h3>
+          ${escapeHTML(product.name || "")}
+        </h3>
+
+        <p>
+          ${escapeHTML(product.description || "")}
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="small-btn whatsapp-btn"
+            target="_blank"
+            href="https://wa.me/${phone}?text=${encodeURIComponent(
+              "Hello, I would like to enquire about " +
+              (product.name || "this product")
+            )}">
+            💬 Enquire
+          </a>
+
+          <a
+            class="small-btn call-btn"
+            href="tel:+${phone}">
+            📞 Call
+          </a>
+
+        </div>
+
+      </div>
+
+    `;
+
+    container.appendChild(card);
+
+  });
+
+}
+
+
+/* SEARCH */
+
+document
+  .getElementById("productSearch")
+  .addEventListener(
+    "input",
+    function() {
+
+      renderProducts();
+
+    }
+  );
+
+
+/* HERO SLIDER */
+
+function renderHeroSlider() {
+
+  const container =
+    document.getElementById(
+      "heroSlider"
+    );
+
+  container.innerHTML = "";
+
+  let images =
+    websiteData.hero_images || [];
+
+  images =
+    images
+      .map(item => item && item.image)
+      .filter(Boolean);
+
+
+  /* Temporary fallback */
+
+  if (!images.length) {
+
+    images = [
+
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80",
+
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80",
+
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"
+
+    ];
+
+  }
+
+
+  images.forEach(function(image, index) {
+
+    const slide =
+      document.createElement("div");
+
+    slide.className =
+      "hero-slide" +
+      (index === 0
+        ? " active"
+        : "");
+
+    slide.style.backgroundImage =
+      `url("${image}")`;
+
+    container.appendChild(slide);
+
+  });
+
+
+  const slides =
+    document.querySelectorAll(
+      ".hero-slide"
+    );
+
+  if (slides.length <= 1) {
+    return;
+  }
+
+
+  let current = 0;
+
+  setInterval(function() {
+
+    slides[current]
+      .classList
+      .remove("active");
+
+    current =
+      (current + 1) %
+      slides.length;
+
+    slides[current]
+      .classList
+      .add("active");
+
+  }, 5000);
+
+}
+
+
+/* GALLERY */
+
+function renderGallery() {
+
+  const container =
+    document.getElementById(
+      "galleryContainer"
+    );
+
+  container.innerHTML = "";
+
+  const gallery =
+    websiteData.gallery || [];
+
+
+  if (!gallery.length) {
+
+    container.innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:25px;
+        color:#667085;
+      ">
+
+        Store photos will appear here soon.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  gallery.forEach(function(item) {
+
+    if (!item.image) {
+      return;
+    }
+
+    const div =
+      document.createElement("div");
+
+    div.className =
+      "gallery-item";
+
+    div.innerHTML = `
+
+      <img
+        src="${item.image}"
+        alt="Holkaran Dass Hem Raj">
+
+    `;
+
+    container.appendChild(div);
+
+  });
+
+}
+
+
+/* WHY CHOOSE US */
+
+function renderWhyChooseUs() {
+
+  const container =
+    document.getElementById(
+      "whyContainer"
+    );
+
+  container.innerHTML = "";
+
+  const items =
+    websiteData.why_choose_us || [];
+
+
+  if (!items.length) {
+
+    const defaults = [
+
+      {
+        title: "Wide Range",
+        description:
+          "Books, stationery, gifts, toys, science goods and sports products under one roof."
+      },
+
+      {
+        title: "For Every Need",
+        description:
+          "Products for students, families, children and everyday requirements."
+      },
+
+      {
+        title: "Convenient Shopping",
+        description:
+          "Find what you need easily and contact us directly for enquiries."
+      }
+
+    ];
+
+    defaults.forEach(addWhyCard);
+
+  } else {
+
+    items.forEach(addWhyCard);
+
+  }
+
+
+  function addWhyCard(item) {
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "why-card";
+
+    card.innerHTML = `
+
+      <h3>
+        ${escapeHTML(item.title || "")}
+      </h3>
+
+      <p>
+        ${escapeHTML(item.description || "")}
+      </p>
+
+    `;
+
+    container.appendChild(card);
+
+  }
+
+}
+
+
+/* SECURITY / HTML ESCAPE */
+
+function escapeHTML(value) {
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+/* START */
 
 loadWebsiteContent();
 
