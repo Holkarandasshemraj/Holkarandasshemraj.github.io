@@ -1,26 +1,44 @@
 shop_name: Holkaran Dass Hem Raj
-tagline: “Learn. Create. Play. Celebrate.”
+tagline: "Learn. Create. Play. Celebrate."
+
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
+
 primary_color: "#ee305e"
 secondary_color: "#e2de61"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
 text_color: "#17233c"
 heading_color: "#123b73"
+nav_text_color: "#ffffff"
+card_background_color: "#ffffff"
+call_color: "#123b73"
+enquire_color: "#25D366"
+button_text_color: "#ffffff"
+
 font_family: Poppins
+heading_font: Poppins
+nav_font: Poppins
+button_font: Poppins
+product_title_font: Poppins
+product_description_font: Poppins
+
+heading_size: 34
+body_size: 16
+product_title_size: 18
+product_description_size: 14
+
 hero_images:
   - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
   - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
   - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
   - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
   - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
+
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
 
-
   We bring together quality products for learning, creativity, fun, and everyday needs, all under one roof. Whether you're looking for school essentials, educational products, a thoughtful gift, or something fun for children, we aim to make your shopping experience easy and convenient.
-
 
   Visit us and discover something for every age, every interest, and every occasion.
 
@@ -29,40 +47,52 @@ address: |
 
   Singhana Road, Opposite Vinayak Hospital,
   Narnaul, Haryana, District Mohindergarh – 123001
+
 phone: "8053721234"
 whatsapp: "918053721234"
-maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
+
+maps_link: "https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac"
+
+timings: ""
+
 categories:
   - name: Stationery
-    icon: ✏️
+    icon: "✏️"
+
   - name: Books
-    icon: 📚
+    icon: "📚"
+
   - name: Sports
-    icon: ⚽
+    icon: "⚽"
+
   - name: Gifts
-    icon: 🎁
+    icon: "🎁"
+
   - name: Toys
-    icon: 🧸
+    icon: "🧸"
+
   - name: Science Goods
-    icon: 🔬
+    icon: "🔬"
+
 products:
   - name: Books
+    category: Books
     image: /images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
     description: >+
       Explore a wide collection of books for students, children, and readers of
       all ages. From educational and academic books to storybooks and general
       reading, we offer books for every interest and need.
 
-    category: Books
   - name: Stationery
+    category: Stationery
     image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
     description: >+
       Find all your everyday stationery essentials in one place. We offer
       notebooks, pens, pencils, school supplies, art materials, and other useful
       stationery products for students, offices, and everyday use.
 
-    category: Stationery
   - name: Sports
+    category: Sports
     image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
     description: >+
       Discover a range of sports products and accessories for students,
@@ -70,31 +100,48 @@ products:
       equipment for different games and activities, find everything you need to
       stay active and enjoy the game.
 
-    category: Sports
   - name: Science Goods
+    category: Science Goods
     image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
     description: >+
       Explore a range of science products and educational materials for students
       and curious minds. Find useful items for science projects, experiments,
       models, and practical learning.
 
-    category: Science Goods
   - name: Gifts
+    category: Gifts
     image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >+
       Make every occasion special with our collection of thoughtful and
       attractive gifts. Discover fun, useful, and unique gift items perfect for
       birthdays, celebrations, festivals, and special moments.
 
-    category: Gifts
   - name: Toys
+    category: Toys
     image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
     description: >+
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
       is designed to make playtime more enjoyable and engaging.
 
-    category: Toys
-seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
-seo_description: Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery,
-  gifts, toys, science goods and sports products, all under one roof.
+gallery: []
+
+why_choose_us:
+  - title: Wide Range
+    description: >+
+      Books, stationery, gifts, toys, science goods and sports products under
+      one roof.
+
+  - title: For Every Need
+    description: >+
+      Products for students, families, children and everyday requirements.
+
+  - title: Convenient Shopping
+    description: >+
+      Find what you need easily and contact us directly for enquiries.
+
+seo_title: "Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul"
+
+seo_description: >+
+  Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery, gifts, toys,
+  science goods and sports products, all under one roof.
