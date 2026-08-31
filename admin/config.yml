@@ -14,10 +14,6 @@ collections:
         file: "content.yml"
         fields:
 
-          # =========================
-          # BASIC SHOP DETAILS
-          # =========================
-
           - label: "Shop Name"
             name: "shop_name"
             widget: "string"
@@ -30,10 +26,6 @@ collections:
             name: "logo"
             widget: "image"
             required: false
-
-          # =========================
-          # COLORS
-          # =========================
 
           - label: "Primary Color"
             name: "primary_color"
@@ -65,10 +57,6 @@ collections:
             widget: "color"
             default: "#123B73"
 
-          # =========================
-          # FONTS
-          # =========================
-
           - label: "Font Family"
             name: "font_family"
             widget: "select"
@@ -78,138 +66,61 @@ collections:
               - "Nunito"
               - "Roboto"
               - "Arial"
-              - "Georgia"
-              - "Playfair Display"
             default: "Poppins"
-
-          - label: "Heading Font Family"
-            name: "heading_font"
-            widget: "select"
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
-
-          - label: "Heading Font Size"
-            name: "heading_size"
-            widget: "select"
-            options:
-              - "Small"
-              - "Medium"
-              - "Large"
-              - "Extra Large"
-            default: "Large"
-
-          - label: "Body Font Size"
-            name: "body_size"
-            widget: "select"
-            options:
-              - "Small"
-              - "Medium"
-              - "Large"
-            default: "Medium"
-
-          # =========================
-          # HERO SECTION
-          # =========================
-
-          - label: "Show Hero Section"
-            name: "show_hero"
-            widget: "boolean"
-            default: true
 
           - label: "Hero Slider Images"
             name: "hero_images"
             widget: "list"
             required: false
             fields:
-
               - label: "Image"
                 name: "image"
                 widget: "image"
-
-              - label: "Title"
-                name: "title"
-                widget: "string"
-                required: false
-
-              - label: "Subtitle"
-                name: "subtitle"
-                widget: "string"
-                required: false
-
-          # =========================
-          # ABOUT SECTION
-          # =========================
-
-          - label: "Show About Section"
-            name: "show_about"
-            widget: "boolean"
-            default: true
 
           - label: "About Us"
             name: "about"
             widget: "text"
 
-          # =========================
-          # CATEGORIES
-          # =========================
+          - label: "Address"
+            name: "address"
+            widget: "text"
 
-          - label: "Show Categories"
-            name: "show_categories"
-            widget: "boolean"
-            default: true
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+
+          - label: "WhatsApp Number"
+            name: "whatsapp"
+            widget: "string"
+
+          - label: "Google Maps Link"
+            name: "maps_link"
+            widget: "string"
+            required: false
+
+          - label: "Shop Timings"
+            name: "timings"
+            widget: "text"
+            required: false
 
           - label: "Categories"
             name: "categories"
             widget: "list"
             required: false
             fields:
-
-              - label: "Category Name"
+              - label: "Name"
                 name: "name"
                 widget: "string"
 
               - label: "Icon"
                 name: "icon"
                 widget: "string"
-                required: false
-
-              - label: "Category Image"
-                name: "image"
-                widget: "image"
-                required: false
-
-              - label: "Category Color"
-                name: "color"
-                widget: "color"
-                required: false
-
-              - label: "Show Category"
-                name: "show"
-                widget: "boolean"
-                default: true
-
-          # =========================
-          # PRODUCTS
-          # =========================
-
-          - label: "Show Products"
-            name: "show_products"
-            widget: "boolean"
-            default: true
 
           - label: "Products"
             name: "products"
             widget: "list"
             required: false
             fields:
-
               - label: "Product Name"
                 name: "name"
                 widget: "string"
@@ -226,40 +137,35 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
-                required: false
-
-              - label: "Show Product"
-                name: "show"
-                widget: "boolean"
-                default: true
-
-          # =========================
-          # GALLERY
-          # =========================
-
-          - label: "Show Gallery"
-            name: "show_gallery"
-            widget: "boolean"
-            default: true
 
           - label: "Gallery"
             name: "gallery"
             widget: "list"
             required: false
             fields:
-
               - label: "Photo"
                 name: "image"
                 widget: "image"
 
-              - label: "Caption"
-                name: "caption"
+          - label: "Why Choose Us"
+            name: "why_choose_us"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Title"
+                name: "title"
                 widget: "string"
-                required: false
 
-          # =========================
-          # WHY CHOOSE US
-          # =========================
+              - label: "Description"
+                name: "description"
+                widget: "text"
 
-          - label: "Show Why Choose Us"
-            name:
+          - label: "SEO Title"
+            name: "seo_title"
+            widget: "string"
+            required: false
+
+          - label: "SEO Description"
+            name: "seo_description"
+            widget: "text"
+            required: false
