@@ -1,16 +1,20 @@
 shop_name: Holkaran Dass Hem Raj
-tagline: Everything You Need, All Under One Roof — Books, Stationery, Sports,
-  Gifts & Science Goods.
-logo: ""
-primary_color: "#061B49"
-secondary_color: "#0D347D"
-accent_color: "#D8AD45"
-background_color: "#F7F8FC"
-about: |
-  Welcome to Holkaran Dass Hem Raj.
-  We offer a wide range of books, stationery, sports goods,
-  gifts, toys and science goods for students, families
-  and everyday needs.
+tagline: “Learn. Create. Play. Celebrate.”
+logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
+primary_color: "#155e9a"
+secondary_color: "#2e8b57"
+accent_color: "#f5a623"
+background_color: "#fffdf7"
+about: >+
+  Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
+  stationery, gifts, toys, science goods, and sports essentials.
+
+
+  We bring together quality products for learning, creativity, fun, and everyday needs, all under one roof. Whether you're looking for school essentials, educational products, a thoughtful gift, or something fun for children, we aim to make your shopping experience easy and convenient.
+
+
+  Visit us and discover something for every age, every interest, and every occasion.
+
 address: |
   Holkaran Dass Hem Raj
   Singhana Road, Opposite Vinayak Hospital,
@@ -53,6 +57,13 @@ products:
       equipment for different games and activities, find everything you need to
       stay active and enjoy the game.
 
+  - name: Science Goods
+    image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
+    description: >+
+      Explore a range of science products and educational materials for students
+      and curious minds. Find useful items for science projects, experiments,
+      models, and practical learning.
+
   - name: Gifts
     image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >+
@@ -66,11 +77,4 @@ products:
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
       is designed to make playtime more enjoyable and engaging.
-
-  - name: Science Goods
-    image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
-    description: >+
-      Explore a range of science products and educational materials for students
-      and curious minds. Find useful items for science projects, experiments,
-      models, and practical learning.
 
