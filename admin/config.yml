@@ -14,8 +14,11 @@ collections:
       - name: "content"
         label: "Website Content"
         file: "content.yml"
-
         fields:
+
+          # =========================
+          # BASIC WEBSITE
+          # =========================
 
           - label: "Shop Name"
             name: "shop_name"
@@ -29,6 +32,10 @@ collections:
             name: "logo"
             widget: "image"
             required: false
+
+          # =========================
+          # COLORS
+          # =========================
 
           - label: "Primary Color"
             name: "primary_color"
@@ -50,6 +57,11 @@ collections:
             widget: "color"
             default: "#F8FAFC"
 
+          - label: "Card Background Color"
+            name: "card_background_color"
+            widget: "color"
+            default: "#FFFFFF"
+
           - label: "Text Color"
             name: "text_color"
             widget: "color"
@@ -62,11 +74,6 @@ collections:
 
           - label: "Navigation Text Color"
             name: "nav_text_color"
-            widget: "color"
-            default: "#FFFFFF"
-
-          - label: "Card Background Color"
-            name: "card_background_color"
             widget: "color"
             default: "#FFFFFF"
 
@@ -84,6 +91,10 @@ collections:
             name: "button_text_color"
             widget: "color"
             default: "#FFFFFF"
+
+          # =========================
+          # FONTS
+          # =========================
 
           - label: "Body Font"
             name: "font_family"
@@ -159,6 +170,10 @@ collections:
               - "Georgia"
             default: "Poppins"
 
+          # =========================
+          # FONT SIZES
+          # =========================
+
           - label: "Main Heading Size"
             name: "heading_size"
             widget: "number"
@@ -191,6 +206,10 @@ collections:
             min: 11
             max: 22
 
+          # =========================
+          # HERO / SLIDER
+          # =========================
+
           - label: "Hero Slider Images"
             name: "hero_images"
             widget: "list"
@@ -200,9 +219,17 @@ collections:
                 name: "image"
                 widget: "image"
 
+          # =========================
+          # ABOUT
+          # =========================
+
           - label: "About Us"
             name: "about"
             widget: "text"
+
+          # =========================
+          # CONTACT
+          # =========================
 
           - label: "Address"
             name: "address"
@@ -226,24 +253,35 @@ collections:
             widget: "text"
             required: false
 
+          # =========================
+          # CATEGORIES
+          # =========================
+
           - label: "Categories"
             name: "categories"
             widget: "list"
             required: false
             fields:
+
               - label: "Category Name"
                 name: "name"
                 widget: "string"
 
-              - label: "Icon"
+              - label: "Category Icon"
                 name: "icon"
                 widget: "string"
+                required: false
+
+          # =========================
+          # PRODUCTS
+          # =========================
 
           - label: "Products"
             name: "products"
             widget: "list"
             required: false
             fields:
+
               - label: "Product Name"
                 name: "name"
                 widget: "string"
@@ -252,7 +290,7 @@ collections:
                 name: "category"
                 widget: "string"
 
-              - label: "Photo"
+              - label: "Product Photo"
                 name: "image"
                 widget: "image"
                 required: false
@@ -260,21 +298,32 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
+
+          # =========================
+          # GALLERY
+          # =========================
 
           - label: "Gallery"
             name: "gallery"
             widget: "list"
             required: false
             fields:
+
               - label: "Photo"
                 name: "image"
                 widget: "image"
+
+          # =========================
+          # WHY CHOOSE US
+          # =========================
 
           - label: "Why Choose Us"
             name: "why_choose_us"
             widget: "list"
             required: false
             fields:
+
               - label: "Title"
                 name: "title"
                 widget: "string"
@@ -282,6 +331,10 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
+
+          # =========================
+          # SEO
+          # =========================
 
           - label: "SEO Title"
             name: "seo_title"
