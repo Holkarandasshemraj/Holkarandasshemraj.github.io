@@ -1,7 +1,6 @@
 shop_name: Holkaran Dass Hem Raj
-tagline: Learn. Create. Play. Celebrate...
+tagline: Learn. Create. Play. Celebrate
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
-primary_color: "#51212d"
 secondary_color: "#0e0994"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
@@ -9,25 +8,31 @@ text_color: "#17233c"
 heading_color: "#123b73"
 nav_text_color: "#ffffff"
 card_background_color: "#ffffff"
-call_color: "#70dc73"
-enquire_color: "#9664be"
+call_button_color: "#5ed86f"
 button_text_color: "#ffffff"
 font_family: Poppins
-heading_font: Roboto
-nav_font: Nunito
-button_font: Poppins
-product_title_font: Poppins
+heading_font: Montserrat
 product_description_font: Poppins
+maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
+call_color: "#70dc73"
+primary_color: "#51212d"
+enquire_button_color: "#a784d4"
+hero_heading_font: Poppins
+hero_text_font: Poppins
+section_heading_font: Poppins
 heading_size: 34
 body_size: 16
+product_title_font: Poppins
 product_title_size: 18
 product_description_size: 14
+show_hero: true
 hero_images:
   - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
   - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
   - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
   - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
   - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
+show_about: true
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
@@ -37,27 +42,38 @@ about: >+
   Visit us and discover something for every age, every interest, and every occasion.
 
 address: |
-  Holkaran Dass Hem Raj
+  Holkaran Dass Hem Raj,
 
   Singhana Road, Opposite Vinayak Hospital,
   Narnaul, Haryana, District Mohindergarh – 123001
 phone: "8053721234"
 whatsapp: "918053721234"
-maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
 timings: ""
+show_call_button: true
+call_button_text: ☎️
+show_enquire_button: true
+enquire_button_text: 🔎
+show_categories: true
 categories:
   - name: Stationery
     icon: ✏️
+    show: true
   - name: Books
     icon: 📚
+    show: true
   - name: Sports
     icon: ⚽
+    show: true
   - name: Gifts
     icon: 🎁
+    show: true
   - name: Toys
     icon: 🧸
+    show: true
   - name: Science Goods
     icon: 🔬
+    show: true
+show_products: true
 products:
   - name: Books
     category: Books
@@ -67,6 +83,7 @@ products:
       all ages. From educational and academic books to storybooks and general
       reading, we offer books for every interest and need.
 
+    show: true
   - name: Stationery
     category: Stationery
     image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
@@ -75,6 +92,7 @@ products:
       notebooks, pens, pencils, school supplies, art materials, and other useful
       stationery products for students, offices, and everyday use.
 
+    show: true
   - name: Sports
     category: Sports
     image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
@@ -84,6 +102,7 @@ products:
       equipment for different games and activities, find everything you need to
       stay active and enjoy the game.
 
+    show: true
   - name: Science Goods
     category: Science Goods
     image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
@@ -92,6 +111,7 @@ products:
       and curious minds. Find useful items for science projects, experiments,
       models, and practical learning.
 
+    show: true
   - name: Gifts
     category: Gifts
     image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
@@ -100,6 +120,7 @@ products:
       attractive gifts. Discover fun, useful, and unique gift items perfect for
       birthdays, celebrations, festivals, and special moments.
 
+    show: true
   - name: Toys
     category: Toys
     image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
@@ -108,7 +129,11 @@ products:
       entertaining play items to creative and educational toys, our collection
       is designed to make playtime more enjoyable and engaging.
 
+    show: true
+nav_font: Nunito
+show_gallery: false
 gallery: []
+show_why_choose_us: false
 why_choose_us:
   - title: Wide Range
     description: >+
@@ -123,7 +148,9 @@ why_choose_us:
     description: |+
       Find what you need easily and contact us directly for enquiries.
 
+enquire_color: "#9664be"
 seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
 seo_description: >
   Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery, gifts, toys,
   science goods and sports products, all under one roof.
+button_font: Poppins
