@@ -15,29 +15,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Arial&family=Georgia&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-  --primary-color:#ee305e;
-  --secondary-color:#e2de61;
-  --accent-color:#f5a623;
-  --background-color:#fffdf7;
-  --text-color:#17233c;
-  --heading-color:#123b73;
+  --primary-color:#EE305E;
+  --secondary-color:#E2DE61;
+  --accent-color:#F5A623;
+  --background-color:#FFFDF7;
+  --card-background-color:#FFFFFF;
+  --text-color:#17233C;
+  --heading-color:#123B73;
+  --nav-text-color:#FFFFFF;
+  --button-text-color:#FFFFFF;
+
+  --call-color:#123B73;
+  --enquire-color:#25D366;
 
   --font-family:Poppins,Arial,sans-serif;
   --heading-font:Poppins,Arial,sans-serif;
   --hero-heading-font:Poppins,Arial,sans-serif;
   --hero-text-font:Poppins,Arial,sans-serif;
   --section-heading-font:Poppins,Arial,sans-serif;
+  --nav-font:Poppins,Arial,sans-serif;
+  --button-font:Poppins,Arial,sans-serif;
+  --product-title-font:Poppins,Arial,sans-serif;
+  --product-description-font:Poppins,Arial,sans-serif;
 
   --heading-size:34px;
   --body-size:16px;
-
-  --call-color:#123b73;
-  --enquire-color:#25d366;
+  --product-title-size:18px;
+  --product-description-size:14px;
 }
 
 *{
@@ -64,7 +73,7 @@ a{
 
 button,
 input{
-  font-family:inherit;
+  font-family:var(--button-font);
 }
 
 img{
@@ -80,7 +89,7 @@ header{
     var(--secondary-color)
   );
 
-  color:white;
+  color:var(--nav-text-color);
   padding:14px 6%;
 
   display:flex;
@@ -128,6 +137,7 @@ header{
 .store-name{
   font-size:20px;
   font-weight:700;
+  font-family:var(--heading-font);
 }
 
 .tagline-small{
@@ -143,7 +153,8 @@ nav{
 }
 
 nav a{
-  color:white;
+  color:var(--nav-text-color);
+  font-family:var(--nav-font);
   font-size:14px;
   font-weight:600;
 }
@@ -156,7 +167,7 @@ nav a:hover{
   display:none;
   background:none;
   border:none;
-  color:white;
+  color:var(--nav-text-color);
   font-size:28px;
   cursor:pointer;
 }
@@ -244,11 +255,12 @@ nav a:hover{
   display:inline-block;
 
   background:var(--accent-color);
-  color:#102a50;
+  color:var(--button-text-color);
 
   padding:13px 25px;
   border-radius:30px;
 
+  font-family:var(--button-font);
   font-weight:700;
   transition:.25s;
 }
@@ -256,6 +268,7 @@ nav a:hover{
 .hero-btn:hover{
   transform:translateY(-3px);
   background:white;
+  color:var(--primary-color);
 }
 
 .hero-btn.secondary{
@@ -300,7 +313,7 @@ section{
 }
 
 .category{
-  background:white;
+  background:var(--card-background-color);
   border-radius:18px;
   padding:28px 15px;
 
@@ -366,12 +379,13 @@ section{
 
   outline:none;
   font-size:15px;
-  background:white;
+  background:var(--card-background-color);
+  color:var(--text-color);
 }
 
 .filter-btn{
   border:none;
-  background:white;
+  background:var(--card-background-color);
 
   padding:11px 18px;
   border-radius:25px;
@@ -380,6 +394,7 @@ section{
   color:var(--heading-color);
 
   font-weight:600;
+  font-family:var(--button-font);
 
   box-shadow:0 3px 10px rgba(0,0,0,.06);
 }
@@ -387,7 +402,7 @@ section{
 .filter-btn.active,
 .filter-btn:hover{
   background:var(--accent-color);
-  color:#102a50;
+  color:var(--button-text-color);
 }
 
 .product-grid{
@@ -397,7 +412,7 @@ section{
 }
 
 .product{
-  background:white;
+  background:var(--card-background-color);
   border-radius:17px;
   overflow:hidden;
 
@@ -439,7 +454,8 @@ section{
 
 .product-info h3{
   color:var(--heading-color);
-  font-family:var(--heading-font);
+  font-family:var(--product-title-font);
+  font-size:var(--product-title-size);
   margin-bottom:6px;
 }
 
@@ -457,7 +473,8 @@ section{
 
 .product-info p{
   color:#667085;
-  font-size:14px;
+  font-family:var(--product-description-font);
+  font-size:var(--product-description-size);
   line-height:1.55;
 }
 
@@ -476,17 +493,18 @@ section{
   border-radius:22px;
 
   font-size:13px;
+  font-family:var(--button-font);
   font-weight:700;
 }
 
 .whatsapp-btn{
   background:var(--enquire-color);
-  color:white;
+  color:var(--button-text-color);
 }
 
 .call-btn{
   background:var(--call-color);
-  color:white;
+  color:var(--button-text-color);
 }
 
 /* WHY */
@@ -498,7 +516,7 @@ section{
 }
 
 .why-card{
-  background:white;
+  background:var(--card-background-color);
   padding:25px;
   border-radius:17px;
 
@@ -526,7 +544,7 @@ section{
 /* ABOUT */
 
 .about{
-  background:white;
+  background:var(--card-background-color);
   text-align:center;
 }
 
@@ -575,11 +593,12 @@ section{
   display:inline-block;
 
   background:var(--primary-color);
-  color:white;
+  color:var(--button-text-color);
 
   padding:14px 28px;
   border-radius:30px;
 
+  font-family:var(--button-font);
   font-weight:700;
 }
 
@@ -620,22 +639,23 @@ section{
 .contact-btn{
   padding:12px 23px;
   border-radius:30px;
+  font-family:var(--button-font);
   font-weight:700;
 }
 
 .contact-btn.whatsapp{
   background:var(--enquire-color);
-  color:white;
+  color:var(--button-text-color);
 }
 
 .contact-btn.call{
   background:var(--call-color);
-  color:white;
+  color:var(--button-text-color);
 }
 
 .contact-btn.maps{
   background:var(--accent-color);
-  color:#102a50;
+  color:var(--button-text-color);
 }
 
 /* FOOTER */
@@ -797,36 +817,24 @@ footer{
 <section id="categories">
 
   <div class="section-title">
-
     <h2>Our Categories</h2>
-
-    <p>
-      Everything you need, all in one place.
-    </p>
-
+    <p>Everything you need, all in one place.</p>
   </div>
 
-  <div
-    class="categories"
-    id="categoriesContainer">
-  </div>
+  <div class="categories" id="categoriesContainer"></div>
 
 </section>
 
 
 <!-- PRODUCTS -->
 
-<section
-  class="products"
-  id="products">
+<section class="products" id="products">
 
   <div class="section-title">
 
     <h2>Our Products</h2>
 
-    <p>
-      Find what you're looking for.
-    </p>
+    <p>Find what you're looking for.</p>
 
   </div>
 
@@ -843,10 +851,7 @@ footer{
 
   </div>
 
-  <div
-    class="product-grid"
-    id="productsContainer">
-  </div>
+  <div class="product-grid" id="productsContainer"></div>
 
 </section>
 
@@ -859,31 +864,21 @@ footer{
 
     <h2>Why Choose Us?</h2>
 
-    <p>
-      Your trusted destination for learning,
-      creativity and more.
-    </p>
+    <p>Your trusted destination for learning, creativity and more.</p>
 
   </div>
 
-  <div
-    class="why-grid"
-    id="whyContainer">
-  </div>
+  <div class="why-grid" id="whyContainer"></div>
 
 </section>
 
 
 <!-- ABOUT -->
 
-<section
-  class="about"
-  id="about">
+<section class="about" id="about">
 
   <div class="section-title">
-
     <h2>About Our Store</h2>
-
   </div>
 
   <div class="about-box">
@@ -908,16 +903,11 @@ footer{
 
     <h2>Our Gallery</h2>
 
-    <p>
-      Take a look at our store and collection.
-    </p>
+    <p>Take a look at our store and collection.</p>
 
   </div>
 
-  <div
-    class="gallery"
-    id="galleryContainer">
-  </div>
+  <div class="gallery" id="galleryContainer"></div>
 
 </section>
 
@@ -940,10 +930,9 @@ footer{
     id="mapButton"
     class="map-btn"
     href="#"
-    target="_blank">
-
+    target="_blank"
+    rel="noopener">
     📍 Get Directions
-
   </a>
 
 </section>
@@ -951,14 +940,10 @@ footer{
 
 <!-- CONTACT -->
 
-<section
-  class="contact"
-  id="contact">
+<section class="contact" id="contact">
 
   <div class="section-title">
-
     <h2>Visit Our Store</h2>
-
   </div>
 
   <div class="contact-info">
@@ -970,18 +955,10 @@ footer{
     </p>
 
     <p style="margin-top:15px;">
-
-      📞
-      <strong id="phone">
-        8053721234
-      </strong>
-
+      📞 <strong id="phone">8053721234</strong>
     </p>
 
-    <p
-      id="timings"
-      style="margin-top:10px;">
-    </p>
+    <p id="timings" style="margin-top:10px;"></p>
 
     <div class="contact-buttons">
 
@@ -989,29 +966,25 @@ footer{
         id="whatsappButton"
         class="contact-btn whatsapp"
         href="#"
-        target="_blank">
-
+        target="_blank"
+        rel="noopener">
         💬 WhatsApp
-
       </a>
 
       <a
         id="callButton"
         class="contact-btn call"
         href="#">
-
         📞 Call Now
-
       </a>
 
       <a
         id="contactMapButton"
         class="contact-btn maps"
         href="#"
-        target="_blank">
-
+        target="_blank"
+        rel="noopener">
         📍 Get Directions
-
       </a>
 
     </div>
@@ -1021,14 +994,10 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
   ©
-  <span id="year">
-    2026
-  </span>
+  <span id="year">2026</span>
 
   <span id="footerShopName">
     Holkaran Dass Hem Raj
@@ -1047,28 +1016,29 @@ footer{
 <script>
 
 let websiteData = {};
-
 let selectedCategory = "All";
+let heroTimer = null;
 
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 document
   .getElementById("menuBtn")
-  .addEventListener(
-    "click",
-    function(){
+  .addEventListener("click", function(){
 
-      document
-        .getElementById("navigation")
-        .classList
-        .toggle("open");
+    document
+      .getElementById("navigation")
+      .classList
+      .toggle("open");
 
-    }
-  );
+  });
 
 
-/* LOAD CONTENT */
+/* =========================
+   LOAD CONTENT
+========================= */
 
 async function loadWebsiteContent(){
 
@@ -1076,16 +1046,11 @@ async function loadWebsiteContent(){
 
     const response =
       await fetch(
-        "/content.yml?cache=" +
-        Date.now()
+        "/content.yml?cache=" + Date.now()
       );
 
     if(!response.ok){
-
-      throw new Error(
-        "content.yml not found"
-      );
-
+      throw new Error("content.yml not found");
     }
 
     const yamlText =
@@ -1110,12 +1075,13 @@ async function loadWebsiteContent(){
 }
 
 
-/* APPLY WEBSITE DATA */
+/* =========================
+   APPLY WEBSITE DATA
+========================= */
 
 function applyWebsiteData(){
 
-  const data =
-    websiteData;
+  const data = websiteData;
 
 
   /* SHOP NAME */
@@ -1123,23 +1089,11 @@ function applyWebsiteData(){
   if(data.shop_name){
 
     document.title =
-      data.shop_name +
-      " | Narnaul";
+      data.shop_name + " | Narnaul";
 
-    document
-      .getElementById("storeName")
-      .textContent =
-      data.shop_name;
-
-    document
-      .getElementById("heroStoreName")
-      .textContent =
-      data.shop_name;
-
-    document
-      .getElementById("footerShopName")
-      .textContent =
-      data.shop_name;
+    setText("storeName", data.shop_name);
+    setText("heroStoreName", data.shop_name);
+    setText("footerShopName", data.shop_name);
 
   }
 
@@ -1148,15 +1102,8 @@ function applyWebsiteData(){
 
   if(data.tagline){
 
-    document
-      .getElementById("smallTagline")
-      .textContent =
-      data.tagline;
-
-    document
-      .getElementById("heroTagline")
-      .textContent =
-      data.tagline;
+    setText("smallTagline", data.tagline);
+    setText("heroTagline", data.tagline);
 
   }
 
@@ -1168,184 +1115,88 @@ function applyWebsiteData(){
     document
       .getElementById("logo")
       .innerHTML =
-
       `<img
         src="${safeUrl(data.logo)}"
         alt="${escapeHTML(
-          data.shop_name ||
-          "Shop Logo"
+          data.shop_name || "Shop Logo"
         )}">`;
 
   }
 
 
-  /* COLORS */
+  /* =========================
+     COLORS
+  ========================= */
 
-  setCSS(
-    "--primary-color",
-    data.primary_color
-  );
+  setCSS("--primary-color", data.primary_color);
+  setCSS("--secondary-color", data.secondary_color);
+  setCSS("--accent-color", data.accent_color);
+  setCSS("--background-color", data.background_color);
+  setCSS("--card-background-color", data.card_background_color);
+  setCSS("--text-color", data.text_color);
+  setCSS("--heading-color", data.heading_color);
+  setCSS("--nav-text-color", data.nav_text_color);
+  setCSS("--button-text-color", data.button_text_color);
 
-  setCSS(
-    "--secondary-color",
-    data.secondary_color
-  );
-
-  setCSS(
-    "--accent-color",
-    data.accent_color
-  );
-
-  setCSS(
-    "--background-color",
-    data.background_color
-  );
-
-  setCSS(
-    "--text-color",
-    data.text_color
-  );
-
-  setCSS(
-    "--heading-color",
-    data.heading_color
-  );
+  setCSS("--call-color", data.call_button_color);
+  setCSS("--enquire-color", data.enquire_button_color);
 
 
-  /* MAIN FONT */
+  /* =========================
+     FONTS
+  ========================= */
 
-  if(data.font_family){
-
-    setCSS(
-      "--font-family",
-      data.font_family +
-      ", Arial, sans-serif"
-    );
-
-  }
-
-
-  /* HEADING FONT */
-
-  if(data.heading_font){
-
-    setCSS(
-      "--heading-font",
-      data.heading_font +
-      ", Arial, sans-serif"
-    );
-
-  }
-
-  /* EXTRA FONT SUPPORT */
-
-  if(data.hero_heading_font){
-
-    setCSS(
-      "--hero-heading-font",
-      data.hero_heading_font +
-      ", Arial, sans-serif"
-    );
-
-  }
-
-  if(data.hero_text_font){
-
-    setCSS(
-      "--hero-text-font",
-      data.hero_text_font +
-      ", Arial, sans-serif"
-    );
-
-  }
-
-  if(data.section_heading_font){
-
-    setCSS(
-      "--section-heading-font",
-      data.section_heading_font +
-      ", Arial, sans-serif"
-    );
-
-  }
+  setFont("--font-family", data.font_family);
+  setFont("--heading-font", data.heading_font);
+  setFont("--hero-heading-font", data.hero_heading_font);
+  setFont("--hero-text-font", data.hero_text_font);
+  setFont("--section-heading-font", data.section_heading_font);
+  setFont("--nav-font", data.nav_font);
+  setFont("--button-font", data.button_font);
+  setFont("--product-title-font", data.product_title_font);
+  setFont("--product-description-font", data.product_description_font);
 
 
-  /* FONT SIZE */
-
-  const headingSizes = {
-
-    "Small":"28px",
-    "Medium":"32px",
-    "Large":"38px",
-    "Extra Large":"46px"
-
-  };
-
-
-  const bodySizes = {
-
-    "Small":"14px",
-    "Medium":"16px",
-    "Large":"18px"
-
-  };
-
+  /* =========================
+     FONT SIZES
+  ========================= */
 
   if(data.heading_size){
-
     setCSS(
       "--heading-size",
-      headingSizes[
-        data.heading_size
-      ] || "34px"
+      String(data.heading_size) + "px"
     );
-
   }
-
 
   if(data.body_size){
-
     setCSS(
       "--body-size",
-      bodySizes[
-        data.body_size
-      ] || "16px"
+      String(data.body_size) + "px"
     );
-
   }
 
-
-  /* BUTTON COLORS */
-
-  if(data.call_button_color){
-
+  if(data.product_title_size){
     setCSS(
-      "--call-color",
-      data.call_button_color
+      "--product-title-size",
+      String(data.product_title_size) + "px"
     );
-
   }
 
-
-  if(data.enquire_button_color){
-
+  if(data.product_description_size){
     setCSS(
-      "--enquire-color",
-      data.enquire_button_color
+      "--product-description-size",
+      String(data.product_description_size) + "px"
     );
-
   }
 
 
-  /* SEO */
+  /* =========================
+     SEO
+  ========================= */
 
   if(data.seo_title){
-
-    document.title =
-      data.seo_title;
-
+    document.title = data.seo_title;
   }
-
 
   if(data.seo_description){
 
@@ -1366,28 +1217,22 @@ function applyWebsiteData(){
   }
 
 
-  /* ABOUT */
+  /* =========================
+     ABOUT
+  ========================= */
 
   if(data.about){
-
-    document
-      .getElementById("aboutText")
-      .textContent =
-      data.about;
-
+    setText("aboutText", data.about);
   }
 
-
-  toggleSection(
-    "about",
-    data.show_about
-  );
+  toggleSection("about", data.show_about);
 
 
-  /* CATEGORIES */
+  /* =========================
+     CATEGORIES
+  ========================= */
 
   renderCategories();
-
 
   toggleSection(
     "categories",
@@ -1395,10 +1240,11 @@ function applyWebsiteData(){
   );
 
 
-  /* PRODUCTS */
+  /* =========================
+     PRODUCTS
+  ========================= */
 
   renderProducts();
-
 
   toggleSection(
     "products",
@@ -1406,10 +1252,11 @@ function applyWebsiteData(){
   );
 
 
-  /* HERO */
+  /* =========================
+     HERO
+  ========================= */
 
   renderHeroSlider();
-
 
   toggleSection(
     "home",
@@ -1417,10 +1264,11 @@ function applyWebsiteData(){
   );
 
 
-  /* GALLERY */
+  /* =========================
+     GALLERY
+  ========================= */
 
   renderGallery();
-
 
   toggleSection(
     "gallery",
@@ -1428,10 +1276,11 @@ function applyWebsiteData(){
   );
 
 
-  /* WHY */
+  /* =========================
+     WHY CHOOSE US
+  ========================= */
 
   renderWhyChooseUs();
-
 
   toggleSection(
     "whySection",
@@ -1439,20 +1288,23 @@ function applyWebsiteData(){
   );
 
 
-  /* CONTACT */
+  /* =========================
+     CONTACT
+  ========================= */
 
   applyContactData();
 
 
-  /* FOOTER */
+  /* =========================
+     FOOTER
+  ========================= */
 
   if(data.footer_text){
 
-    document
-      .getElementById("footerText")
-      .textContent =
-      " " +
-      data.footer_text;
+    setText(
+      "footerText",
+      " " + data.footer_text
+    );
 
   }
 
@@ -1465,12 +1317,13 @@ function applyWebsiteData(){
 }
 
 
-/* CONTACT DATA */
+/* =========================
+   CONTACT
+========================= */
 
 function applyContactData(){
 
-  const data =
-    websiteData;
+  const data = websiteData;
 
 
   /* ADDRESS */
@@ -1482,15 +1335,12 @@ function applyContactData(){
       .innerHTML =
       "📍 " +
       escapeHTML(data.address)
-        .replace(
-          /\n/g,
-          "<br>"
-        );
+        .replace(/\n/g, "<br>");
 
-    document
-      .getElementById("mapAddress")
-      .textContent =
-      data.address;
+    setText(
+      "mapAddress",
+      data.address
+    );
 
   }
 
@@ -1498,23 +1348,19 @@ function applyContactData(){
   /* PHONE */
 
   const phone =
-    cleanPhone(
-      data.phone
-    );
-
+    cleanPhone(data.phone);
 
   if(phone){
 
-    document
-      .getElementById("phone")
-      .textContent =
-      data.phone;
+    setText(
+      "phone",
+      data.phone
+    );
 
     document
       .getElementById("callButton")
       .href =
-      "tel:+" +
-      phone;
+      "tel:+" + phone;
 
   }
 
@@ -1522,18 +1368,14 @@ function applyContactData(){
   /* WHATSAPP */
 
   const whatsapp =
-    cleanPhone(
-      data.whatsapp
-    );
-
+    cleanPhone(data.whatsapp);
 
   if(whatsapp){
 
     document
       .getElementById("whatsappButton")
       .href =
-      "https://wa.me/" +
-      whatsapp;
+      "https://wa.me/" + whatsapp;
 
   }
 
@@ -1543,19 +1385,15 @@ function applyContactData(){
   if(data.maps_link){
 
     const map =
-      safeUrl(
-        data.maps_link
-      );
+      safeUrl(data.maps_link);
 
     document
       .getElementById("mapButton")
-      .href =
-      map;
+      .href = map;
 
     document
       .getElementById("contactMapButton")
-      .href =
-      map;
+      .href = map;
 
   }
 
@@ -1569,10 +1407,7 @@ function applyContactData(){
       .innerHTML =
       "🕐 " +
       escapeHTML(data.timings)
-        .replace(
-          /\n/g,
-          "<br>"
-        );
+        .replace(/\n/g, "<br>");
 
   }
 
@@ -1580,25 +1415,20 @@ function applyContactData(){
   /* CALL BUTTON */
 
   const callButton =
-    document
-      .getElementById(
-        "callButton"
-      );
-
+    document.getElementById(
+      "callButton"
+    );
 
   if(data.show_call_button === false){
 
-    callButton.style.display =
-      "none";
+    callButton.style.display = "none";
 
   }
   else{
 
-    callButton.style.display =
-      "inline-block";
+    callButton.style.display = "inline-block";
 
   }
-
 
   if(data.call_button_text){
 
@@ -1612,27 +1442,20 @@ function applyContactData(){
   /* ENQUIRE BUTTON */
 
   const whatsappButton =
-    document
-      .getElementById(
-        "whatsappButton"
-      );
+    document.getElementById(
+      "whatsappButton"
+    );
 
+  if(data.show_enquire_button === false){
 
-  if(
-    data.show_enquire_button === false
-  ){
-
-    whatsappButton.style.display =
-      "none";
+    whatsappButton.style.display = "none";
 
   }
   else{
 
-    whatsappButton.style.display =
-      "inline-block";
+    whatsappButton.style.display = "inline-block";
 
   }
-
 
   if(data.enquire_button_text){
 
@@ -1645,19 +1468,18 @@ function applyContactData(){
 }
 
 
-/* CATEGORIES */
+/* =========================
+   CATEGORIES
+========================= */
 
 function renderCategories(){
 
   const container =
-    document
-      .getElementById(
-        "categoriesContainer"
-      );
-
+    document.getElementById(
+      "categoriesContainer"
+    );
 
   container.innerHTML = "";
-
 
   const categories =
     websiteData.categories || [];
@@ -1667,20 +1489,13 @@ function renderCategories(){
     function(category){
 
       if(category.show === false){
-
         return;
-
       }
 
-
       const card =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
-
-      card.className =
-        "category";
+      card.className = "category";
 
 
       if(category.color){
@@ -1695,30 +1510,23 @@ function renderCategories(){
 
       let visual = "";
 
-
       if(category.image){
 
         visual =
-
           `<img
             class="category-image"
-            src="${safeUrl(
-              category.image
-            )}"
+            src="${safeUrl(category.image)}"
             alt="${escapeHTML(
-              category.name ||
-              "Category"
+              category.name || "Category"
             )}">`;
 
       }
       else{
 
         visual =
-
           `<div class="icon">
             ${escapeHTML(
-              category.icon ||
-              "📌"
+              category.icon || "📌"
             )}
           </div>`;
 
@@ -1726,7 +1534,6 @@ function renderCategories(){
 
 
       card.innerHTML =
-
         `${visual}
 
         <h3>
@@ -1741,12 +1548,10 @@ function renderCategories(){
         function(){
 
           selectedCategory =
-            category.name;
+            category.name || "All";
 
           document
-            .getElementById(
-              "products"
-            )
+            .getElementById("products")
             .scrollIntoView({
               behavior:"smooth"
             });
@@ -1757,9 +1562,7 @@ function renderCategories(){
       );
 
 
-      container.appendChild(
-        card
-      );
+      container.appendChild(card);
 
     }
   );
@@ -1768,7 +1571,6 @@ function renderCategories(){
   if(!categories.length){
 
     container.innerHTML =
-
       `<div style="
         grid-column:1/-1;
         text-align:center;
@@ -1783,69 +1585,64 @@ function renderCategories(){
 }
 
 
-/* FILTER BUTTONS */
+/* =========================
+   FILTER BUTTONS
+========================= */
 
 function renderFilterButtons(){
 
   const container =
-    document
-      .getElementById(
-        "filterButtons"
-      );
-
+    document.getElementById(
+      "filterButtons"
+    );
 
   container.innerHTML = "";
-
 
   const products =
     websiteData.products || [];
 
 
   const categories = [
-
     "All",
-
     ...new Set(
-
       products
-
         .filter(
-          p => p.show !== false
+          p => p && p.show !== false
         )
-
         .map(
           p => p.category
         )
-
         .filter(Boolean)
-
     )
-
   ];
+
+
+  if(
+    !categories.includes(
+      selectedCategory
+    )
+  ){
+
+    selectedCategory = "All";
+
+  }
 
 
   categories.forEach(
     function(category){
 
       const button =
-        document.createElement(
-          "button"
-        );
-
+        document.createElement("button");
 
       button.className =
         "filter-btn" +
-
         (
           selectedCategory === category
           ? " active"
           : ""
         );
 
-
-      button.textContent =
-        category;
-
+      button.textContent = category;
 
       button.addEventListener(
         "click",
@@ -1859,10 +1656,7 @@ function renderFilterButtons(){
         }
       );
 
-
-      container.appendChild(
-        button
-      );
+      container.appendChild(button);
 
     }
   );
@@ -1870,28 +1664,27 @@ function renderFilterButtons(){
 }
 
 
-/* PRODUCTS */
+/* =========================
+   PRODUCTS
+========================= */
 
 function renderProducts(){
 
   const container =
-    document
-      .getElementById(
-        "productsContainer"
-      );
-
+    document.getElementById(
+      "productsContainer"
+    );
 
   container.innerHTML = "";
-
 
   renderFilterButtons();
 
 
   const products =
     (websiteData.products || [])
-
       .filter(
         product =>
+          product &&
           product.show !== false
       );
 
@@ -1919,16 +1712,15 @@ function renderProducts(){
 
 
         const matchesSearch =
-
           !search ||
 
-          (
+          String(
             product.name || ""
           )
             .toLowerCase()
             .includes(search) ||
 
-          (
+          String(
             product.description || ""
           )
             .toLowerCase()
@@ -1947,7 +1739,6 @@ function renderProducts(){
   if(!filtered.length){
 
     container.innerHTML =
-
       `<div style="
         grid-column:1/-1;
         text-align:center;
@@ -1966,25 +1757,18 @@ function renderProducts(){
     function(product){
 
       const card =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
-
-      card.className =
-        "product";
+      card.className = "product";
 
 
       const image =
         product.image
 
         ? `<img
-            src="${safeUrl(
-              product.image
-            )}"
+            src="${safeUrl(product.image)}"
             alt="${escapeHTML(
-              product.name ||
-              "Product"
+              product.name || "Product"
             )}">`
 
         : `<span>📦</span>`;
@@ -2010,15 +1794,15 @@ function renderProducts(){
 
 
       if(
-        websiteData
-          .show_enquire_button !== false
+        websiteData.show_enquire_button !== false &&
+        whatsapp
       ){
 
         actions +=
-
           `<a
             class="small-btn whatsapp-btn"
             target="_blank"
+            rel="noopener"
             href="https://wa.me/${whatsapp}?text=${encodeURIComponent(
               "Hello, I would like to enquire about " +
               (
@@ -2029,8 +1813,7 @@ function renderProducts(){
 
             💬 ${
               escapeHTML(
-                websiteData
-                  .enquire_button_text ||
+                websiteData.enquire_button_text ||
                 "Enquire"
               )
             }
@@ -2041,8 +1824,7 @@ function renderProducts(){
 
 
       if(
-        websiteData
-          .show_call_button !== false
+        websiteData.show_call_button !== false
       ){
 
         const callNumber =
@@ -2051,28 +1833,28 @@ function renderProducts(){
             websiteData.whatsapp
           );
 
+        if(callNumber){
 
-        actions +=
+          actions +=
+            `<a
+              class="small-btn call-btn"
+              href="tel:+${callNumber}">
 
-          `<a
-            class="small-btn call-btn"
-            href="tel:+${callNumber}">
+              📞 ${
+                escapeHTML(
+                  websiteData.call_button_text ||
+                  "Call"
+                )
+              }
 
-            📞 ${
-              escapeHTML(
-                websiteData
-                  .call_button_text ||
-                "Call"
-              )
-            }
+            </a>`;
 
-          </a>`;
+        }
 
       }
 
 
       card.innerHTML =
-
         `<div class="product-img">
           ${image}
         </div>
@@ -2082,8 +1864,7 @@ function renderProducts(){
           ${
             product.category
 
-            ? `<span
-                class="product-category">
+            ? `<span class="product-category">
                 ${escapeHTML(
                   product.category
                 )}
@@ -2117,9 +1898,7 @@ function renderProducts(){
         </div>`;
 
 
-      container.appendChild(
-        card
-      );
+      container.appendChild(card);
 
     }
   );
@@ -2127,34 +1906,40 @@ function renderProducts(){
 }
 
 
-/* SEARCH */
+/* =========================
+   SEARCH
+========================= */
 
 document
-  .getElementById(
-    "productSearch"
-  )
+  .getElementById("productSearch")
   .addEventListener(
     "input",
     function(){
-
       renderProducts();
-
     }
   );
 
 
-/* HERO SLIDER */
+/* =========================
+   HERO SLIDER
+========================= */
 
 function renderHeroSlider(){
 
   const container =
-    document
-      .getElementById(
-        "heroSlider"
-      );
-
+    document.getElementById(
+      "heroSlider"
+    );
 
   container.innerHTML = "";
+
+
+  if(heroTimer){
+
+    clearInterval(heroTimer);
+    heroTimer = null;
+
+  }
 
 
   let images =
@@ -2163,13 +1948,11 @@ function renderHeroSlider(){
 
   images =
     images
-
       .filter(
         item =>
           item &&
           item.image
       )
-
       .map(
         item =>
           item.image
@@ -2195,28 +1978,20 @@ function renderHeroSlider(){
     function(image,index){
 
       const slide =
-        document.createElement(
-          "div"
-        );
-
+        document.createElement("div");
 
       slide.className =
         "hero-slide" +
-
         (
           index === 0
           ? " active"
           : ""
         );
 
-
       slide.style.backgroundImage =
         `url("${safeUrl(image)}")`;
 
-
-      container.appendChild(
-        slide
-      );
+      container.appendChild(slide);
 
     }
   );
@@ -2229,51 +2004,48 @@ function renderHeroSlider(){
 
 
   if(slides.length <= 1){
-
     return;
-
   }
 
 
   let current = 0;
 
 
-  setInterval(
-    function(){
+  heroTimer =
+    setInterval(
+      function(){
 
-      slides[current]
-        .classList
-        .remove("active");
+        slides[current]
+          .classList
+          .remove("active");
 
+        current =
+          (
+            current + 1
+          ) %
+          slides.length;
 
-      current =
-        (
-          current + 1
-        ) %
-        slides.length;
+        slides[current]
+          .classList
+          .add("active");
 
-
-      slides[current]
-        .classList
-        .add("active");
-
-    },
-    5000
-  );
+      },
+      5000
+    );
 
 }
 
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
 function renderGallery(){
 
   const container =
-    document
-      .getElementById(
-        "galleryContainer"
-      );
-
+    document.getElementById(
+      "galleryContainer"
+    );
 
   container.innerHTML = "";
 
@@ -2285,7 +2057,6 @@ function renderGallery(){
   if(!gallery.length){
 
     container.innerHTML =
-
       `<div style="
         grid-column:1/-1;
         text-align:center;
@@ -2303,29 +2074,21 @@ function renderGallery(){
   gallery.forEach(
     function(item){
 
-      if(!item.image){
-
+      if(!item || !item.image){
         return;
-
       }
 
 
       const div =
-        document.createElement(
-          "div"
-        );
-
+        document.createElement("div");
 
       div.className =
         "gallery-item";
 
 
       div.innerHTML =
-
         `<img
-          src="${safeUrl(
-            item.image
-          )}"
+          src="${safeUrl(item.image)}"
           alt="${escapeHTML(
             item.caption ||
             websiteData.shop_name ||
@@ -2333,9 +2096,7 @@ function renderGallery(){
           )}">`;
 
 
-      container.appendChild(
-        div
-      );
+      container.appendChild(div);
 
     }
   );
@@ -2343,16 +2104,16 @@ function renderGallery(){
 }
 
 
-/* WHY CHOOSE US */
+/* =========================
+   WHY CHOOSE US
+========================= */
 
 function renderWhyChooseUs(){
 
   const container =
-    document
-      .getElementById(
-        "whyContainer"
-      );
-
+    document.getElementById(
+      "whyContainer"
+    );
 
   container.innerHTML = "";
 
@@ -2389,41 +2150,35 @@ function renderWhyChooseUs(){
     ];
 
 
-    defaults.forEach(
-      addWhyCard
-    );
+    defaults.forEach(addWhyCard);
 
   }
   else{
 
-    items.forEach(
-      addWhyCard
-    );
+    items.forEach(addWhyCard);
 
   }
 
 
   function addWhyCard(item){
 
-    const card =
-      document.createElement(
-        "div"
-      );
+    if(!item){
+      return;
+    }
 
+    const card =
+      document.createElement("div");
 
     card.className =
       "why-card";
 
 
     card.innerHTML =
-
       `${
         item.icon
 
         ? `<div class="why-icon">
-            ${escapeHTML(
-              item.icon
-            )}
+            ${escapeHTML(item.icon)}
           </div>`
 
         : ""
@@ -2442,16 +2197,16 @@ function renderWhyChooseUs(){
       </p>`;
 
 
-    container.appendChild(
-      card
-    );
+    container.appendChild(card);
 
   }
 
 }
 
 
-/* SECTION SHOW / HIDE */
+/* =========================
+   SHOW / HIDE SECTIONS
+========================= */
 
 function toggleSection(
   id,
@@ -2459,15 +2214,10 @@ function toggleSection(
 ){
 
   const element =
-    document.getElementById(
-      id
-    );
-
+    document.getElementById(id);
 
   if(!element){
-
     return;
-
   }
 
 
@@ -2487,14 +2237,20 @@ function toggleSection(
 }
 
 
-/* CSS HELPER */
+/* =========================
+   CSS HELPERS
+========================= */
 
 function setCSS(
   property,
   value
 ){
 
-  if(value){
+  if(
+    value !== undefined &&
+    value !== null &&
+    value !== ""
+  ){
 
     document.documentElement
       .style
@@ -2508,30 +2264,69 @@ function setCSS(
 }
 
 
-/* PHONE */
+function setFont(
+  property,
+  value
+){
+
+  if(
+    value !== undefined &&
+    value !== null &&
+    value !== ""
+  ){
+
+    setCSS(
+      property,
+      `"${String(value).replace(/"/g,"")}", Arial, sans-serif`
+    );
+
+  }
+
+}
+
+
+/* =========================
+   TEXT HELPER
+========================= */
+
+function setText(
+  id,
+  value
+){
+
+  const element =
+    document.getElementById(id);
+
+  if(element){
+
+    element.textContent =
+      value;
+
+  }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
 
 function cleanPhone(value){
 
   if(!value){
-
     return "";
-
   }
 
 
   let phone =
     String(value)
-      .replace(
-        /\D/g,
-        ""
-      );
+      .replace(/\D/g,"");
 
 
   if(phone.length === 10){
 
     phone =
-      "91" +
-      phone;
+      "91" + phone;
 
   }
 
@@ -2541,41 +2336,30 @@ function cleanPhone(value){
 }
 
 
-/* HTML ESCAPE */
+/* =========================
+   HTML ESCAPE
+========================= */
 
 function escapeHTML(value){
 
   return String(value)
 
-    .replace(
-      /&/g,
-      "&amp;"
-    )
+    .replace(/&/g,"&amp;")
 
-    .replace(
-      /</g,
-      "&lt;"
-    )
+    .replace(/</g,"&lt;")
 
-    .replace(
-      />/g,
-      "&gt;"
-    )
+    .replace(/>/g,"&gt;")
 
-    .replace(
-      /"/g,
-      "&quot;"
-    )
+    .replace(/"/g,"&quot;")
 
-    .replace(
-      /'/g,
-      "&#039;"
-    );
+    .replace(/'/g,"&#039;");
 
 }
 
 
-/* URL SAFETY */
+/* =========================
+   URL SAFETY
+========================= */
 
 function safeUrl(value){
 
@@ -2584,13 +2368,9 @@ function safeUrl(value){
 
 
   if(
-
     url.startsWith("/") ||
-
     url.startsWith("https://") ||
-
     url.startsWith("http://")
-
   ){
 
     return url;
@@ -2603,7 +2383,9 @@ function safeUrl(value){
 }
 
 
-/* START */
+/* =========================
+   START
+========================= */
 
 loadWebsiteContent();
 
@@ -2611,3 +2393,6 @@ loadWebsiteContent();
 
 </body>
 </html>
+
+
+
