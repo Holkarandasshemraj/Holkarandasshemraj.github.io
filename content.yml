@@ -1,22 +1,22 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: Learn. Create. Play. Celebrate
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
-secondary_color: "#0e0994"
-accent_color: "#f5a623"
+secondary_color: "#71de33"
+accent_color: "#f1c551"
 background_color: "#fffdf7"
 text_color: "#17233c"
 heading_color: "#123b73"
 nav_text_color: "#ffffff"
 card_background_color: "#ffffff"
-call_button_color: "#5ed86f"
+call_button_color: "#46b656"
 button_text_color: "#ffffff"
 font_family: Poppins
-heading_font: Montserrat
+heading_font: Nunito
 product_description_font: Poppins
 maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
 call_color: "#70dc73"
-primary_color: "#51212d"
-enquire_button_color: "#a784d4"
+primary_color: "#e20d44"
+enquire_button_color: "#61418b"
 hero_heading_font: Poppins
 hero_text_font: Poppins
 section_heading_font: Poppins
@@ -50,9 +50,9 @@ phone: "8053721234"
 whatsapp: "918053721234"
 timings: ""
 show_call_button: true
-call_button_text: ☎️
+call_button_text: " "
 show_enquire_button: true
-enquire_button_text: 🔎
+enquire_button_text: " "
 show_categories: true
 categories:
   - name: Stationery
@@ -133,7 +133,7 @@ products:
 nav_font: Nunito
 show_gallery: false
 gallery: []
-show_why_choose_us: false
+show_why_choose_us: true
 why_choose_us:
   - title: Wide Range
     description: >+
