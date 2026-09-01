@@ -17,10 +17,6 @@ collections:
 
         fields:
 
-          # =========================
-          # BASIC SHOP DETAILS
-          # =========================
-
           - label: "Shop Name"
             name: "shop_name"
             widget: "string"
@@ -34,9 +30,7 @@ collections:
             widget: "image"
             required: false
 
-          # =========================
           # COLORS
-          # =========================
 
           - label: "Primary Color"
             name: "primary_color"
@@ -78,12 +72,14 @@ collections:
             widget: "color"
             default: "#FFFFFF"
 
+          # CALL / ENQUIRE COLORS
+
           - label: "Call Button Color"
             name: "call_button_color"
             widget: "color"
             default: "#123B73"
 
-          - label: "Enquire / WhatsApp Button Color"
+          - label: "Enquire Button Color"
             name: "enquire_button_color"
             widget: "color"
             default: "#25D366"
@@ -93,9 +89,7 @@ collections:
             widget: "color"
             default: "#FFFFFF"
 
-          # =========================
           # FONTS
-          # =========================
 
           - label: "Body Font"
             name: "font_family"
@@ -160,9 +154,7 @@ collections:
               - "Playfair Display"
             default: "Poppins"
 
-          # =========================
           # FONT SIZES
-          # =========================
 
           - label: "Main Heading Size"
             name: "heading_size"
@@ -182,149 +174,6 @@ collections:
               - "Medium"
               - "Large"
             default: "Medium"
-
-          # =========================
-          # HERO
-          # =========================
-
-          - label: "Show Hero Section"
-            name: "show_hero"
-            widget: "boolean"
-            default: true
-
-          - label: "Hero Slider Images"
-            name: "hero_images"
-            widget: "list"
-            required: false
-            fields:
-              - label: "Image"
-                name: "image"
-                widget: "image"
-
-          # =========================
-          # ABOUT
-          # =========================
-
-          - label: "Show About Section"
-            name: "show_about"
-            widget: "boolean"
-            default: true
-
-          - label: "About Us"
-            name: "about"
-            widget: "text"
-
-          # =========================
-          # CONTACT
-          # =========================
-
-          - label: "Address"
-            name: "address"
-            widget: "text"
-
-          - label: "Phone"
-            name: "phone"
-            widget: "string"
-
-          - label: "WhatsApp Number"
-            name: "whatsapp"
-            widget: "string"
-
-          - label: "Google Maps Link"
-            name: "maps_link"
-            widget: "string"
-            required: false
-
-          - label: "Shop Timings"
-            name: "timings"
-            widget: "text"
-            required: false
-
-          # =========================
-          # CALL BUTTON
-          # =========================
-
-          - label: "Show Call Button"
-            name: "show_call_button"
-            widget: "boolean"
-            default: true
-
-          - label: "Call Button Text"
-            name: "call_button_text"
-            widget: "string"
-            default: "Call Now"
-
-          - label: "Call Button Color"
-            name: "call_button_color"
-            widget: "color"
-            default: "#123B73"
-
-          # =========================
-          # ENQUIRE BUTTON
-          # =========================
-
-          - label: "Show Enquire Button"
-            name: "show_enquire_button"
-            widget: "boolean"
-            default: true
-
-          - label: "Enquire Button Text"
-            name: "enquire_button_text"
-            widget: "string"
-            default: "Enquire"
-
-          - label: "Enquire Button Color"
-            name: "enquire_button_color"
-            widget: "color"
-            default: "#25D366"
-
-          # =========================
-          # CATEGORIES
-          # =========================
-
-          - label: "Show Categories Section"
-            name: "show_categories"
-            widget: "boolean"
-            default: true
-
-          - label: "Categories"
-            name: "categories"
-            widget: "list"
-            required: false
-            fields:
-
-              - label: "Category Name"
-                name: "name"
-                widget: "string"
-
-              - label: "Icon"
-                name: "icon"
-                widget: "string"
-                required: false
-
-              - label: "Category Image"
-                name: "image"
-                widget: "image"
-                required: false
-
-              - label: "Category Color"
-                name: "color"
-                widget: "color"
-                required: false
-
-              - label: "Show Category"
-                name: "show"
-                widget: "boolean"
-                default: true
-
-          # =========================
-          # PRODUCTS
-          # =========================
-
-          - label: "Show Products Section"
-            name: "show_products"
-            widget: "boolean"
-            default: true
 
           - label: "Product Title Font"
             name: "product_title_font"
@@ -367,6 +216,125 @@ collections:
             min: 11
             max: 22
 
+          # HERO
+
+          - label: "Show Hero Section"
+            name: "show_hero"
+            widget: "boolean"
+            default: true
+
+          - label: "Hero Slider Images"
+            name: "hero_images"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+
+          # ABOUT
+
+          - label: "Show About Section"
+            name: "show_about"
+            widget: "boolean"
+            default: true
+
+          - label: "About Us"
+            name: "about"
+            widget: "text"
+
+          # CONTACT
+
+          - label: "Address"
+            name: "address"
+            widget: "text"
+
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+
+          - label: "WhatsApp Number"
+            name: "whatsapp"
+            widget: "string"
+
+          - label: "Google Maps Link"
+            name: "maps_link"
+            widget: "string"
+            required: false
+
+          - label: "Shop Timings"
+            name: "timings"
+            widget: "text"
+            required: false
+
+          # CALL BUTTON
+
+          - label: "Show Call Button"
+            name: "show_call_button"
+            widget: "boolean"
+            default: true
+
+          - label: "Call Button Text"
+            name: "call_button_text"
+            widget: "string"
+            default: "Call Now"
+
+          # ENQUIRE BUTTON
+
+          - label: "Show Enquire Button"
+            name: "show_enquire_button"
+            widget: "boolean"
+            default: true
+
+          - label: "Enquire Button Text"
+            name: "enquire_button_text"
+            widget: "string"
+            default: "Enquire"
+
+          # CATEGORIES
+
+          - label: "Show Categories Section"
+            name: "show_categories"
+            widget: "boolean"
+            default: true
+
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            required: false
+            fields:
+
+              - label: "Category Name"
+                name: "name"
+                widget: "string"
+
+              - label: "Icon"
+                name: "icon"
+                widget: "string"
+                required: false
+
+              - label: "Category Image"
+                name: "image"
+                widget: "image"
+                required: false
+
+              - label: "Category Color"
+                name: "color"
+                widget: "color"
+                required: false
+
+              - label: "Show Category"
+                name: "show"
+                widget: "boolean"
+                default: true
+
+          # PRODUCTS
+
+          - label: "Show Products Section"
+            name: "show_products"
+            widget: "boolean"
+            default: true
+
           - label: "Products"
             name: "products"
             widget: "list"
@@ -395,9 +363,7 @@ collections:
                 widget: "boolean"
                 default: true
 
-          # =========================
           # GALLERY
-          # =========================
 
           - label: "Show Gallery Section"
             name: "show_gallery"
@@ -419,9 +385,7 @@ collections:
                 widget: "string"
                 required: false
 
-          # =========================
           # WHY CHOOSE US
-          # =========================
 
           - label: "Show Why Choose Us Section"
             name: "show_why_choose_us"
@@ -447,9 +411,7 @@ collections:
                 name: "description"
                 widget: "text"
 
-          # =========================
           # SEO
-          # =========================
 
           - label: "SEO Title"
             name: "seo_title"
@@ -461,9 +423,7 @@ collections:
             widget: "text"
             required: false
 
-          # =========================
           # FOOTER
-          # =========================
 
           - label: "Footer Text"
             name: "footer_text"
