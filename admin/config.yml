@@ -11,7 +11,6 @@ collections:
   - name: "site"
     label: "Website"
     files:
-
       - name: "content"
         label: "Website Content"
         file: "content.yml"
@@ -19,7 +18,7 @@ collections:
         fields:
 
           # =========================
-          # BASIC WEBSITE
+          # BASIC SHOP DETAILS
           # =========================
 
           - label: "Shop Name"
@@ -34,42 +33,6 @@ collections:
             name: "logo"
             widget: "image"
             required: false
-
-
-          # =========================
-          # SECTION VISIBILITY
-          # =========================
-
-          - label: "Show Hero Section"
-            name: "show_hero"
-            widget: "boolean"
-            default: true
-
-          - label: "Show Categories"
-            name: "show_categories"
-            widget: "boolean"
-            default: true
-
-          - label: "Show Products"
-            name: "show_products"
-            widget: "boolean"
-            default: true
-
-          - label: "Show About Section"
-            name: "show_about"
-            widget: "boolean"
-            default: true
-
-          - label: "Show Gallery"
-            name: "show_gallery"
-            widget: "boolean"
-            default: true
-
-          - label: "Show Why Choose Us"
-            name: "show_why_choose_us"
-            widget: "boolean"
-            default: true
-
 
           # =========================
           # COLORS
@@ -105,18 +68,13 @@ collections:
             widget: "color"
             default: "#123B73"
 
-          - label: "Card Background Color"
-            name: "card_background_color"
-            widget: "color"
-            default: "#FFFFFF"
-
           - label: "Navigation Text Color"
             name: "nav_text_color"
             widget: "color"
             default: "#FFFFFF"
 
-          - label: "Button Text Color"
-            name: "button_text_color"
+          - label: "Card Background Color"
+            name: "card_background_color"
             widget: "color"
             default: "#FFFFFF"
 
@@ -125,11 +83,15 @@ collections:
             widget: "color"
             default: "#123B73"
 
-          - label: "Enquire Button Color"
+          - label: "Enquire / WhatsApp Button Color"
             name: "enquire_button_color"
             widget: "color"
             default: "#25D366"
 
+          - label: "Button Text Color"
+            name: "button_text_color"
+            widget: "color"
+            default: "#FFFFFF"
 
           # =========================
           # FONTS
@@ -198,131 +160,59 @@ collections:
               - "Playfair Display"
             default: "Poppins"
 
-          - label: "Navigation Font"
-            name: "nav_font"
-            widget: "select"
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
-
-          - label: "Button Font"
-            name: "button_font"
-            widget: "select"
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
-
-          - label: "Product Title Font"
-            name: "product_title_font"
-            widget: "select"
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
-
-          - label: "Product Description Font"
-            name: "product_description_font"
-            widget: "select"
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
-
-
           # =========================
           # FONT SIZES
           # =========================
 
           - label: "Main Heading Size"
             name: "heading_size"
-            widget: "number"
-            value_type: "int"
-            default: 34
-            min: 20
-            max: 60
+            widget: "select"
+            options:
+              - "Small"
+              - "Medium"
+              - "Large"
+              - "Extra Large"
+            default: "Medium"
 
           - label: "Body Text Size"
             name: "body_size"
-            widget: "number"
-            value_type: "int"
-            default: 16
-            min: 12
-            max: 24
-
-          - label: "Product Title Size"
-            name: "product_title_size"
-            widget: "number"
-            value_type: "int"
-            default: 18
-            min: 14
-            max: 30
-
-          - label: "Product Description Size"
-            name: "product_description_size"
-            widget: "number"
-            value_type: "int"
-            default: 14
-            min: 11
-            max: 22
-
+            widget: "select"
+            options:
+              - "Small"
+              - "Medium"
+              - "Large"
+            default: "Medium"
 
           # =========================
-          # BUTTON TEXT
+          # HERO
           # =========================
 
-          - label: "Call Button Text"
-            name: "call_button_text"
-            widget: "string"
-            default: "Call Now"
-
-          - label: "Enquire Button Text"
-            name: "enquire_button_text"
-            widget: "string"
-            default: "Enquire"
-
-
-          # =========================
-          # HERO SLIDER
-          # =========================
+          - label: "Show Hero Section"
+            name: "show_hero"
+            widget: "boolean"
+            default: true
 
           - label: "Hero Slider Images"
             name: "hero_images"
             widget: "list"
             required: false
             fields:
-
               - label: "Image"
                 name: "image"
                 widget: "image"
-
 
           # =========================
           # ABOUT
           # =========================
 
+          - label: "Show About Section"
+            name: "show_about"
+            widget: "boolean"
+            default: true
+
           - label: "About Us"
             name: "about"
             widget: "text"
-
 
           # =========================
           # CONTACT
@@ -350,9 +240,8 @@ collections:
             widget: "text"
             required: false
 
-
           # =========================
-          # CONTACT BUTTON VISIBILITY
+          # CALL BUTTON
           # =========================
 
           - label: "Show Call Button"
@@ -360,15 +249,43 @@ collections:
             widget: "boolean"
             default: true
 
+          - label: "Call Button Text"
+            name: "call_button_text"
+            widget: "string"
+            default: "Call Now"
+
+          - label: "Call Button Color"
+            name: "call_button_color"
+            widget: "color"
+            default: "#123B73"
+
+          # =========================
+          # ENQUIRE BUTTON
+          # =========================
+
           - label: "Show Enquire Button"
             name: "show_enquire_button"
             widget: "boolean"
             default: true
 
+          - label: "Enquire Button Text"
+            name: "enquire_button_text"
+            widget: "string"
+            default: "Enquire"
+
+          - label: "Enquire Button Color"
+            name: "enquire_button_color"
+            widget: "color"
+            default: "#25D366"
 
           # =========================
           # CATEGORIES
           # =========================
+
+          - label: "Show Categories Section"
+            name: "show_categories"
+            widget: "boolean"
+            default: true
 
           - label: "Categories"
             name: "categories"
@@ -380,7 +297,7 @@ collections:
                 name: "name"
                 widget: "string"
 
-              - label: "Category Icon"
+              - label: "Icon"
                 name: "icon"
                 widget: "string"
                 required: false
@@ -400,10 +317,55 @@ collections:
                 widget: "boolean"
                 default: true
 
-
           # =========================
           # PRODUCTS
           # =========================
+
+          - label: "Show Products Section"
+            name: "show_products"
+            widget: "boolean"
+            default: true
+
+          - label: "Product Title Font"
+            name: "product_title_font"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+              - "Playfair Display"
+            default: "Poppins"
+
+          - label: "Product Description Font"
+            name: "product_description_font"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+            default: "Poppins"
+
+          - label: "Product Title Size"
+            name: "product_title_size"
+            widget: "number"
+            value_type: "int"
+            default: 18
+            min: 14
+            max: 30
+
+          - label: "Product Description Size"
+            name: "product_description_size"
+            widget: "number"
+            value_type: "int"
+            default: 14
+            min: 11
+            max: 22
 
           - label: "Products"
             name: "products"
@@ -418,9 +380,8 @@ collections:
               - label: "Category"
                 name: "category"
                 widget: "string"
-                required: false
 
-              - label: "Product Photo"
+              - label: "Photo"
                 name: "image"
                 widget: "image"
                 required: false
@@ -428,17 +389,20 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
-                required: false
 
               - label: "Show Product"
                 name: "show"
                 widget: "boolean"
                 default: true
 
-
           # =========================
           # GALLERY
           # =========================
+
+          - label: "Show Gallery Section"
+            name: "show_gallery"
+            widget: "boolean"
+            default: true
 
           - label: "Gallery"
             name: "gallery"
@@ -455,10 +419,14 @@ collections:
                 widget: "string"
                 required: false
 
-
           # =========================
           # WHY CHOOSE US
           # =========================
+
+          - label: "Show Why Choose Us Section"
+            name: "show_why_choose_us"
+            widget: "boolean"
+            default: true
 
           - label: "Why Choose Us"
             name: "why_choose_us"
@@ -479,17 +447,6 @@ collections:
                 name: "description"
                 widget: "text"
 
-
-          # =========================
-          # FOOTER
-          # =========================
-
-          - label: "Footer Text"
-            name: "footer_text"
-            widget: "string"
-            required: false
-
-
           # =========================
           # SEO
           # =========================
@@ -502,4 +459,13 @@ collections:
           - label: "SEO Description"
             name: "seo_description"
             widget: "text"
+            required: false
+
+          # =========================
+          # FOOTER
+          # =========================
+
+          - label: "Footer Text"
+            name: "footer_text"
+            widget: "string"
             required: false
