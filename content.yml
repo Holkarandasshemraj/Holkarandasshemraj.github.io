@@ -1,39 +1,33 @@
 shop_name: Holkaran Dass Hem Raj
-tagline: "Learn. Create. Play. Celebrate."
-
+tagline: Learn. Create. Play. Celebrate.
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
-
-primary_color: "#ee305e"
-secondary_color: "#e2de61"
+primary_color: "#bf294d"
+secondary_color: "#b7e261"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
 text_color: "#17233c"
 heading_color: "#123b73"
 nav_text_color: "#ffffff"
 card_background_color: "#ffffff"
-call_color: "#123b73"
-enquire_color: "#25D366"
+call_color: "#77ec7a"
+enquire_color: "#9364b8"
 button_text_color: "#ffffff"
-
 font_family: Poppins
-heading_font: Poppins
+heading_font: Playfair Display
 nav_font: Poppins
 button_font: Poppins
 product_title_font: Poppins
 product_description_font: Poppins
-
 heading_size: 34
 body_size: 16
 product_title_size: 18
 product_description_size: 14
-
 hero_images:
   - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
   - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
   - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
   - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
   - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
-
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
@@ -47,33 +41,23 @@ address: |
 
   Singhana Road, Opposite Vinayak Hospital,
   Narnaul, Haryana, District Mohindergarh – 123001
-
 phone: "8053721234"
 whatsapp: "918053721234"
-
-maps_link: "https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac"
-
+maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
 timings: ""
-
 categories:
   - name: Stationery
-    icon: "✏️"
-
+    icon: ✏️
   - name: Books
-    icon: "📚"
-
+    icon: 📚
   - name: Sports
-    icon: "⚽"
-
+    icon: ⚽
   - name: Gifts
-    icon: "🎁"
-
+    icon: 🎁
   - name: Toys
-    icon: "🧸"
-
+    icon: 🧸
   - name: Science Goods
-    icon: "🔬"
-
+    icon: 🔬
 products:
   - name: Books
     category: Books
@@ -125,7 +109,6 @@ products:
       is designed to make playtime more enjoyable and engaging.
 
 gallery: []
-
 why_choose_us:
   - title: Wide Range
     description: >+
@@ -133,15 +116,14 @@ why_choose_us:
       one roof.
 
   - title: For Every Need
-    description: >+
+    description: |+
       Products for students, families, children and everyday requirements.
 
   - title: Convenient Shopping
-    description: >+
+    description: |+
       Find what you need easily and contact us directly for enquiries.
 
-seo_title: "Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul"
-
-seo_description: >+
+seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
+seo_description: >
   Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery, gifts, toys,
   science goods and sports products, all under one roof.
