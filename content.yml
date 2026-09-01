@@ -1,20 +1,20 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: Learn. Create. Play. Celebrate...
 logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
-primary_color: "#bf294d"
-secondary_color: "#b7e261"
+primary_color: "#51212d"
+secondary_color: "#0e0994"
 accent_color: "#f5a623"
 background_color: "#fffdf7"
 text_color: "#17233c"
 heading_color: "#123b73"
 nav_text_color: "#ffffff"
 card_background_color: "#ffffff"
-call_color: "#77ec7a"
-enquire_color: "#9364b8"
+call_color: "#70dc73"
+enquire_color: "#9664be"
 button_text_color: "#ffffff"
 font_family: Poppins
-heading_font: Playfair Display
-nav_font: Poppins
+heading_font: Roboto
+nav_font: Nunito
 button_font: Poppins
 product_title_font: Poppins
 product_description_font: Poppins
