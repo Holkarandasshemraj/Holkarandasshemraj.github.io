@@ -11,9 +11,11 @@ collections:
   - name: "site"
     label: "Website"
     files:
+
       - name: "content"
         label: "Website Content"
         file: "content.yml"
+
         fields:
 
           # =========================
@@ -33,6 +35,42 @@ collections:
             widget: "image"
             required: false
 
+
+          # =========================
+          # SECTION VISIBILITY
+          # =========================
+
+          - label: "Show Hero Section"
+            name: "show_hero"
+            widget: "boolean"
+            default: true
+
+          - label: "Show Categories"
+            name: "show_categories"
+            widget: "boolean"
+            default: true
+
+          - label: "Show Products"
+            name: "show_products"
+            widget: "boolean"
+            default: true
+
+          - label: "Show About Section"
+            name: "show_about"
+            widget: "boolean"
+            default: true
+
+          - label: "Show Gallery"
+            name: "show_gallery"
+            widget: "boolean"
+            default: true
+
+          - label: "Show Why Choose Us"
+            name: "show_why_choose_us"
+            widget: "boolean"
+            default: true
+
+
           # =========================
           # COLORS
           # =========================
@@ -40,27 +78,22 @@ collections:
           - label: "Primary Color"
             name: "primary_color"
             widget: "color"
-            default: "#123B73"
+            default: "#EE305E"
 
           - label: "Secondary Color"
             name: "secondary_color"
             widget: "color"
-            default: "#1F6B9C"
+            default: "#E2DE61"
 
           - label: "Accent Color"
             name: "accent_color"
             widget: "color"
-            default: "#F4A51C"
+            default: "#F5A623"
 
           - label: "Background Color"
             name: "background_color"
             widget: "color"
-            default: "#F8FAFC"
-
-          - label: "Card Background Color"
-            name: "card_background_color"
-            widget: "color"
-            default: "#FFFFFF"
+            default: "#FFFDF7"
 
           - label: "Text Color"
             name: "text_color"
@@ -72,25 +105,31 @@ collections:
             widget: "color"
             default: "#123B73"
 
+          - label: "Card Background Color"
+            name: "card_background_color"
+            widget: "color"
+            default: "#FFFFFF"
+
           - label: "Navigation Text Color"
             name: "nav_text_color"
             widget: "color"
             default: "#FFFFFF"
 
-          - label: "Call Button Color"
-            name: "call_color"
-            widget: "color"
-            default: "#123B73"
-
-          - label: "Enquire Button Color"
-            name: "enquire_color"
-            widget: "color"
-            default: "#25D366"
-
           - label: "Button Text Color"
             name: "button_text_color"
             widget: "color"
             default: "#FFFFFF"
+
+          - label: "Call Button Color"
+            name: "call_button_color"
+            widget: "color"
+            default: "#123B73"
+
+          - label: "Enquire Button Color"
+            name: "enquire_button_color"
+            widget: "color"
+            default: "#25D366"
+
 
           # =========================
           # FONTS
@@ -110,6 +149,44 @@ collections:
 
           - label: "Heading Font"
             name: "heading_font"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+              - "Playfair Display"
+            default: "Poppins"
+
+          - label: "Hero Heading Font"
+            name: "hero_heading_font"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+              - "Playfair Display"
+            default: "Poppins"
+
+          - label: "Hero Text Font"
+            name: "hero_text_font"
+            widget: "select"
+            options:
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+            default: "Poppins"
+
+          - label: "Section Heading Font"
+            name: "section_heading_font"
             widget: "select"
             options:
               - "Poppins"
@@ -170,6 +247,7 @@ collections:
               - "Georgia"
             default: "Poppins"
 
+
           # =========================
           # FONT SIZES
           # =========================
@@ -206,8 +284,24 @@ collections:
             min: 11
             max: 22
 
+
           # =========================
-          # HERO / SLIDER
+          # BUTTON TEXT
+          # =========================
+
+          - label: "Call Button Text"
+            name: "call_button_text"
+            widget: "string"
+            default: "Call Now"
+
+          - label: "Enquire Button Text"
+            name: "enquire_button_text"
+            widget: "string"
+            default: "Enquire"
+
+
+          # =========================
+          # HERO SLIDER
           # =========================
 
           - label: "Hero Slider Images"
@@ -215,9 +309,11 @@ collections:
             widget: "list"
             required: false
             fields:
+
               - label: "Image"
                 name: "image"
                 widget: "image"
+
 
           # =========================
           # ABOUT
@@ -226,6 +322,7 @@ collections:
           - label: "About Us"
             name: "about"
             widget: "text"
+
 
           # =========================
           # CONTACT
@@ -253,6 +350,22 @@ collections:
             widget: "text"
             required: false
 
+
+          # =========================
+          # CONTACT BUTTON VISIBILITY
+          # =========================
+
+          - label: "Show Call Button"
+            name: "show_call_button"
+            widget: "boolean"
+            default: true
+
+          - label: "Show Enquire Button"
+            name: "show_enquire_button"
+            widget: "boolean"
+            default: true
+
+
           # =========================
           # CATEGORIES
           # =========================
@@ -272,6 +385,22 @@ collections:
                 widget: "string"
                 required: false
 
+              - label: "Category Image"
+                name: "image"
+                widget: "image"
+                required: false
+
+              - label: "Category Color"
+                name: "color"
+                widget: "color"
+                required: false
+
+              - label: "Show Category"
+                name: "show"
+                widget: "boolean"
+                default: true
+
+
           # =========================
           # PRODUCTS
           # =========================
@@ -289,6 +418,7 @@ collections:
               - label: "Category"
                 name: "category"
                 widget: "string"
+                required: false
 
               - label: "Product Photo"
                 name: "image"
@@ -299,6 +429,12 @@ collections:
                 name: "description"
                 widget: "text"
                 required: false
+
+              - label: "Show Product"
+                name: "show"
+                widget: "boolean"
+                default: true
+
 
           # =========================
           # GALLERY
@@ -314,6 +450,12 @@ collections:
                 name: "image"
                 widget: "image"
 
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                required: false
+
+
           # =========================
           # WHY CHOOSE US
           # =========================
@@ -324,6 +466,11 @@ collections:
             required: false
             fields:
 
+              - label: "Icon"
+                name: "icon"
+                widget: "string"
+                required: false
+
               - label: "Title"
                 name: "title"
                 widget: "string"
@@ -331,6 +478,17 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
+
+
+          # =========================
+          # FOOTER
+          # =========================
+
+          - label: "Footer Text"
+            name: "footer_text"
+            widget: "string"
+            required: false
+
 
           # =========================
           # SEO
