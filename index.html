@@ -202,15 +202,9 @@ nav a:hover{
   opacity:1;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-
-  background:linear-gradient(
-    rgba(5,24,65,.78),
-    rgba(8,45,105,.86)
-  );
-}
+.hero-overlay{display:none;}
+.hero-slide{will-change:opacity,filter;}
+.price{margin-top:10px;color:var(--heading-color);font-weight:700;}
 
 .hero-content{
   position:relative;
@@ -1246,10 +1240,9 @@ function applyWebsiteData(){
 
   renderProducts();
 
-  toggleSection(
-    "products",
-    data.show_products
-  );
+  toggleSection("products", data.show_products);
+  toggleSection("whySection", data.show_why_choose_us);
+  toggleSection("gallery", data.show_gallery);
 
 
   /* =========================
@@ -1795,6 +1788,7 @@ function renderProducts(){
 
       if(
         websiteData.show_enquire_button !== false &&
+        product.show_enquire_button !== false &&
         whatsapp
       ){
 
@@ -1824,7 +1818,8 @@ function renderProducts(){
 
 
       if(
-        websiteData.show_call_button !== false
+        websiteData.show_call_button !== false &&
+        product.show_call_button === true
       ){
 
         const callNumber =
@@ -1886,6 +1881,14 @@ function renderProducts(){
           </p>
 
           ${
+            product.show_price === true && (product.sale_price || product.price)
+            ? `<div class="price">
+                ${product.sale_price ? `<span>${escapeHTML(product.sale_price)}</span>${product.price ? ` <del style="opacity:.55;font-weight:500;margin-left:6px;">${escapeHTML(product.price)}</del>` : ""}` : escapeHTML(product.price)}
+              </div>`
+            : ""
+          }
+
+          ${
             actions
 
             ? `<div class="product-actions">
@@ -1925,116 +1928,72 @@ document
 ========================= */
 
 function renderHeroSlider(){
-
-  const container =
-    document.getElementById(
-      "heroSlider"
-    );
-
+  const container = document.getElementById("heroSlider");
   container.innerHTML = "";
+  if(heroTimer){ clearInterval(heroTimer); heroTimer = null; }
 
-
-  if(heroTimer){
-
-    clearInterval(heroTimer);
-    heroTimer = null;
-
-  }
-
-
-  let images =
-    websiteData.hero_images || [];
-
-
-  images =
-    images
-      .filter(
-        item =>
-          item &&
-          item.image
-      )
-      .map(
-        item =>
-          item.image
-      );
-
-
-  if(!images.length){
-
-    images = [
-
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80",
-
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80",
-
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"
-
-    ];
-
-  }
-
-
-  images.forEach(
-    function(image,index){
-
-      const slide =
-        document.createElement("div");
-
-      slide.className =
-        "hero-slide" +
-        (
-          index === 0
-          ? " active"
-          : ""
-        );
-
-      slide.style.backgroundImage =
-        `url("${safeUrl(image)}")`;
-
-      container.appendChild(slide);
-
-    }
-  );
-
-
-  const slides =
-    document.querySelectorAll(
-      ".hero-slide"
+  const items = (websiteData.hero_images || []).filter(item => item && item.image);
+  if(!items.length){
+    items.push(
+      {image:"https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80"},
+      {image:"https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80"},
+      {image:"https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"}
     );
-
-
-  if(slides.length <= 1){
-    return;
   }
 
+  const toRgba = (hex, opacity) => {
+    const value = String(hex || "").trim();
+    const match = value.match(/^#([0-9a-f]{6})$/i);
+    if(!match) return String(hex || "transparent");
+    const n = parseInt(match[1],16);
+    return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${Math.max(0,Math.min(1,Number(opacity ?? 1)))})`;
+  };
+
+  items.forEach((item,index) => {
+    const slide = document.createElement("div");
+    slide.className = "hero-slide" + (index === 0 ? " active" : "");
+    const overlayOn = item.show_overlay !== false;
+    const overlayColor = item.overlay_color || "#071b36";
+    const overlayOpacity = item.overlay_opacity === undefined ? 0.55 : Number(item.overlay_opacity);
+    const gradientOn = item.gradient === true;
+    const gradientColor = item.gradient_color || overlayColor;
+    const layers = [];
+    if(gradientOn){
+      layers.push(`linear-gradient(135deg,${toRgba(gradientColor,overlayOpacity)},rgba(0,0,0,0))`);
+    } else if(overlayOn){
+      layers.push(`linear-gradient(${toRgba(overlayColor,overlayOpacity)},${toRgba(overlayColor,overlayOpacity)})`);
+    }
+    layers.push(`url("${safeUrl(item.image)}")`);
+    slide.style.backgroundImage = layers.join(",");
+    slide.style.filter = item.blur ? `blur(${Math.max(0,Math.min(20,Number(item.blur_amount)||0))}px)` : "none";
+    slide.style.transform = item.blur ? "scale(1.03)" : "none";
+    container.appendChild(slide);
+  });
+
+  const slides = document.querySelectorAll(".hero-slide");
+  const applySlideText = (index) => {
+    const item = items[index] || {};
+    setText("heroStoreName", item.heading || websiteData.shop_name || "Holkaran Dass Hem Raj");
+    setText("heroTagline", item.text || websiteData.tagline || "Learn. Create. Play. Celebrate.");
+    const primary = document.querySelector(".hero-buttons .hero-btn:not(.secondary)");
+    if(primary){
+      primary.style.display = item.show_button === true ? "inline-block" : "none";
+      primary.textContent = item.button_text || "Explore Products";
+      primary.href = safeUrl(item.button_link) || "#products";
+    }
+  };
+
+  applySlideText(0);
+  if(slides.length <= 1) return;
 
   let current = 0;
-
-
-  heroTimer =
-    setInterval(
-      function(){
-
-        slides[current]
-          .classList
-          .remove("active");
-
-        current =
-          (
-            current + 1
-          ) %
-          slides.length;
-
-        slides[current]
-          .classList
-          .add("active");
-
-      },
-      5000
-    );
-
+  heroTimer = setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+    applySlideText(current);
+  }, 5000);
 }
-
 
 /* =========================
    GALLERY
