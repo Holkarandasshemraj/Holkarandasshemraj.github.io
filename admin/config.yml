@@ -3,10 +3,8 @@ backend:
   repo: Holkarandasshemraj/Holkarandasshemraj.github.io
   branch: main
   base_url: https://hdhr-cms-auth.hishigoyal22.workers.dev
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
 collections:
   - name: "site"
     label: "Website"
@@ -14,564 +12,209 @@ collections:
       - name: "content"
         label: "Website Content"
         file: "content.yml"
-
         fields:
-
-          - label: "Shop Name"
-            name: "shop_name"
-            widget: "string"
-            required: false
-
-          - label: "Tagline"
-            name: "tagline"
-            widget: "string"
-            required: false
-
-          - label: "Logo"
-            name: "logo"
-            widget: "image"
-            required: false
-
-          # COLORS
-
-          - label: "Primary Color"
-            name: "primary_color"
-            widget: "color"
-            required: false
-            default: "#EE305E"
-
-          - label: "Secondary Color"
-            name: "secondary_color"
-            widget: "color"
-            required: false
-            default: "#E2DE61"
-
-          - label: "Accent Color"
-            name: "accent_color"
-            widget: "color"
-            required: false
-            default: "#F5A623"
-
-          - label: "Background Color"
-            name: "background_color"
-            widget: "color"
-            required: false
-            default: "#FFFDF7"
-
-          - label: "Text Color"
-            name: "text_color"
-            widget: "color"
-            required: false
-            default: "#17233C"
-
-          - label: "Heading Color"
-            name: "heading_color"
-            widget: "color"
-            required: false
-            default: "#123B73"
-
-          - label: "Navigation Text Color"
-            name: "nav_text_color"
-            widget: "color"
-            required: false
-            default: "#FFFFFF"
-
-          - label: "Card Background Color"
-            name: "card_background_color"
-            widget: "color"
-            required: false
-            default: "#FFFFFF"
-
-          # CALL / ENQUIRE COLORS
-
-          - label: "Call Button Color"
-            name: "call_button_color"
-            widget: "color"
-            required: false
-            default: "#123B73"
-
-          - label: "Enquire Button Color"
-            name: "enquire_button_color"
-            widget: "color"
-            required: false
-            default: "#25D366"
-
-          - label: "Button Text Color"
-            name: "button_text_color"
-            widget: "color"
-            required: false
-            default: "#FFFFFF"
-
-          # FONTS
+          - {label: "Shop Name", name: "shop_name", widget: "string", required: false}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Primary Color", name: "primary_color", widget: "color", required: false}
+          - {label: "Secondary Color", name: "secondary_color", widget: "color", required: false}
+          - {label: "Accent Color", name: "accent_color", widget: "color", required: false}
+          - {label: "Background Color", name: "background_color", widget: "color", required: false}
+          - {label: "Card Background Color", name: "card_background_color", widget: "color", required: false}
+          - {label: "Text Color", name: "text_color", widget: "color", required: false}
+          - {label: "Heading Color", name: "heading_color", widget: "color", required: false}
+          - {label: "Navigation Text Color", name: "nav_text_color", widget: "color", required: false}
+          - {label: "Button Text Color", name: "button_text_color", widget: "color", required: false}
+          - {label: "Call Button Color", name: "call_button_color", widget: "color", required: false}
+          - {label: "Enquire Button Color", name: "enquire_button_color", widget: "color", required: false}
 
           - label: "Body Font"
             name: "font_family"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
+          - {label: "Body Font Weight", name: "body_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Body Font Style", name: "body_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Heading Font"
             name: "heading_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
+          - {label: "Heading Weight", name: "heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Heading Style", name: "heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Hero Heading Font"
             name: "hero_heading_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
+          - {label: "Hero Heading Weight", name: "hero_heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Hero Heading Style", name: "hero_heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Hero Text Font"
             name: "hero_text_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
+          - {label: "Hero Text Weight", name: "hero_text_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Hero Text Style", name: "hero_text_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Section Heading Font"
             name: "section_heading_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
+          - {label: "Section Heading Weight", name: "section_heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Section Heading Style", name: "section_heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
-          # FONT SIZES
-
-          - label: "Main Heading Size"
-            name: "heading_size"
-            widget: "number"
+          - label: "Navigation Font"
+            name: "nav_font"
+            widget: "select"
             required: false
-            value_type: "int"
-            default: 34
-            min: 12
-            max: 80
-
-          - label: "Body Text Size"
-            name: "body_size"
-            widget: "number"
-            required: false
-            value_type: "int"
-            default: 16
-            min: 10
-            max: 30
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
+          - {label: "Navigation Weight", name: "nav_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Navigation Style", name: "nav_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Button Font"
             name: "button_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
+          - {label: "Button Weight", name: "button_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Button Style", name: "button_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Product Title Font"
             name: "product_title_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-              - "Playfair Display"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
+          - {label: "Product Title Weight", name: "product_title_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Product Title Style", name: "product_title_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
           - label: "Product Description Font"
             name: "product_description_font"
             widget: "select"
             required: false
-            options:
-              - "Poppins"
-              - "Montserrat"
-              - "Nunito"
-              - "Roboto"
-              - "Arial"
-              - "Georgia"
-            default: "Poppins"
+            options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
+          - {label: "Product Description Weight", name: "product_description_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
+          - {label: "Product Description Style", name: "product_description_font_style", widget: "select", required: false, options: ["normal", "italic"]}
 
-          - label: "Product Title Size"
-            name: "product_title_size"
-            widget: "number"
+          - {label: "Main Heading Size", name: "heading_size", widget: "number", required: false, value_type: "int", min: 12, max: 80}
+          - {label: "Body Text Size", name: "body_size", widget: "number", required: false, value_type: "int", min: 10, max: 30}
+          - {label: "Product Title Size", name: "product_title_size", widget: "number", required: false, value_type: "int", min: 12, max: 32}
+          - {label: "Product Description Size", name: "product_description_size", widget: "number", required: false, value_type: "int", min: 10, max: 24}
+
+          - label: "Navigation Labels"
+            name: "navigation"
+            widget: "object"
             required: false
-            value_type: "int"
-            default: 18
-            min: 14
-            max: 30
+            fields:
+              - {label: "Home", name: "home_label", widget: "string", required: false}
+              - {label: "Categories", name: "categories_label", widget: "string", required: false}
+              - {label: "Products", name: "products_label", widget: "string", required: false}
+              - {label: "About", name: "about_label", widget: "string", required: false}
+              - {label: "Gallery", name: "gallery_label", widget: "string", required: false}
+              - {label: "Contact", name: "contact_label", widget: "string", required: false}
 
-          - label: "Product Description Size"
-            name: "product_description_size"
-            widget: "number"
-            required: false
-            value_type: "int"
-            default: 14
-            min: 11
-            max: 22
+          - {label: "Categories Title", name: "categories_title", widget: "string", required: false}
+          - {label: "Categories Subtitle", name: "categories_subtitle", widget: "string", required: false}
+          - {label: "Products Title", name: "products_title", widget: "string", required: false}
+          - {label: "Products Subtitle", name: "products_subtitle", widget: "string", required: false}
+          - {label: "Why Choose Us Title", name: "why_title", widget: "string", required: false}
+          - {label: "Why Choose Us Subtitle", name: "why_subtitle", widget: "string", required: false}
+          - {label: "About Title", name: "about_title", widget: "string", required: false}
+          - {label: "Gallery Title", name: "gallery_title", widget: "string", required: false}
+          - {label: "Gallery Subtitle", name: "gallery_subtitle", widget: "string", required: false}
+          - {label: "Find Us Title", name: "map_title", widget: "string", required: false}
+          - {label: "Contact Title", name: "contact_title", widget: "string", required: false}
 
-          # HERO
-
-          - label: "Show Hero Section"
-            name: "show_hero"
-            widget: "boolean"
-            required: false
-            default: true
-
+          - {label: "Show Hero Section", name: "show_hero", widget: "boolean", required: false}
           - label: "Hero Slider"
             name: "hero_images"
             widget: "list"
             required: false
+            summary: "{{fields.heading}}"
             fields:
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                required: false
-              - label: "Heading"
-                name: "heading"
-                widget: "string"
-                required: false
-              - label: "Text"
-                name: "text"
-                widget: "text"
-                required: false
-              - label: "Show Overlay"
-                name: "show_overlay"
-                widget: "boolean"
-                required: false
-                default: true
-              - label: "Overlay Color"
-                name: "overlay_color"
-                widget: "color"
-                required: false
-              - label: "Overlay Opacity"
-                name: "overlay_opacity"
-                widget: "number"
-                required: false
-                value_type: "float"
-                min: 0
-                max: 1
-                step: 0.05
-              - label: "Blur"
-                name: "blur"
-                widget: "boolean"
-                required: false
-                default: false
-              - label: "Blur Amount (px)"
-                name: "blur_amount"
-                widget: "number"
-                required: false
-                value_type: "int"
-                min: 0
-                max: 20
-              - label: "Gradient"
-                name: "gradient"
-                widget: "boolean"
-                required: false
-                default: false
-              - label: "Gradient Color"
-                name: "gradient_color"
-                widget: "color"
-                required: false
-              - label: "Button Text"
-                name: "button_text"
-                widget: "string"
-                required: false
-              - label: "Button Link"
-                name: "button_link"
-                widget: "string"
-                required: false
-              - label: "Show Button"
-                name: "show_button"
-                widget: "boolean"
-                required: false
-                default: false
+              - {label: "Show Slide", name: "show", widget: "boolean", required: false}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Heading", name: "heading", widget: "string", required: false}
+              - {label: "Text", name: "text", widget: "text", required: false}
+              - {label: "Show Overlay", name: "show_overlay", widget: "boolean", required: false}
+              - {label: "Overlay Color", name: "overlay_color", widget: "color", required: false}
+              - {label: "Overlay Opacity", name: "overlay_opacity", widget: "number", required: false, value_type: "float", min: 0, max: 1, step: 0.05}
+              - {label: "Blur", name: "blur", widget: "boolean", required: false}
+              - {label: "Blur Amount (px)", name: "blur_amount", widget: "number", required: false, value_type: "int", min: 0, max: 20}
+              - {label: "Gradient", name: "gradient", widget: "boolean", required: false}
+              - {label: "Gradient Color", name: "gradient_color", widget: "color", required: false}
+              - {label: "Show Button", name: "show_button", widget: "boolean", required: false}
+              - {label: "Button Text", name: "button_text", widget: "string", required: false}
+              - {label: "Button Link", name: "button_link", widget: "string", required: false}
 
-          # ABOUT
+          - {label: "Show About Section", name: "show_about", widget: "boolean", required: false}
+          - {label: "About Us", name: "about", widget: "text", required: false}
+          - {label: "Address", name: "address", widget: "text", required: false}
+          - {label: "Phone", name: "phone", widget: "string", required: false}
+          - {label: "WhatsApp Number", name: "whatsapp", widget: "string", required: false}
+          - {label: "Google Maps Link", name: "maps_link", widget: "string", required: false}
+          - {label: "Shop Timings", name: "timings", widget: "text", required: false}
+          - {label: "Show Call Button", name: "show_call_button", widget: "boolean", required: false}
+          - {label: "Call Button Text", name: "call_button_text", widget: "string", required: false}
+          - {label: "Show Enquire Button", name: "show_enquire_button", widget: "boolean", required: false}
+          - {label: "Enquire Button Text", name: "enquire_button_text", widget: "string", required: false}
 
-          - label: "Show About Section"
-            name: "show_about"
-            widget: "boolean"
-            required: false
-            default: true
-
-          - label: "About Us"
-            name: "about"
-            widget: "text"
-            required: false
-
-          # CONTACT
-
-          - label: "Address"
-            name: "address"
-            widget: "text"
-            required: false
-
-          - label: "Phone"
-            name: "phone"
-            widget: "string"
-            required: false
-
-          - label: "WhatsApp Number"
-            name: "whatsapp"
-            widget: "string"
-            required: false
-
-          - label: "Google Maps Link"
-            name: "maps_link"
-            widget: "string"
-            required: false
-
-          - label: "Shop Timings"
-            name: "timings"
-            widget: "text"
-            required: false
-
-          # CALL BUTTON
-
-          - label: "Show Call Button"
-            name: "show_call_button"
-            widget: "boolean"
-            required: false
-            default: true
-
-          - label: "Call Button Text"
-            name: "call_button_text"
-            widget: "string"
-            required: false
-            default: "Call Now"
-
-          # ENQUIRE BUTTON
-
-          - label: "Show Enquire Button"
-            name: "show_enquire_button"
-            widget: "boolean"
-            required: false
-            default: true
-
-          - label: "Enquire Button Text"
-            name: "enquire_button_text"
-            widget: "string"
-            required: false
-            default: "Enquire"
-
-          # CATEGORIES
-
-          - label: "Show Categories Section"
-            name: "show_categories"
-            widget: "boolean"
-            required: false
-            default: true
-
+          - {label: "Show Categories Section", name: "show_categories", widget: "boolean", required: false}
           - label: "Categories"
             name: "categories"
             widget: "list"
             required: false
+            summary: "{{fields.name}}"
             fields:
+              - {label: "Category Name", name: "name", widget: "string", required: false}
+              - {label: "Icon / Emoji", name: "icon", widget: "string", required: false}
+              - {label: "Category Image", name: "image", widget: "image", required: false}
+              - {label: "Category Color", name: "color", widget: "color", required: false}
+              - {label: "Show Category", name: "show", widget: "boolean", required: false}
 
-              - label: "Category Name"
-                name: "name"
-                widget: "string"
-                required: false
-
-              - label: "Icon"
-                name: "icon"
-                widget: "string"
-                required: false
-
-              - label: "Category Image"
-                name: "image"
-                widget: "image"
-                required: false
-
-              - label: "Category Color"
-                name: "color"
-                widget: "color"
-                required: false
-
-              - label: "Show Category"
-                name: "show"
-                widget: "boolean"
-                required: false
-                default: true
-
-          # PRODUCTS
-
-          - label: "Show Products Section"
-            name: "show_products"
-            widget: "boolean"
-            required: false
-            default: true
-
+          - {label: "Show Products Section", name: "show_products", widget: "boolean", required: false}
           - label: "Products"
             name: "products"
             widget: "list"
             required: false
+            summary: "{{fields.name}}"
             fields:
+              - {label: "Product Name", name: "name", widget: "string", required: false}
+              - {label: "Category", name: "category", widget: "string", required: false}
+              - {label: "Photo", name: "image", widget: "image", required: false}
+              - {label: "Description", name: "description", widget: "text", required: false}
+              - {label: "Price", name: "price", widget: "string", required: false}
+              - {label: "Sale Price", name: "sale_price", widget: "string", required: false}
+              - {label: "Show Price", name: "show_price", widget: "boolean", required: false}
+              - {label: "Show Call Button", name: "show_call_button", widget: "boolean", required: false}
+              - {label: "Show Enquire Button", name: "show_enquire_button", widget: "boolean", required: false}
+              - {label: "Show Product", name: "show", widget: "boolean", required: false}
 
-              - label: "Product Name"
-                name: "name"
-                widget: "string"
-                required: false
-
-              - label: "Category"
-                name: "category"
-                widget: "string"
-                required: false
-
-              - label: "Photo"
-                name: "image"
-                widget: "image"
-                required: false
-
-              - label: "Description"
-                name: "description"
-                widget: "text"
-                required: false
-
-              - label: "Price"
-                name: "price"
-                widget: "string"
-                required: false
-
-              - label: "Sale Price"
-                name: "sale_price"
-                widget: "string"
-                required: false
-
-              - label: "Show Price"
-                name: "show_price"
-                widget: "boolean"
-                required: false
-                default: false
-
-              - label: "Show Call Button"
-                name: "show_call_button"
-                widget: "boolean"
-                required: false
-                default: false
-
-              - label: "Show Enquire Button"
-                name: "show_enquire_button"
-                widget: "boolean"
-                required: false
-                default: true
-
-              - label: "Show Product"
-                name: "show"
-                widget: "boolean"
-                required: false
-                default: true
-
-          # GALLERY
-
-          - label: "Show Gallery Section"
-            name: "show_gallery"
-            widget: "boolean"
-            required: false
-            default: true
-
+          - {label: "Show Gallery Section", name: "show_gallery", widget: "boolean", required: false}
           - label: "Gallery"
             name: "gallery"
             widget: "list"
             required: false
+            summary: "{{fields.caption}}"
             fields:
+              - {label: "Photo", name: "image", widget: "image", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
 
-              - label: "Photo"
-                name: "image"
-                widget: "image"
-                required: false
-
-              - label: "Caption"
-                name: "caption"
-                widget: "string"
-                required: false
-
-          # WHY CHOOSE US
-
-          - label: "Show Why Choose Us Section"
-            name: "show_why_choose_us"
-            widget: "boolean"
-            required: false
-            default: true
-
+          - {label: "Show Why Choose Us Section", name: "show_why_choose_us", widget: "boolean", required: false}
           - label: "Why Choose Us"
             name: "why_choose_us"
             widget: "list"
             required: false
+            summary: "{{fields.title}}"
             fields:
+              - {label: "Icon / Emoji", name: "icon", widget: "string", required: false}
+              - {label: "Title", name: "title", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "text", required: false}
 
-              - label: "Icon"
-                name: "icon"
-                widget: "string"
-                required: false
-
-              - label: "Title"
-                name: "title"
-                widget: "string"
-                required: false
-
-              - label: "Description"
-                name: "description"
-                widget: "text"
-                required: false
-
-          # SEO
-
-          - label: "SEO Title"
-            name: "seo_title"
-            widget: "string"
-            required: false
-
-          - label: "SEO Description"
-            name: "seo_description"
-            widget: "text"
-            required: false
-
-          # FOOTER
-
-          - label: "Footer Text"
-            name: "footer_text"
-            widget: "string"
-            required: false
+          - {label: "SEO Title", name: "seo_title", widget: "string", required: false}
+          - {label: "SEO Description", name: "seo_description", widget: "text", required: false}
+          - {label: "Footer Text", name: "footer_text", widget: "string", required: false}
