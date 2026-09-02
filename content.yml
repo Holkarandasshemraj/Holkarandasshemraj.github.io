@@ -53,7 +53,7 @@ navigation:
 categories_title: Our Categories
 categories_subtitle: Everything you need, all in one place.
 products_title: Our Products
-products_subtitle: Find what you're looking for.
+products_subtitle: Find what you’re looking for.
 why_title: Why Choose Us?
 why_subtitle: Your trusted destination for learning, creativity and more.
 about_title: About Our Store
@@ -144,12 +144,11 @@ hero_images:
     second_button_link: "#contact"
     show_second_button: true
 show_about: true
-about_title: About Our Store
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
 
-  We bring together quality products for learning, creativity, fun, and everyday needs, all under one roof. Whether you're looking for school essentials, educational products, a thoughtful gift, or something fun for children, we aim to make your shopping experience easy and convenient.
+  We bring together quality products for learning, creativity, fun, and everyday needs, all under one roof. Whether you’re looking for school essentials, educational products, a thoughtful gift, or something fun for children, we aim to make your shopping experience easy and convenient.
 
   Visit us and discover something for every age, every interest, and every occasion.
 address: |
@@ -265,11 +264,11 @@ why_choose_us:
       one roof.
   - icon: 🎯
     title: For Every Need
-    description: |+
+    description: |
       Products for students, families, children and everyday requirements.
   - icon: 📞
     title: Convenient Shopping
-    description: |+
+    description: |
       Find what you need easily and contact us directly for enquiries.
 seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
 seo_description: >
