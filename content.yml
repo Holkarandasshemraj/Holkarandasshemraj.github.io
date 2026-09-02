@@ -1,6 +1,6 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: Learn. Create. Play. Celebrate.
-logo: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
+logo: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
 primary_color: "#e20d44"
 secondary_color: "#71de33"
 accent_color: "#f1c551"
@@ -63,7 +63,7 @@ map_title: Find Us
 contact_title: Visit Our Store
 show_hero: true
 hero_images:
-  - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
+  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
     heading: Holkaran Dass Hem Raj
     text: Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.
     show_overlay: true
@@ -79,7 +79,7 @@ hero_images:
     second_button_text: Visit Our Store
     second_button_link: "#contact"
     show_second_button: true
-  - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
+  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
     heading: Books for Every Interest
     text: Educational, academic, story and general reading books for all ages.
     show_overlay: true
@@ -95,7 +95,7 @@ hero_images:
     second_button_text: Visit Our Store
     second_button_link: "#contact"
     show_second_button: true
-  - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
+  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
     heading: Stationery for Everyday Needs
     text: School, office, art and writing essentials in one convenient place.
     show_overlay: true
@@ -111,7 +111,7 @@ hero_images:
     second_button_text: Visit Our Store
     second_button_link: "#contact"
     show_second_button: true
-  - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
+  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
     heading: Gifts, Toys & More
     text: Fun and thoughtful choices for birthdays, celebrations and special moments.
     show_overlay: true
@@ -127,7 +127,7 @@ hero_images:
     second_button_text: Visit Our Store
     second_button_link: "#contact"
     show_second_button: true
-  - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
+  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
     heading: Learn. Create. Play.
     text: Science goods and sports essentials for curious and active minds.
     show_overlay: true
@@ -188,7 +188,7 @@ show_products: true
 products:
   - name: Books
     category: Books
-    image: /images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
     description: >+
       Explore a wide collection of books for students, children, and readers of
       all ages. From educational and academic books to storybooks and general
@@ -199,7 +199,7 @@ products:
     show: true
   - name: Stationery
     category: Stationery
-    image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
     description: >+
       Find all your everyday stationery essentials in one place. We offer
       notebooks, pens, pencils, school supplies, art materials, and other useful
@@ -210,7 +210,7 @@ products:
     show: true
   - name: Sports
     category: Sports
-    image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
     description: >+
       Discover a range of sports products and accessories for students,
       beginners, and sports enthusiasts. From everyday sports essentials to
@@ -222,7 +222,7 @@ products:
     show: true
   - name: Science Goods
     category: Science Goods
-    image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
     description: >+
       Explore a range of science products and educational materials for students
       and curious minds. Find useful items for science projects, experiments,
@@ -233,7 +233,7 @@ products:
     show: true
   - name: Gifts
     category: Gifts
-    image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >+
       Make every occasion special with our collection of thoughtful and
       attractive gifts. Discover fun, useful, and unique gift items perfect for
@@ -244,7 +244,7 @@ products:
     show: true
   - name: Toys
     category: Toys
-    image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
     description: >+
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
