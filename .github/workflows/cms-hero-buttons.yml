@@ -35,18 +35,9 @@ jobs:
 
           p = Path('index.html')
           s = p.read_text()
-          old = '''  <a id="heroButton" class="btn primary" href="#products">Explore Products</a><a id="heroSecond" class="btn secondary" href="#contact">Visit Our Store</a>'''
-          new = '''  <a id="heroButton" class="btn primary" href="#products">Explore Products</a><a id="heroSecond" class="btn secondary" href="#contact">Visit Our Store</a>'''
-          if old in s:
-              s = s.replace(old, new, 1)
-
-          # Inject a small post-render hook without disturbing the existing site logic.
-          hook = r'''\n<script>\n(function(){\n  function wireHeroSecond(){\n    var btn=document.getElementById('heroSecond');\n    var slides=(window.data&&Array.isArray(window.data.hero_images))?window.data.hero_images:[];\n    if(!btn||!slides.length)return;\n    var i=window.__heroIndex||0, item=slides[i]||{};\n    btn.textContent=item.second_button_text||'Visit Our Store';\n    btn.href=item.second_button_link||'#contact';\n    btn.style.display=item.show_second_button===false?'none':'';\n  }\n  var tries=0;\n  var t=setInterval(function(){wireHeroSecond();if(++tries>20)clearInterval(t)},500);\n  window.addEventListener('heroSlideChanged',wireHeroSecond);\n})();\n</script>\n'''
-          if 'function wireHeroSecond()' not in s:
+          hook = r'''\n<script>\n(function(){\n  var cache=null,last=-1;\n  async function load(){\n    try{\n      var r=await fetch('/content.yml?cms='+Date.now(),{cache:'no-store'});\n      if(!r.ok)return;\n      var y=await r.text();\n      if(window.jsyaml) cache=window.jsyaml.load(y)||{};\n      else if(window.jsYaml) cache=window.jsYaml.load(y)||{};\n    }catch(e){}\n  }\n  function wire(){\n    var btn=document.getElementById('heroSecond'), nodes=document.querySelectorAll('.slide');\n    if(!btn||!nodes.length||!cache||!Array.isArray(cache.hero_images))return;\n    var i=0; for(var n=0;n<nodes.length;n++){if(nodes[n].classList.contains('active')){i=n;break;}}\n    var item=cache.hero_images[i]||{};\n    btn.textContent=item.second_button_text||'Visit Our Store';\n    btn.href=item.second_button_link||'#contact';\n    btn.style.display=item.show_second_button===false?'none':'';\n    if(i!==last){last=i;}\n  }\n  load().then(wire);\n  setInterval(wire,700);\n  setInterval(load,10000);\n})();\n</script>\n'''
+          if 'cms='+Date.now() not in s:
               s = s.replace('</body>', hook + '</body>', 1)
-
-          # Expose data/hero index to the hook if the existing script keeps them lexical.
-          s = s.replace("let data={},selected='All',timer=null;", "let data={},selected='All',timer=null;window.data=data;window.__heroIndex=0;")
           p.write_text(s)
           PY
 
