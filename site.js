@@ -1,4 +1,5 @@
 const UPLOADS='/images/uploads/';
+const RAW='https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/';
 const CONTENT='content.yml';
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -19,7 +20,7 @@ const fallback={
  phone:'8053721234',whatsapp:'918053721234'
 };
 let data=JSON.parse(JSON.stringify(fallback));
-function imageUrl(v){if(!v)return '';v=String(v);if(v.startsWith('data:')||v.startsWith('blob:'))return v;if(v.startsWith('/'))return v;if(/^https?:\/\//i.test(v)){const m=v.match(/\/images\/uploads\/(.+)$/);return m?UPLOADS+m[1]:v}return UPLOADS+v.split('/').pop()}
+function imageUrl(v){if(!v)return '';v=String(v);if(v.startsWith('data:')||v.startsWith('blob:'))return v;if(/^https?:\/\//i.test(v)){const m=v.match(/\/images\/uploads\/(.+)$/);return m?RAW+m[1]:v}if(v.startsWith('/images/uploads/'))return RAW+v.substring('/images/uploads/'.length);return UPLOADS+v.split('/').pop()}
 async function loadData(){try{const r=await fetch(CONTENT+'?v='+Date.now(),{cache:'no-store'});if(r.ok&&window.jsyaml){const parsed=jsyaml.load(await r.text());if(parsed&&typeof parsed==='object')data=Object.assign(data,parsed)}}catch(e){console.warn('Using fallback site content',e)}applyTheme();renderHeader();renderPage();}
 function setVar(name,value){if(value!==undefined&&value!==null&&value!=='')document.documentElement.style.setProperty(name,value)}
 function applyTheme(){const m={primary_color:'--primary',secondary_color:'--secondary',accent_color:'--accent',background_color:'--bg',card_background_color:'--card',text_color:'--text',heading_color:'--heading',call_button_color:'--call',enquire_button_color:'--enquire',button_text_color:'--btntext',font_family:'--bodyfont',heading_font:'--headingfont',nav_font:'--navfont',button_font:'--buttonfont',product_title_font:'--productfont',product_description_font:'--productdescfont',body_font_weight:'--bodyweight',heading_font_weight:'--headingweight',nav_font_weight:'--navweight',button_font_weight:'--buttonweight',product_title_font_weight:'--productweight',product_description_font_weight:'--productdescweight',body_font_style:'--bodystyle',heading_font_style:'--headingstyle',nav_font_style:'--navstyle',button_font_style:'--buttonstyle',product_title_font_style:'--productstyle',product_description_font_style:'--productdescstyle',body_size:'--bodysize',heading_size:'--headingsize',button_size:'--buttonsize',product_title_size:'--productsize',product_description_size:'--productdescsize'};Object.keys(m).forEach(k=>setVar(m[k],data[k]))}
