@@ -68,7 +68,10 @@ collections:
             required: false
             fields:
               - {label: Home, name: home_label, widget: string, required: false}
-              - {label: Categories, name: categories_label, widget: string, required: false}
+              - {label: Shop, name: shop_label, widget: string, required: false}
+              - {label: All Categories, name: all_categories_label, widget: string, required: false}
+              - {label: Brands, name: brands_label, widget: string, required: false}
+              - {label: All Brands, name: all_brands_label, widget: string, required: false}
               - {label: Products, name: products_label, widget: string, required: false}
               - {label: About, name: about_label, widget: string, required: false}
               - {label: Gallery, name: gallery_label, widget: string, required: false}
@@ -77,6 +80,9 @@ collections:
           - {label: Categories Subtitle, name: categories_subtitle, widget: string, required: false}
           - {label: Products Title, name: products_title, widget: string, required: false}
           - {label: Products Subtitle, name: products_subtitle, widget: string, required: false}
+          - {label: Brands Title, name: brands_title, widget: string, required: false}
+          - {label: Brands Subtitle, name: brands_subtitle, widget: string, required: false}
+          - {label: Brands Button Text, name: brands_button_text, widget: string, required: false}
           - {label: Why Choose Us Title, name: why_title, widget: string, required: false}
           - {label: Why Choose Us Subtitle, name: why_subtitle, widget: string, required: false}
           - {label: About Title, name: about_title, widget: string, required: false}
@@ -110,6 +116,7 @@ collections:
               - {label: Second Button Link, name: second_button_link, widget: string, required: false}
           - {label: Show About Section, name: show_about, widget: boolean, required: false}
           - {label: About Us, name: about, widget: text, required: false}
+          - {label: About Image, name: about_image, widget: image, required: false}
           - {label: Address, name: address, widget: text, required: false}
           - {label: Phone, name: phone, widget: string, required: false}
           - {label: WhatsApp Number, name: whatsapp, widget: string, required: false}
@@ -131,6 +138,18 @@ collections:
               - {label: Category Image, name: image, widget: image, required: false}
               - {label: Category Color, name: color, widget: color, required: false}
               - {label: Show Category, name: show, widget: boolean, required: false}
+          - {label: Show Brands Section, name: show_brands, widget: boolean, required: false}
+          - label: Brands
+            name: brands
+            widget: list
+            required: false
+            summary: '{{fields.name}}'
+            fields:
+              - {label: Brand Name, name: name, widget: string, required: false}
+              - {label: Brand Logo / Image, name: logo, widget: image, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Brand Color, name: color, widget: color, required: false}
+              - {label: Show Brand, name: show, widget: boolean, required: false}
           - {label: Show Products Section, name: show_products, widget: boolean, required: false}
           - label: Products
             name: products
@@ -140,6 +159,7 @@ collections:
             fields:
               - {label: Product Name, name: name, widget: string, required: false}
               - {label: Category, name: category, widget: string, required: false}
+              - {label: Brand, name: brand, widget: string, required: false}
               - {label: Photo, name: image, widget: image, required: false}
               - {label: Description, name: description, widget: text, required: false}
               - {label: Price, name: price, widget: string, required: false}
@@ -157,6 +177,7 @@ collections:
             fields:
               - {label: Photo, name: image, widget: image, required: false}
               - {label: Caption, name: caption, widget: string, required: false}
+              - {label: Show Photo, name: show, widget: boolean, required: false}
           - {label: Show Why Choose Us Section, name: show_why_choose_us, widget: boolean, required: false}
           - label: Why Choose Us
             name: why_choose_us
@@ -167,6 +188,7 @@ collections:
               - {label: Icon / Emoji, name: icon, widget: string, required: false}
               - {label: Title, name: title, widget: string, required: false}
               - {label: Description, name: description, widget: text, required: false}
+              - {label: Show Item, name: show, widget: boolean, required: false}
           - {label: SEO Title, name: seo_title, widget: string, required: false}
           - {label: SEO Description, name: seo_description, widget: text, required: false}
           - {label: Footer Text, name: footer_text, widget: string, required: false}
