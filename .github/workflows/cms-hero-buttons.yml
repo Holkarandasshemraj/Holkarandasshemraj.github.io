@@ -1,0 +1,63 @@
+name: Wire Hero Secondary Button Controls
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'admin/config.yml'
+      - 'content.yml'
+      - '.github/workflows/cms-hero-buttons.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Patch CMS and frontend
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          cfg = Path('admin/config.yml')
+          s = cfg.read_text()
+          marker = '              - {label: "Button Link", name: "button_link", widget: "string", required: false}\n'
+          additions = marker + '              - {label: "Show Second Button", name: "show_second_button", widget: "boolean", required: false}\n              - {label: "Second Button Text", name: "second_button_text", widget: "string", required: false}\n              - {label: "Second Button Link", name: "second_button_link", widget: "string", required: false}\n'
+          if 'name: "show_second_button"' not in s and marker in s:
+              s = s.replace(marker, additions, 1)
+          cfg.write_text(s)
+
+          p = Path('index.html')
+          s = p.read_text()
+          old = '''  <a id="heroButton" class="btn primary" href="#products">Explore Products</a><a id="heroSecond" class="btn secondary" href="#contact">Visit Our Store</a>'''
+          new = '''  <a id="heroButton" class="btn primary" href="#products">Explore Products</a><a id="heroSecond" class="btn secondary" href="#contact">Visit Our Store</a>'''
+          if old in s:
+              s = s.replace(old, new, 1)
+
+          # Inject a small post-render hook without disturbing the existing site logic.
+          hook = r'''\n<script>\n(function(){\n  function wireHeroSecond(){\n    var btn=document.getElementById('heroSecond');\n    var slides=(window.data&&Array.isArray(window.data.hero_images))?window.data.hero_images:[];\n    if(!btn||!slides.length)return;\n    var i=window.__heroIndex||0, item=slides[i]||{};\n    btn.textContent=item.second_button_text||'Visit Our Store';\n    btn.href=item.second_button_link||'#contact';\n    btn.style.display=item.show_second_button===false?'none':'';\n  }\n  var tries=0;\n  var t=setInterval(function(){wireHeroSecond();if(++tries>20)clearInterval(t)},500);\n  window.addEventListener('heroSlideChanged',wireHeroSecond);\n})();\n</script>\n'''
+          if 'function wireHeroSecond()' not in s:
+              s = s.replace('</body>', hook + '</body>', 1)
+
+          # Expose data/hero index to the hook if the existing script keeps them lexical.
+          s = s.replace("let data={},selected='All',timer=null;", "let data={},selected='All',timer=null;window.data=data;window.__heroIndex=0;")
+          p.write_text(s)
+          PY
+
+      - name: Commit patched files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html admin/config.yml
+          if git diff --cached --quiet; then
+            echo 'No changes needed.'
+            exit 0
+          fi
+          git commit -m 'fix: connect hero secondary button to CMS [skip ci]'
+          git push
