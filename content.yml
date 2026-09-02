@@ -72,8 +72,7 @@ hero_images:
   - heading: Holkaran Dass Hem Raj
     blur: false
     button_link: products.html
-    text: Books, stationery, gifts, toys, science goods and sports essentials — all
-      under one roof.
+    text: Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.
     show_overlay: true
     second_button_text: Visit Our Store
     blur_amount: 0
@@ -146,7 +145,7 @@ hero_images:
     overlay_color: "#123b73"
     show_button: true
     button_text: Enquire Now
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandass.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
@@ -215,6 +214,7 @@ show_products: true
 products:
   - name: Books
     category: Books
+    image: /images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
     description: >
       Explore a wide collection of books for students, children, and readers of
       all ages. From educational and academic books to storybooks and general
@@ -225,6 +225,7 @@ products:
     show: true
   - name: Stationery
     category: Stationery
+    image: /images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
     description: >
       Find all your everyday stationery essentials in one place. We offer
       notebooks, pens, pencils, school supplies, art materials, and other useful
@@ -235,6 +236,7 @@ products:
     show: true
   - name: Sports
     category: Sports
+    image: /images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
     description: >
       Discover a range of sports products and accessories for students,
       beginners, and sports enthusiasts. From everyday sports essentials to
@@ -246,6 +248,7 @@ products:
     show: true
   - name: Science Goods
     category: Science Goods
+    image: /images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
     description: >
       Explore a range of science products and educational materials for students
       and curious minds. Find useful items for science projects, experiments,
@@ -256,6 +259,7 @@ products:
     show: true
   - name: Gifts
     category: Gifts
+    image: /images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >
       Make every occasion special with our collection of thoughtful and
       attractive gifts. Discover fun, useful, and unique gift items perfect for
@@ -266,6 +270,7 @@ products:
     show: true
   - name: Toys
     category: Toys
+    image: /images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
     description: >
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
