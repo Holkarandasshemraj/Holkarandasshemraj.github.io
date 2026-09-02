@@ -76,6 +76,9 @@ hero_images:
     button_text: Explore Products
     button_link: "#products"
     show_button: true
+    second_button_text: Visit Our Store
+    second_button_link: "#contact"
+    show_second_button: true
   - image: /images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
     heading: Books for Every Interest
     text: Educational, academic, story and general reading books for all ages.
@@ -89,6 +92,9 @@ hero_images:
     button_text: View Books
     button_link: "#products"
     show_button: true
+    second_button_text: Visit Our Store
+    second_button_link: "#contact"
+    show_second_button: true
   - image: /images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
     heading: Stationery for Everyday Needs
     text: School, office, art and writing essentials in one convenient place.
@@ -102,6 +108,9 @@ hero_images:
     button_text: Shop Stationery
     button_link: "#products"
     show_button: true
+    second_button_text: Visit Our Store
+    second_button_link: "#contact"
+    show_second_button: true
   - image: /images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
     heading: Gifts, Toys & More
     text: Fun and thoughtful choices for birthdays, celebrations and special moments.
@@ -115,6 +124,9 @@ hero_images:
     button_text: Explore More
     button_link: "#products"
     show_button: true
+    second_button_text: Visit Our Store
+    second_button_link: "#contact"
+    show_second_button: true
   - image: /images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
     heading: Learn. Create. Play.
     text: Science goods and sports essentials for curious and active minds.
@@ -128,6 +140,9 @@ hero_images:
     button_text: Enquire Now
     button_link: "#contact"
     show_button: true
+    second_button_text: Visit Our Store
+    second_button_link: "#contact"
+    show_second_button: true
 show_about: true
 about_title: About Our Store
 about: >+
