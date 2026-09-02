@@ -3,241 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- HDHR storefront deployment refresh -->
-
 <meta name="google-site-verification" content="TGMsBPAhVvv0YQ5FJjHZhaDEx0ZZ1T4FofFihD1Hyg0">
-
 <title>Holkaran Dass Hem Raj | Narnaul</title>
-
 <meta name="description" content="Holkaran Dass Hem Raj, Narnaul – Books, Stationery, Gifts, Toys, Science Goods and Sports products.">
 <meta name="keywords" content="Holkaran Dass Hem Raj, Narnaul, books, stationery, gifts, toys, science goods, sports">
 <meta name="robots" content="index, follow">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
 <style>
-
-:root{
-  --primary-color:#EE305E;
-  --secondary-color:#E2DE61;
-  --accent-color:#F5A623;
-  --background-color:#FFFDF7;
-  --card-background-color:#FFFFFF;
-  --text-color:#17233C;
-  --heading-color:#123B73;
-  --nav-text-color:#FFFFFF;
-  --button-text-color:#FFFFFF;
-
-  --call-color:#123B73;
-  --enquire-color:#25D366;
-
-  --font-family:Poppins,Arial,sans-serif;
-  --heading-font:Poppins,Arial,sans-serif;
-  --hero-heading-font:Poppins,Arial,sans-serif;
-  --hero-text-font:Poppins,Arial,sans-serif;
-  --section-heading-font:Poppins,Arial,sans-serif;
-  --nav-font:Nunito,Arial,sans-serif;
-  --button-font:Poppins,Arial,sans-serif;
-  --product-title-font:Poppins,Arial,sans-serif;
-  --product-description-font:Poppins,Arial,sans-serif;
-
-  --body-weight:400;
-  --heading-weight:700;
-  --hero-heading-weight:700;
-  --hero-text-weight:400;
-  --section-heading-weight:700;
-  --nav-weight:700;
-  --button-weight:600;
-  --product-title-weight:700;
-  --product-description-weight:400;
-
-  --body-style:normal;
-  --heading-style:normal;
-  --hero-heading-style:normal;
-  --hero-text-style:normal;
-  --section-heading-style:normal;
-  --nav-style:normal;
-  --button-style:normal;
-  --product-title-style:normal;
-  --product-description-style:normal;
-
-  --body-size:16px;
-  --heading-size:42px;
-  --hero-heading-size:48px;
-  --hero-text-size:18px;
-  --section-heading-size:34px;
-  --button-size:15px;
-  --product-title-size:20px;
-  --product-description-size:14px;
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--font-family);font-size:var(--body-size);font-weight:var(--body-weight);font-style:var(--body-style);background:var(--background-color);color:var(--text-color);line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-button,input,select{font:inherit}
-.container{width:min(1180px,92%);margin:auto}
-
-.topbar{background:var(--heading-color);color:#fff;font-size:13px}
-.topbar .container{display:flex;justify-content:space-between;gap:16px;padding:7px 0;align-items:center}
-
-header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 3px 18px rgba(0,0,0,.08)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{display:flex;align-items:center;gap:12px;min-width:0}
-.brand img{width:58px;height:58px;object-fit:contain}
-.brand-name{font-family:var(--heading-font);font-weight:var(--heading-weight);font-style:var(--heading-style);color:var(--heading-color);font-size:22px;line-height:1.15}
-.brand-tag{font-size:11px;color:#6d7480}
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px;align-items:center}
-nav a{font-family:var(--nav-font);font-weight:var(--nav-weight);font-style:var(--nav-style);font-size:14px;padding:10px 12px;border-radius:9px}
-nav a:hover{background:#f3f5f8;color:var(--primary-color)}
-.menu-btn{display:none;border:0;background:transparent;font-size:27px;cursor:pointer;color:var(--heading-color)}
-
-.hero{position:relative;overflow:hidden;background:var(--heading-color);color:#fff}
-.slides{position:relative;min-height:520px}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease;display:flex;align-items:center;background-size:cover;background-position:center}
-.slide.active{opacity:1;visibility:visible}
-.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.25));pointer-events:none}
-.slide-content{position:relative;z-index:2;width:min(760px,92%);margin-left:max(4%,calc((100% - 1180px)/2));padding:70px 0}
-.hero-logo{width:130px;height:130px;object-fit:contain;background:rgba(255,255,255,.94);padding:8px;border-radius:18px;margin-bottom:18px}
-.hero h1{font-family:var(--hero-heading-font);font-size:var(--hero-heading-size);font-weight:var(--hero-heading-weight);font-style:var(--hero-heading-style);line-height:1.1;margin:0 0 15px}
-.hero p{font-family:var(--hero-text-font);font-size:var(--hero-text-size);font-weight:var(--hero-text-weight);font-style:var(--hero-text-style);max-width:680px;margin:0 0 25px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;padding:12px 19px;border-radius:10px;font-family:var(--button-font);font-weight:var(--button-weight);font-style:var(--button-style);font-size:var(--button-size);transition:.2s}
-.btn-primary{background:var(--primary-color);color:var(--button-text-color)}
-.btn-secondary{background:#fff;color:var(--heading-color)}
-.btn:hover{transform:translateY(-2px)}
-.slider-dots{position:absolute;z-index:5;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px}
-.slider-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer}
-.slider-dot.active{background:#fff;transform:scale(1.25)}
-
-section{padding:72px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 34px}
-.section-head h2{font-family:var(--section-heading-font);font-size:var(--section-heading-size);font-weight:var(--section-heading-weight);font-style:var(--section-heading-style);line-height:1.2;color:var(--heading-color);margin:0 0 10px}
-.section-head p{margin:0;color:#687282}
-
-.grid{display:grid;gap:20px}
-.categories-grid{grid-template-columns:repeat(6,1fr)}
-.category-card{background:var(--card-background-color);border-radius:16px;padding:20px 12px;text-align:center;box-shadow:0 8px 25px rgba(20,30,50,.07);border:1px solid rgba(20,30,50,.06);transition:.2s}
-.category-card:hover{transform:translateY(-4px)}
-.category-icon,.category-image{width:72px;height:72px;margin:0 auto 12px;border-radius:50%;object-fit:cover;display:flex;align-items:center;justify-content:center;background:#f4f6fa;font-size:30px}
-.category-card h3{margin:0;font-family:var(--heading-font);font-weight:var(--heading-weight);font-size:16px;color:var(--heading-color)}
-
-.products-toolbar{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:25px}
-.search{flex:1;min-width:240px;padding:12px 15px;border:1px solid #d9dee7;border-radius:10px;background:#fff;outline:none}
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.filter-btn{border:1px solid #d9dee7;background:#fff;padding:9px 13px;border-radius:8px;cursor:pointer}
-.filter-btn.active,.filter-btn:hover{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}
-.products-grid{grid-template-columns:repeat(3,1fr)}
-.product-card{background:var(--card-background-color);border-radius:17px;overflow:hidden;border:1px solid rgba(20,30,50,.07);box-shadow:0 8px 25px rgba(20,30,50,.07);display:flex;flex-direction:column}
-.product-img{height:230px;background:#f4f5f7;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.product-img img{width:100%;height:100%;object-fit:cover}
-.product-body{padding:18px;display:flex;flex-direction:column;flex:1}
-.product-body h3{font-family:var(--product-title-font);font-size:var(--product-title-size);font-weight:var(--product-title-weight);font-style:var(--product-title-style);color:var(--heading-color);margin:0 0 5px}
-.product-body p{font-family:var(--product-description-font);font-size:var(--product-description-size);font-weight:var(--product-description-weight);font-style:var(--product-description-style);color:#687282;margin:0 0 12px}
-.price{font-weight:700;color:var(--primary-color);margin-top:auto;margin-bottom:13px}
-.product-actions{display:flex;gap:8px;flex-wrap:wrap}
-.call-btn{background:var(--call-color);color:#fff}.enquire-btn{background:var(--enquire-color);color:#fff}
-
-.why-grid{grid-template-columns:repeat(3,1fr)}
-.why-card{background:#fff;padding:25px;border-radius:15px;box-shadow:0 8px 25px rgba(20,30,50,.06);text-align:center}
-.why-icon{font-size:34px;margin-bottom:8px}.why-card h3{margin:0 0 7px;color:var(--heading-color)}
-
-.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.about-box{background:#fff;padding:32px;border-radius:18px;box-shadow:0 8px 25px rgba(20,30,50,.06)}
-.about-box h2{font-family:var(--heading-font);font-size:var(--heading-size);font-weight:var(--heading-weight);font-style:var(--heading-style);line-height:1.15;color:var(--heading-color);margin:0 0 15px}
-.about-image{min-height:340px;border-radius:20px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-size:50px}
-
-.gallery-grid{grid-template-columns:repeat(4,1fr)}
-.gallery-item{height:220px;border-radius:15px;overflow:hidden;background:#eee}.gallery-item img{width:100%;height:100%;object-fit:cover}
-
-.map-wrap iframe{width:100%;height:390px;border:0;border-radius:18px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.contact-card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 25px rgba(20,30,50,.06)}
-.contact-card h3{color:var(--heading-color);margin-top:0}
-.contact-row{display:flex;gap:12px;margin:13px 0;align-items:flex-start}
-.contact-row strong{display:block;color:var(--heading-color)}
-.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-
-footer{background:var(--heading-color);color:#fff;padding:35px 0;text-align:center}
-footer p{margin:6px 0;opacity:.9}
-
-@media(max-width:1000px){
-  .categories-grid{grid-template-columns:repeat(3,1fr)}
-  .products-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:760px){
-  .topbar .container{justify-content:center;text-align:center}
-  .topbar .right{display:none}
-  .nav{min-height:68px}
-  .brand img{width:48px;height:48px}.brand-name{font-size:18px}
-  .menu-btn{display:block}
-  nav{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;border-top:1px solid #eee;padding:8px 4%;box-shadow:0 12px 20px rgba(0,0,0,.08)}
-  nav.open{display:block}nav ul{display:block}nav li{margin:2px 0}nav a{display:block}
-  .slides{min-height:560px}.slide-content{margin:0 auto;padding:50px 4%}.hero h1{font-size:36px}.hero p{font-size:16px}.hero-logo{width:105px;height:105px}
-  section{padding:55px 0}.section-head h2{font-size:30px}
-  .categories-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
-  .products-grid,.about-wrap,.contact-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:480px){
-  .categories-grid,.why-grid,.gallery-grid{grid-template-columns:1fr}
-  .product-img{height:210px}.hero-actions .btn{width:100%}
-}
+:root{--primary-color:#EE305E;--secondary-color:#E2DE61;--accent-color:#F5A623;--background-color:#FFFDF7;--card-background-color:#FFFFFF;--text-color:#17233C;--heading-color:#123B73;--nav-text-color:#FFFFFF;--button-text-color:#FFFFFF;--call-color:#123B73;--enquire-color:#25D366;--font-family:Poppins,Arial,sans-serif;--heading-font:Poppins,Arial,sans-serif;--hero-heading-font:Poppins,Arial,sans-serif;--hero-text-font:Poppins,Arial,sans-serif;--section-heading-font:Poppins,Arial,sans-serif;--nav-font:Nunito,Arial,sans-serif;--button-font:Poppins,Arial,sans-serif;--product-title-font:Poppins,Arial,sans-serif;--product-description-font:Poppins,Arial,sans-serif;--body-weight:400;--heading-weight:700;--hero-heading-weight:700;--hero-text-weight:400;--section-heading-weight:700;--nav-weight:700;--button-weight:600;--product-title-weight:700;--product-description-weight:400;--body-style:normal;--heading-style:normal;--hero-heading-style:normal;--hero-text-style:normal;--section-heading-style:normal;--nav-style:normal;--button-style:normal;--product-title-style:normal;--product-description-style:normal;--body-size:16px;--heading-size:42px;--hero-heading-size:48px;--hero-text-size:18px;--section-heading-size:34px;--button-size:15px;--product-title-size:20px;--product-description-size:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;font-family:var(--font-family);font-size:var(--body-size);font-weight:var(--body-weight);font-style:var(--body-style);background:var(--background-color);color:var(--text-color);line-height:1.6}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}button,input,select{font:inherit}.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--heading-color);color:#fff;font-size:13px}.topbar .container{display:flex;justify-content:space-between;gap:16px;padding:7px 0;align-items:center}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 3px 18px rgba(0,0,0,.08)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:58px;height:58px;object-fit:contain}.brand-name{font-family:var(--heading-font);font-weight:var(--heading-weight);font-style:var(--heading-style);color:var(--heading-color);font-size:22px;line-height:1.15}.brand-tag{font-size:11px;color:#6d7480}nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px;align-items:center}nav a{font-family:var(--nav-font);font-weight:var(--nav-weight);font-style:var(--nav-style);font-size:14px;padding:10px 12px;border-radius:9px}nav a:hover{background:#f3f5f8;color:var(--primary-color)}.menu-btn{display:none;border:0;background:transparent;font-size:27px;cursor:pointer;color:var(--heading-color)}
+.hero{position:relative;overflow:hidden;background:var(--heading-color);color:#fff}.slides{position:relative;min-height:520px}.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease;display:flex;align-items:center;background-size:cover;background-position:center}.slide.active{opacity:1;visibility:visible}.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.25));pointer-events:none}.slide-content{position:relative;z-index:2;width:min(760px,92%);margin-left:max(4%,calc((100% - 1180px)/2));padding:70px 0}.hero-logo{width:130px;height:130px;object-fit:contain;background:rgba(255,255,255,.94);padding:8px;border-radius:18px;margin-bottom:18px}.hero h1{font-family:var(--hero-heading-font);font-size:var(--hero-heading-size);font-weight:var(--hero-heading-weight);font-style:var(--hero-heading-style);line-height:1.1;margin:0 0 15px}.hero p{font-family:var(--hero-text-font);font-size:var(--hero-text-size);font-weight:var(--hero-text-weight);font-style:var(--hero-text-style);max-width:680px;margin:0 0 25px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;padding:12px 19px;border-radius:10px;font-family:var(--button-font);font-weight:var(--button-weight);font-style:var(--button-style);font-size:var(--button-size);transition:.2s}.btn-primary{background:var(--primary-color);color:var(--button-text-color)}.btn-secondary{background:#fff;color:var(--heading-color)}.btn:hover{transform:translateY(-2px)}.slider-dots{position:absolute;z-index:5;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px}.slider-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer}.slider-dot.active{background:#fff;transform:scale(1.25)}
+section{padding:72px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head h2{font-family:var(--section-heading-font);font-size:var(--section-heading-size);font-weight:var(--section-heading-weight);font-style:var(--section-heading-style);line-height:1.2;color:var(--heading-color);margin:0 0 10px}.section-head p{margin:0;color:#687282}.grid{display:grid;gap:20px}.categories-grid{grid-template-columns:repeat(6,1fr)}.category-card{background:var(--card-background-color);border-radius:16px;padding:20px 12px;text-align:center;box-shadow:0 8px 25px rgba(20,30,50,.07);border:1px solid rgba(20,30,50,.06);transition:.2s}.category-card:hover{transform:translateY(-4px)}.category-icon,.category-image{width:72px;height:72px;margin:0 auto 12px;border-radius:50%;object-fit:cover;display:flex;align-items:center;justify-content:center;background:#f4f6fa;font-size:30px}.category-card h3{margin:0;font-family:var(--heading-font);font-weight:var(--heading-weight);font-size:16px;color:var(--heading-color)}
+.products-toolbar{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:25px}.search{flex:1;min-width:240px;padding:12px 15px;border:1px solid #d9dee7;border-radius:10px;background:#fff;outline:none}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{border:1px solid #d9dee7;background:#fff;padding:9px 13px;border-radius:8px;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}.products-grid{grid-template-columns:repeat(3,1fr)}.product-card{background:var(--card-background-color);border-radius:17px;overflow:hidden;border:1px solid rgba(20,30,50,.07);box-shadow:0 8px 25px rgba(20,30,50,.07);display:flex;flex-direction:column}.product-img{height:230px;background:#f4f5f7;display:flex;align-items:center;justify-content:center;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover}.product-body{padding:18px;display:flex;flex-direction:column;flex:1}.product-body h3{font-family:var(--product-title-font);font-size:var(--product-title-size);font-weight:var(--product-title-weight);font-style:var(--product-title-style);color:var(--heading-color);margin:0 0 5px}.product-body p{font-family:var(--product-description-font);font-size:var(--product-description-size);font-weight:var(--product-description-weight);font-style:var(--product-description-style);color:#687282;margin:0 0 12px}.price{font-weight:700;color:var(--primary-color);margin-top:auto;margin-bottom:13px}.product-actions{display:flex;gap:8px;flex-wrap:wrap}.call-btn{background:var(--call-color);color:#fff}.enquire-btn{background:var(--enquire-color);color:#fff}
+.why-grid{grid-template-columns:repeat(3,1fr)}.why-card{background:#fff;padding:25px;border-radius:15px;box-shadow:0 8px 25px rgba(20,30,50,.06);text-align:center}.why-icon{font-size:34px;margin-bottom:8px}.why-card h3{margin:0 0 7px;color:var(--heading-color)}.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:#fff;padding:32px;border-radius:18px;box-shadow:0 8px 25px rgba(20,30,50,.06)}.about-box h2{font-family:var(--heading-font);font-size:var(--heading-size);font-weight:var(--heading-weight);font-style:var(--heading-style);line-height:1.15;color:var(--heading-color);margin:0 0 15px}.about-image{min-height:340px;border-radius:20px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-size:50px}.gallery-grid{grid-template-columns:repeat(4,1fr)}.gallery-item{height:220px;border-radius:15px;overflow:hidden;background:#eee}.gallery-item img{width:100%;height:100%;object-fit:cover}.map-wrap iframe{width:100%;height:390px;border:0;border-radius:18px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 25px rgba(20,30,50,.06)}.contact-card h3{color:var(--heading-color);margin-top:0}.contact-row{display:flex;gap:12px;margin:13px 0;align-items:flex-start}.contact-row strong{display:block;color:var(--heading-color)}.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}footer{background:var(--heading-color);color:#fff;padding:35px 0;text-align:center}footer p{margin:6px 0;opacity:.9}
+@media(max-width:1000px){.categories-grid{grid-template-columns:repeat(3,1fr)}.products-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.topbar .container{justify-content:center;text-align:center}.topbar .right{display:none}.nav{min-height:68px}.brand img{width:48px;height:48px}.brand-name{font-size:18px}.menu-btn{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;border-top:1px solid #eee;padding:8px 4%;box-shadow:0 12px 20px rgba(0,0,0,.08)}nav.open{display:block}nav ul{display:block}nav li{margin:2px 0}nav a{display:block}.slides{min-height:560px}.slide-content{margin:0 auto;padding:50px 4%}.hero h1{font-size:36px}.hero p{font-size:16px}.hero-logo{width:105px;height:105px}section{padding:55px 0}.section-head h2{font-size:30px}.categories-grid,.why-grid{grid-template-columns:repeat(2,1fr)}.products-grid,.about-wrap,.contact-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.categories-grid,.why-grid,.gallery-grid{grid-template-columns:1fr}.product-img{height:210px}.hero-actions .btn{width:100%}}
 </style>
 </head>
 <body>
-
 <div class="topbar"><div class="container"><div>Holkaran Dass Hem Raj • Narnaul</div><div class="right">Books • Stationery • Sports • Gifts • Toys • Science Goods</div></div></div>
-
-<header><div class="container nav">
-  <a class="brand" href="#home">
-    <img src="/images/uploads/file_00000000f9e48211ae9421db860baf41.png" alt="Holkaran Dass Hem Raj">
-    <div><div class="brand-name">Holkaran Dass Hem Raj</div><div class="brand-tag">Learn. Create. Play. Celebrate.</div></div>
-  </a>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav id="nav"><ul>
-    <li><a href="#home">Home</a></li><li><a href="#categories">Categories</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
-  </ul></nav>
-</div></header>
-
+<header><div class="container nav"><a class="brand" href="#home"><img id="brandLogo" src="/images/uploads/file_00000000f9e48211ae9421db860baf41.png" alt="Holkaran Dass Hem Raj"><div><div class="brand-name" id="brandName">Holkaran Dass Hem Raj</div><div class="brand-tag" id="brandTag">Learn. Create. Play. Celebrate.</div></div></a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button><nav id="nav"><ul><li><a href="#home">Home</a></li><li><a href="#categories">Categories</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></nav></div></header>
 <main>
-<section class="hero" id="home"><div class="slides" id="slides">
-  <article class="slide active" style="background-image:url('/images/uploads/file_00000000f9e48211ae9421db860baf41.png')"><div class="slide-content"><img class="hero-logo" src="/images/uploads/file_00000000f9e48211ae9421db860baf41.png" alt="Holkaran Dass Hem Raj"><h1>Holkaran Dass Hem Raj</h1><p>Your trusted destination for books, stationery, sports goods, gifts, toys and science goods in Narnaul.</p><div class="hero-actions"><a class="btn btn-primary" href="#products">Explore Products</a><a class="btn btn-secondary" href="#contact">Visit Our Store</a></div></div></article>
-  <article class="slide" style="background-image:url('/images/uploads/sandy-millar-8vaQKYnawHw-unsplash.jpg')"><div class="slide-content"><h1>Books for Every Interest</h1><p>School books, learning resources and reading choices for every age.</p><div class="hero-actions"><a class="btn btn-primary" href="#products">View Books</a><a class="btn btn-secondary" href="#contact">Visit Our Store</a></div></div></article>
-  <article class="slide" style="background-image:url('/images/uploads/hannah-rodrigo-mf_3y1q2Yg-unsplash.jpg')"><div class="slide-content"><h1>Stationery for Everyday Needs</h1><p>Quality stationery for students, schools, offices and creative work.</p><div class="hero-actions"><a class="btn btn-primary" href="#products">Shop Stationery</a><a class="btn btn-secondary" href="#contact">Visit Our Store</a></div></div></article>
-  <article class="slide" style="background-image:url('/images/uploads/caroline-hernandez-4sKpZ2Y4unsplash.jpg')"><div class="slide-content"><h1>Gifts, Toys &amp; More</h1><p>Fun, useful and thoughtful picks for every occasion.</p><div class="hero-actions"><a class="btn btn-primary" href="#products">Explore More</a><a class="btn btn-secondary" href="#contact">Visit Our Store</a></div></div></article>
-  <article class="slide" style="background-image:url('/images/uploads/declan-sun-Rb9s6d5mVxM-unsplash.jpg')"><div class="slide-content"><h1>Learn. Create. Play.</h1><p>Discover products that make learning and creativity more enjoyable.</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">Enquire Now</a><a class="btn btn-secondary" href="#contact">Visit Our Store</a></div></div></article>
-  <div class="slider-dots" id="dots"></div>
-</div></section>
-
-<section id="categories"><div class="container"><div class="section-head"><h2>Shop by Category</h2><p>Explore our popular categories.</p></div><div class="grid categories-grid" id="categoriesGrid"></div></div></section>
-
-<section id="products"><div class="container"><div class="section-head"><h2>Our Products</h2><p>Browse products and enquire directly with the store.</p></div><div class="products-toolbar"><input id="search" class="search" placeholder="Search products..."><div class="filters" id="filters"></div></div><div class="grid products-grid" id="productsGrid"></div></div></section>
-
-<section id="why"><div class="container"><div class="section-head"><h2>Why Choose Us</h2><p>Trusted service with products for learning, work and play.</p></div><div class="grid why-grid"><div class="why-card"><div class="why-icon">✓</div><h3>Trusted Store</h3><p>Serving Narnaul with a wide range of useful products.</p></div><div class="why-card"><div class="why-icon">★</div><h3>Wide Range</h3><p>Books, stationery, sports, gifts, toys and science goods in one place.</p></div><div class="why-card"><div class="why-icon">♥</div><h3>Easy Enquiry</h3><p>Call or WhatsApp us to ask about products and availability.</p></div></div></div></section>
-
-<section id="about"><div class="container about-wrap"><div class="about-image">📚</div><div class="about-box"><h2>About Us</h2><p>Holkaran Dass Hem Raj is a trusted local store in Narnaul offering books, stationery, sports goods, gifts, toys and science goods. We aim to make everyday learning, creativity and gifting easier by bringing a useful range of products under one roof.</p></div></div></section>
-
-<section id="contact"><div class="container"><div class="section-head"><h2>Visit or Contact Us</h2><p>We are happy to help with product enquiries.</p></div><div class="contact-grid"><div class="contact-card"><h3>Store Details</h3><div class="contact-row"><span>📍</span><div><strong>Address</strong>Holkaran Dass Hem Raj,<br>Singhana Road, Opposite Vinayak Hospital,<br>Narnaul, Haryana, District Mohindergarh – 123001</div></div><div class="contact-row"><span>📞</span><div><strong>Phone</strong>8053721234</div></div><div class="contact-row"><span>💬</span><div><strong>WhatsApp</strong>+91 80537 21234</div></div><div class="contact-actions"><a class="btn call-btn" href="tel:8053721234">Call Now</a><a class="btn enquire-btn" href="https://wa.me/918053721234">Enquire on WhatsApp</a></div></div><div class="contact-card map-wrap"><iframe src="https://www.google.com/maps?q=Holkaran%20Dass%20Hem%20Raj%20Narnaul&output=embed" loading="lazy"></iframe></div></div></div></section>
-</main>
-
-<footer><div class="container"><p><strong>Holkaran Dass Hem Raj</strong></p><p>Learn. Create. Play. Celebrate.</p><p>© 2026 Holkaran Dass Hem Raj. All rights reserved.</p></div></footer>
-
+<section class="hero" id="home"><div class="slides" id="slides"></div></section>
+<section id="categories"><div class="container"><div class="section-head"><h2 id="categoriesTitle">Our Categories</h2><p id="categoriesSubtitle">Everything you need, all in one place.</p></div><div class="grid categories-grid" id="categoriesGrid"></div></div></section>
+<section id="products"><div class="container"><div class="section-head"><h2 id="productsTitle">Our Products</h2><p id="productsSubtitle">Find what you’re looking for.</p></div><div class="products-toolbar"><input id="search" class="search" placeholder="Search products..."><div class="filters" id="filters"></div></div><div class="grid products-grid" id="productsGrid"></div></div></section>
+<section id="why"><div class="container"><div class="section-head"><h2 id="whyTitle">Why Choose Us?</h2><p id="whySubtitle">Your trusted destination for learning, creativity and more.</p></div><div class="grid why-grid" id="whyGrid"></div></div></section>
+<section id="about"><div class="container about-wrap"><div class="about-image">📚</div><div class="about-box"><h2 id="aboutTitle">About Our Store</h2><p id="aboutText"></p></div></div></section>
+<section id="gallery"><div class="container"><div class="section-head"><h2 id="galleryTitle">Our Gallery</h2><p id="gallerySubtitle">Take a look at our store and collection.</p></div><div class="grid gallery-grid" id="galleryGrid"></div></div></section>
+<section id="contact"><div class="container"><div class="section-head"><h2 id="contactTitle">Visit Our Store</h2><p>We are happy to help with product enquiries.</p></div><div class="contact-grid"><div class="contact-card"><h3>Store Details</h3><div class="contact-row"><span>📍</span><div><strong>Address</strong><span id="address"></span></div></div><div class="contact-row"><span>📞</span><div><strong>Phone</strong><span id="phone"></span></div></div><div class="contact-row"><span>💬</span><div><strong>WhatsApp</strong><span id="whatsapp"></span></div></div><div class="contact-actions"><a class="btn call-btn" id="callButton" href="#">Call Now</a><a class="btn enquire-btn" id="whatsappButton" href="#">Enquire on WhatsApp</a></div></div><div class="contact-card map-wrap"><iframe id="mapFrame" src="" loading="lazy"></iframe></div></div></div></section>
+</main><footer><div class="container"><p><strong id="footerName">Holkaran Dass Hem Raj</strong></p><p id="footerTag">Learn. Create. Play. Celebrate.</p><p id="footerText">© 2026 Holkaran Dass Hem Raj. All rights reserved.</p></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 <script>
-const fallback={categories:[{name:'Stationery',icon:'✏️'},{name:'Books',icon:'📚'},{name:'Sports',icon:'⚽'},{name:'Gifts',icon:'🎁'},{name:'Toys',icon:'🧸'},{name:'Science Goods',icon:'🔬'}],products:[{name:'Books',category:'Books',description:'Books and learning resources.',image:'/images/uploads/Books.png'},{name:'Stationery',category:'Stationery',description:'Everyday school and office stationery.',image:'/images/uploads/Stationery.png'},{name:'Sports',category:'Sports',description:'Sports and activity essentials.',image:'/images/uploads/Sports.png'},{name:'Science Goods',category:'Science Goods',description:'Science learning goods and supplies.',image:'/images/uploads/Science Goods.png'},{name:'Gifts',category:'Gifts',description:'Gift options for every occasion.',image:'/images/uploads/Gifts.png'},{name:'Toys',category:'Toys',description:'Fun toys for kids.',image:'/images/uploads/Toys.png'}]};
-let data=fallback;
-async function loadContent(){try{const r=await fetch('/content.yml?x='+Date.now());if(r.ok){const t=await r.text();data=Object.assign({},fallback,jsyaml.load(t)||{});}}catch(e){}render();}
-function render(){const cats=(data.categories||fallback.categories).filter(x=>x.show!==false);document.getElementById('categoriesGrid').innerHTML=cats.map(c=>`<div class="category-card"><div class="category-icon">${c.icon||'📦'}</div><h3>${c.name||''}</h3></div>`).join('');const products=(data.products||fallback.products).filter(x=>x.show!==false);const filters=['All',...new Set(products.map(p=>p.category).filter(Boolean))];document.getElementById('filters').innerHTML=filters.map((f,i)=>`<button class="filter-btn ${i===0?'active':''}" data-filter="${f}">${f}</button>`).join('');const grid=document.getElementById('productsGrid');function draw(filter='All',q=''){const arr=products.filter(p=>(filter==='All'||p.category===filter)&&(`${p.name||''} ${p.description||''} ${p.category||''}`).toLowerCase().includes(q.toLowerCase()));grid.innerHTML=arr.map(p=>`<article class="product-card"><div class="product-img">${p.image?`<img src="${p.image}" alt="${p.name||''}">`:'📦'}</div><div class="product-body"><h3>${p.name||''}</h3><p>${p.description||''}</p>${p.show_price!==false&&(p.price||p.sale_price)?`<div class="price">${p.sale_price||p.price||''}</div>`:''}<div class="product-actions">${p.show_call_button!==false?'<a class="btn call-btn" href="tel:8053721234">Call</a>':''}${p.show_enquire_button!==false?'<a class="btn enquire-btn" href="https://wa.me/918053721234">Enquire</a>':''}</div></div></article>`).join('');}
-draw();document.querySelectorAll('.filter-btn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');draw(b.dataset.filter,document.getElementById('search').value)});document.getElementById('search').oninput=e=>{const f=document.querySelector('.filter-btn.active')?.dataset.filter||'All';draw(f,e.target.value)};}
-const slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('dots');let current=0;slides.forEach((_,i)=>{const b=document.createElement('button');b.className='slider-dot'+(i===0?' active':'');b.onclick=()=>go(i);dots.appendChild(b)});function go(i){current=i;slides.forEach((s,n)=>s.classList.toggle('active',n===i));[...dots.children].forEach((d,n)=>d.classList.toggle('active',n===i))}setInterval(()=>go((current+1)%slides.length),5000);
-document.getElementById('menuBtn').onclick=()=>document.getElementById('nav').classList.toggle('open');
-loadContent();
+const fallback={shop_name:'Holkaran Dass Hem Raj',tagline:'Learn. Create. Play. Celebrate.',logo:'/images/uploads/file_00000000f9e48211ae9421db860baf41.png',categories:[{name:'Stationery',icon:'✏️',show:true},{name:'Books',icon:'📚',show:true},{name:'Sports',icon:'⚽',show:true},{name:'Gifts',icon:'🎁',show:true},{name:'Toys',icon:'🧸',show:true},{name:'Science Goods',icon:'🔬',show:true}],products:[],hero_images:[{image:'/images/uploads/file_00000000f9e48211ae9421db860baf41.png',heading:'Holkaran Dass Hem Raj',text:'Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.',show_overlay:true,overlay_color:'#123b73',overlay_opacity:.45,button_text:'Explore Products',button_link:'#products',show_button:true,second_button_text:'Visit Our Store',second_button_link:'#contact',show_second_button:true}],why_choose_us:[{icon:'🏪',title:'Wide Range',description:'Books, stationery, gifts, toys, science goods and sports products under one roof.'},{icon:'🎯',title:'For Every Need',description:'Products for students, families, children and everyday requirements.'},{icon:'📞',title:'Convenient Shopping',description:'Find what you need easily and contact us directly for enquiries.'}],gallery:[]};
+let data=fallback, current=0, timer=null;
+async function loadContent(){try{const r=await fetch('/content.yml?x='+Date.now());if(r.ok){const t=await r.text();const parsed=jsyaml.load(t)||{};data=Object.assign({},fallback,parsed)}}catch(e){console.error(e)}render()}
+function esc(v){return String(v??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]))}
+function renderHero(){const list=(data.show_hero===false?[]:(data.hero_images||[])).filter(x=>x&&x.show_slide!==false);const slides=document.getElementById('slides');if(!list.length){slides.innerHTML='';return}slides.innerHTML=list.map((s,i)=>{const image=s.image||'';const overlay=s.show_overlay===false?'transparent':(s.overlay_color||'#123b73');const opacity=s.show_overlay===false?0:(s.overlay_opacity??.45);const blur=s.blur?`filter:blur(${Number(s.blur_amount||0)}px);`:'';const gradient=s.gradient?`linear-gradient(90deg,${s.gradient_color||overlay},transparent),`:'';const bg=image?`background-image:${gradient}url("${image}");`:'';return `<article class="slide ${i===0?'active':''}" style="${bg}"><div class="slide-content"><h1>${esc(s.heading||'')}</h1><p>${esc(s.text||'')}</p><div class="hero-actions">${s.show_button!==false&&s.button_text?`<a class="btn btn-primary" href="${esc(s.button_link||'#contact')}">${esc(s.button_text)}</a>`:''}${s.show_second_button!==false&&s.second_button_text?`<a class="btn btn-secondary" href="${esc(s.second_button_link||'#contact')}">${esc(s.second_button_text)}</a>`:''}</div></div><div style="position:absolute;inset:0;background:${overlay};opacity:${opacity};pointer-events:none;${blur}"></div></article>`}).join('');const dots=document.createElement('div');dots.className='slider-dots';dots.id='dots';slides.appendChild(dots);current=0;document.querySelectorAll('.slide').forEach((_,i)=>{const b=document.createElement('button');b.className='slider-dot'+(i===0?' active':'');b.setAttribute('aria-label','Slide '+(i+1));b.onclick=()=>go(i);dots.appendChild(b)});clearInterval(timer);timer=list.length>1?setInterval(()=>go((current+1)%list.length),5000):null}
+function go(i){const slides=[...document.querySelectorAll('.slide')],dots=[...document.querySelectorAll('.slider-dot')];if(!slides.length)return;current=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===current));dots.forEach((d,n)=>d.classList.toggle('active',n===current))}
+function render(){document.getElementById('brandLogo').src=data.logo||fallback.logo;document.getElementById('brandName').textContent=data.shop_name||'';document.getElementById('brandTag').textContent=data.tagline||'';document.getElementById('footerName').textContent=data.shop_name||'';document.getElementById('footerTag').textContent=data.tagline||'';document.getElementById('categoriesTitle').textContent=data.categories_title||'Our Categories';document.getElementById('categoriesSubtitle').textContent=data.categories_subtitle||'';document.getElementById('productsTitle').textContent=data.products_title||'Our Products';document.getElementById('productsSubtitle').textContent=data.products_subtitle||'';document.getElementById('whyTitle').textContent=data.why_title||'Why Choose Us?';document.getElementById('whySubtitle').textContent=data.why_subtitle||'';document.getElementById('aboutTitle').textContent=data.about_title||'About Our Store';document.getElementById('aboutText').textContent=data.about||'';document.getElementById('galleryTitle').textContent=data.gallery_title||'Our Gallery';document.getElementById('gallerySubtitle').textContent=data.gallery_subtitle||'';document.getElementById('contactTitle').textContent=data.contact_title||'Visit Our Store';document.getElementById('address').innerHTML=esc(data.address||'').replace(/\n/g,'<br>');document.getElementById('phone').textContent=data.phone||'';document.getElementById('whatsapp').textContent=data.whatsapp||'';document.getElementById('callButton').href='tel:'+(data.phone||'8053721234');document.getElementById('callButton').textContent=data.call_button_text||'Call Now';document.getElementById('callButton').style.display=data.show_call_button===false?'none':'inline-flex';const wa=data.whatsapp||'918053721234';document.getElementById('whatsappButton').href='https://wa.me/'+String(wa).replace(/\D/g,'');document.getElementById('whatsappButton').textContent=data.enquire_button_text||'Enquire on WhatsApp';document.getElementById('whatsappButton').style.display=data.show_enquire_button===false?'none':'inline-flex';const map=data.maps_link||'';document.getElementById('mapFrame').src=map?`https://www.google.com/maps?q=${encodeURIComponent(map)}&output=embed`:'https://www.google.com/maps?q=Holkaran%20Dass%20Hem%20Raj%20Narnaul&output=embed';renderHero();const cats=(data.categories||[]).filter(x=>x.show!==false);document.getElementById('categoriesGrid').innerHTML=cats.map(c=>`<div class="category-card">${c.image?`<img class="category-image" src="${esc(c.image)}" alt="${esc(c.name||'')}">`:`<div class="category-icon">${esc(c.icon||'📦')}</div>`}<h3>${esc(c.name||'')}</h3></div>`).join('');const products=(data.products||[]).filter(x=>x.show!==false);const filters=['All',...new Set(products.map(p=>p.category).filter(Boolean))];document.getElementById('filters').innerHTML=filters.map((f,i)=>`<button class="filter-btn ${i===0?'active':''}" data-filter="${esc(f)}">${esc(f)}</button>`).join('');const grid=document.getElementById('productsGrid');function draw(filter='All',q=''){const arr=products.filter(p=>(filter==='All'||p.category===filter)&&(`${p.name||''} ${p.description||''} ${p.category||''}`).toLowerCase().includes(q.toLowerCase()));grid.innerHTML=arr.map(p=>`<article class="product-card"><div class="product-img">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name||'')}">`:'📦'}</div><div class="product-body"><h3>${esc(p.name||'')}</h3><p>${esc(p.description||'')}</p>${p.show_price!==false&&(p.price||p.sale_price)?`<div class="price">${esc(p.sale_price||p.price||'')}</div>`:''}<div class="product-actions">${p.show_call_button!==false?`<a class="btn call-btn" href="tel:${esc(data.phone||'8053721234')}">Call</a>`:''}${p.show_enquire_button!==false?`<a class="btn enquire-btn" href="https://wa.me/${esc(String(data.whatsapp||'918053721234').replace(/\D/g,''))}">Enquire</a>`:''}</div></div></article>`).join('')||'<p style="grid-column:1/-1;text-align:center">No products to show.</p>'}draw();document.querySelectorAll('.filter-btn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');draw(b.dataset.filter,document.getElementById('search').value)});document.getElementById('search').oninput=e=>{const f=document.querySelector('.filter-btn.active')?.dataset.filter||'All';draw(f,e.target.value)};const gallery=(data.show_gallery===false?[]:(data.gallery||[]));document.getElementById('gallery').style.display=gallery.length?'block':'none';document.getElementById('galleryGrid').innerHTML=gallery.map(g=>`<div class="gallery-item">${g.image?`<img src="${esc(g.image)}" alt="">`:''}</div>`).join('');const why=(data.why_choose_us||[]);document.getElementById('whyGrid').innerHTML=why.map(w=>`<div class="why-card"><div class="why-icon">${esc(w.icon||'★')}</div><h3>${esc(w.title||'')}</h3><p>${esc(w.description||'')}</p></div>`).join('')}
+document.getElementById('menuBtn').onclick=()=>document.getElementById('nav').classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));loadContent();
 </script>
 </body>
 </html>
