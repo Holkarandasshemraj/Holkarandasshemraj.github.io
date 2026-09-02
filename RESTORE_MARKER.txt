@@ -1,0 +1,1 @@
+Restoring the original working website layout and assets after an accidental frontend replacement. The image files and logo assets remain in the repository.
