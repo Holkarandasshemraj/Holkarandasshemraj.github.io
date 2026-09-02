@@ -20,10 +20,12 @@ collections:
           - label: "Shop Name"
             name: "shop_name"
             widget: "string"
+            required: false
 
           - label: "Tagline"
             name: "tagline"
             widget: "string"
+            required: false
 
           - label: "Logo"
             name: "logo"
@@ -35,41 +37,49 @@ collections:
           - label: "Primary Color"
             name: "primary_color"
             widget: "color"
+            required: false
             default: "#EE305E"
 
           - label: "Secondary Color"
             name: "secondary_color"
             widget: "color"
+            required: false
             default: "#E2DE61"
 
           - label: "Accent Color"
             name: "accent_color"
             widget: "color"
+            required: false
             default: "#F5A623"
 
           - label: "Background Color"
             name: "background_color"
             widget: "color"
+            required: false
             default: "#FFFDF7"
 
           - label: "Text Color"
             name: "text_color"
             widget: "color"
+            required: false
             default: "#17233C"
 
           - label: "Heading Color"
             name: "heading_color"
             widget: "color"
+            required: false
             default: "#123B73"
 
           - label: "Navigation Text Color"
             name: "nav_text_color"
             widget: "color"
+            required: false
             default: "#FFFFFF"
 
           - label: "Card Background Color"
             name: "card_background_color"
             widget: "color"
+            required: false
             default: "#FFFFFF"
 
           # CALL / ENQUIRE COLORS
@@ -77,16 +87,19 @@ collections:
           - label: "Call Button Color"
             name: "call_button_color"
             widget: "color"
+            required: false
             default: "#123B73"
 
           - label: "Enquire Button Color"
             name: "enquire_button_color"
             widget: "color"
+            required: false
             default: "#25D366"
 
           - label: "Button Text Color"
             name: "button_text_color"
             widget: "color"
+            required: false
             default: "#FFFFFF"
 
           # FONTS
@@ -94,6 +107,7 @@ collections:
           - label: "Body Font"
             name: "font_family"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -106,6 +120,7 @@ collections:
           - label: "Heading Font"
             name: "heading_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -119,6 +134,7 @@ collections:
           - label: "Hero Heading Font"
             name: "hero_heading_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -132,6 +148,7 @@ collections:
           - label: "Hero Text Font"
             name: "hero_text_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -144,6 +161,7 @@ collections:
           - label: "Section Heading Font"
             name: "section_heading_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -159,6 +177,7 @@ collections:
           - label: "Main Heading Size"
             name: "heading_size"
             widget: "select"
+            required: false
             options:
               - "Small"
               - "Medium"
@@ -169,6 +188,7 @@ collections:
           - label: "Body Text Size"
             name: "body_size"
             widget: "select"
+            required: false
             options:
               - "Small"
               - "Medium"
@@ -178,6 +198,7 @@ collections:
           - label: "Product Title Font"
             name: "product_title_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -191,6 +212,7 @@ collections:
           - label: "Product Description Font"
             name: "product_description_font"
             widget: "select"
+            required: false
             options:
               - "Poppins"
               - "Montserrat"
@@ -203,6 +225,7 @@ collections:
           - label: "Product Title Size"
             name: "product_title_size"
             widget: "number"
+            required: false
             value_type: "int"
             default: 18
             min: 14
@@ -211,6 +234,7 @@ collections:
           - label: "Product Description Size"
             name: "product_description_size"
             widget: "number"
+            required: false
             value_type: "int"
             default: 14
             min: 11
@@ -221,9 +245,10 @@ collections:
           - label: "Show Hero Section"
             name: "show_hero"
             widget: "boolean"
+            required: false
             default: true
 
-          - label: "Hero Slider Images"
+          - label: "Hero Slider"
             name: "hero_images"
             widget: "list"
             required: false
@@ -231,31 +256,97 @@ collections:
               - label: "Image"
                 name: "image"
                 widget: "image"
+                required: false
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+                required: false
+              - label: "Text"
+                name: "text"
+                widget: "text"
+                required: false
+              - label: "Show Overlay"
+                name: "show_overlay"
+                widget: "boolean"
+                required: false
+                default: true
+              - label: "Overlay Color"
+                name: "overlay_color"
+                widget: "color"
+                required: false
+              - label: "Overlay Opacity"
+                name: "overlay_opacity"
+                widget: "number"
+                required: false
+                value_type: "float"
+                min: 0
+                max: 1
+                step: 0.05
+              - label: "Blur"
+                name: "blur"
+                widget: "boolean"
+                required: false
+                default: false
+              - label: "Blur Amount (px)"
+                name: "blur_amount"
+                widget: "number"
+                required: false
+                value_type: "int"
+                min: 0
+                max: 20
+              - label: "Gradient"
+                name: "gradient"
+                widget: "boolean"
+                required: false
+                default: false
+              - label: "Gradient Color"
+                name: "gradient_color"
+                widget: "color"
+                required: false
+              - label: "Button Text"
+                name: "button_text"
+                widget: "string"
+                required: false
+              - label: "Button Link"
+                name: "button_link"
+                widget: "string"
+                required: false
+              - label: "Show Button"
+                name: "show_button"
+                widget: "boolean"
+                required: false
+                default: false
+            required: false
 
           # ABOUT
 
           - label: "Show About Section"
             name: "show_about"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "About Us"
             name: "about"
             widget: "text"
+            required: false
 
           # CONTACT
 
           - label: "Address"
             name: "address"
             widget: "text"
+            required: false
 
           - label: "Phone"
             name: "phone"
             widget: "string"
+            required: false
 
           - label: "WhatsApp Number"
             name: "whatsapp"
             widget: "string"
+            required: false
 
           - label: "Google Maps Link"
             name: "maps_link"
@@ -272,11 +363,13 @@ collections:
           - label: "Show Call Button"
             name: "show_call_button"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Call Button Text"
             name: "call_button_text"
             widget: "string"
+            required: false
             default: "Call Now"
 
           # ENQUIRE BUTTON
@@ -284,11 +377,13 @@ collections:
           - label: "Show Enquire Button"
             name: "show_enquire_button"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Enquire Button Text"
             name: "enquire_button_text"
             widget: "string"
+            required: false
             default: "Enquire"
 
           # CATEGORIES
@@ -296,6 +391,7 @@ collections:
           - label: "Show Categories Section"
             name: "show_categories"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Categories"
@@ -307,6 +403,7 @@ collections:
               - label: "Category Name"
                 name: "name"
                 widget: "string"
+            required: false
 
               - label: "Icon"
                 name: "icon"
@@ -326,6 +423,7 @@ collections:
               - label: "Show Category"
                 name: "show"
                 widget: "boolean"
+            required: false
                 default: true
 
           # PRODUCTS
@@ -333,6 +431,7 @@ collections:
           - label: "Show Products Section"
             name: "show_products"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Products"
@@ -344,10 +443,12 @@ collections:
               - label: "Product Name"
                 name: "name"
                 widget: "string"
+            required: false
 
               - label: "Category"
                 name: "category"
                 widget: "string"
+            required: false
 
               - label: "Photo"
                 name: "image"
@@ -357,10 +458,12 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
+            required: false
 
               - label: "Show Product"
                 name: "show"
                 widget: "boolean"
+            required: false
                 default: true
 
           # GALLERY
@@ -368,6 +471,7 @@ collections:
           - label: "Show Gallery Section"
             name: "show_gallery"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Gallery"
@@ -379,6 +483,7 @@ collections:
               - label: "Photo"
                 name: "image"
                 widget: "image"
+            required: false
 
               - label: "Caption"
                 name: "caption"
@@ -390,6 +495,7 @@ collections:
           - label: "Show Why Choose Us Section"
             name: "show_why_choose_us"
             widget: "boolean"
+            required: false
             default: true
 
           - label: "Why Choose Us"
@@ -406,10 +512,12 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
+            required: false
 
               - label: "Description"
                 name: "description"
                 widget: "text"
+            required: false
 
           # SEO
 
