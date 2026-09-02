@@ -13,18 +13,54 @@ call_button_color: "#46b656"
 enquire_button_color: "#61418b"
 button_text_color: "#ffffff"
 font_family: Poppins
+body_font_weight: "400"
+body_font_style: normal
 heading_font: Nunito
+heading_font_weight: "700"
+heading_font_style: normal
 hero_heading_font: Poppins
+hero_heading_font_weight: "700"
+hero_heading_font_style: normal
 hero_text_font: Poppins
+hero_text_font_weight: "400"
+hero_text_font_style: normal
 section_heading_font: Poppins
+section_heading_font_weight: "700"
+section_heading_font_style: normal
 nav_font: Nunito
+nav_font_weight: "600"
+nav_font_style: normal
 button_font: Poppins
+button_font_weight: "700"
+button_font_style: normal
 product_title_font: Poppins
+product_title_font_weight: "700"
+product_title_font_style: normal
 product_description_font: Poppins
+product_description_font_weight: "400"
+product_description_font_style: normal
 heading_size: 34
 body_size: 16
 product_title_size: 18
 product_description_size: 14
+navigation:
+  home_label: Home
+  categories_label: Categories
+  products_label: Products
+  about_label: About
+  gallery_label: Gallery
+  contact_label: Contact
+categories_title: Our Categories
+categories_subtitle: Everything you need, all in one place.
+products_title: Our Products
+products_subtitle: Find what you're looking for.
+why_title: Why Choose Us?
+why_subtitle: Your trusted destination for learning, creativity and more.
+about_title: About Our Store
+gallery_title: Our Gallery
+gallery_subtitle: Take a look at our store and collection.
+map_title: Find Us
+contact_title: Visit Our Store
 show_hero: true
 hero_images:
   - image: /images/uploads/file_00000000f9e48211ae9421db860baf41.png
@@ -93,6 +129,7 @@ hero_images:
     button_link: "#contact"
     show_button: true
 show_about: true
+about_title: About Our Store
 about: >+
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
@@ -223,3 +260,4 @@ seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
 seo_description: >
   Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery, gifts, toys,
   science goods and sports products, all under one roof.
+footer_text: ""
