@@ -3,8 +3,10 @@ backend:
   repo: Holkarandasshemraj/Holkarandasshemraj.github.io
   branch: main
   base_url: https://hdhr-cms-auth.hishigoyal22.workers.dev
+site_url: https://hdhr.pages.dev
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+publish_mode: simple
 collections:
   - name: "site"
     label: "Website"
@@ -12,6 +14,7 @@ collections:
       - name: "content"
         label: "Website Content"
         file: "content.yml"
+        format: yaml
         fields:
           - {label: "Shop Name", name: "shop_name", widget: "string", required: false}
           - {label: "Tagline", name: "tagline", widget: "string", required: false}
@@ -27,7 +30,6 @@ collections:
           - {label: "Button Text Color", name: "button_text_color", widget: "color", required: false}
           - {label: "Call Button Color", name: "call_button_color", widget: "color", required: false}
           - {label: "Enquire Button Color", name: "enquire_button_color", widget: "color", required: false}
-
           - label: "Body Font"
             name: "font_family"
             widget: "select"
@@ -35,7 +37,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
           - {label: "Body Font Weight", name: "body_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Body Font Style", name: "body_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Heading Font"
             name: "heading_font"
             widget: "select"
@@ -43,7 +44,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
           - {label: "Heading Weight", name: "heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Heading Style", name: "heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Hero Heading Font"
             name: "hero_heading_font"
             widget: "select"
@@ -51,7 +51,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
           - {label: "Hero Heading Weight", name: "hero_heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Hero Heading Style", name: "hero_heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Hero Text Font"
             name: "hero_text_font"
             widget: "select"
@@ -59,7 +58,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
           - {label: "Hero Text Weight", name: "hero_text_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Hero Text Style", name: "hero_text_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Section Heading Font"
             name: "section_heading_font"
             widget: "select"
@@ -67,7 +65,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
           - {label: "Section Heading Weight", name: "section_heading_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Section Heading Style", name: "section_heading_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Navigation Font"
             name: "nav_font"
             widget: "select"
@@ -75,7 +72,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
           - {label: "Navigation Weight", name: "nav_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Navigation Style", name: "nav_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Button Font"
             name: "button_font"
             widget: "select"
@@ -83,7 +79,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
           - {label: "Button Weight", name: "button_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Button Style", name: "button_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Product Title Font"
             name: "product_title_font"
             widget: "select"
@@ -91,7 +86,6 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia", "Playfair Display"]
           - {label: "Product Title Weight", name: "product_title_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Product Title Style", name: "product_title_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - label: "Product Description Font"
             name: "product_description_font"
             widget: "select"
@@ -99,12 +93,10 @@ collections:
             options: ["Poppins", "Montserrat", "Nunito", "Roboto", "Arial", "Georgia"]
           - {label: "Product Description Weight", name: "product_description_font_weight", widget: "select", required: false, options: ["300", "400", "500", "600", "700", "800"]}
           - {label: "Product Description Style", name: "product_description_font_style", widget: "select", required: false, options: ["normal", "italic"]}
-
           - {label: "Main Heading Size", name: "heading_size", widget: "number", required: false, value_type: "int", min: 12, max: 80}
           - {label: "Body Text Size", name: "body_size", widget: "number", required: false, value_type: "int", min: 10, max: 30}
           - {label: "Product Title Size", name: "product_title_size", widget: "number", required: false, value_type: "int", min: 12, max: 32}
           - {label: "Product Description Size", name: "product_description_size", widget: "number", required: false, value_type: "int", min: 10, max: 24}
-
           - label: "Navigation Labels"
             name: "navigation"
             widget: "object"
@@ -116,7 +108,6 @@ collections:
               - {label: "About", name: "about_label", widget: "string", required: false}
               - {label: "Gallery", name: "gallery_label", widget: "string", required: false}
               - {label: "Contact", name: "contact_label", widget: "string", required: false}
-
           - {label: "Categories Title", name: "categories_title", widget: "string", required: false}
           - {label: "Categories Subtitle", name: "categories_subtitle", widget: "string", required: false}
           - {label: "Products Title", name: "products_title", widget: "string", required: false}
@@ -128,7 +119,6 @@ collections:
           - {label: "Gallery Subtitle", name: "gallery_subtitle", widget: "string", required: false}
           - {label: "Find Us Title", name: "map_title", widget: "string", required: false}
           - {label: "Contact Title", name: "contact_title", widget: "string", required: false}
-
           - {label: "Show Hero Section", name: "show_hero", widget: "boolean", required: false}
           - label: "Hero Slider"
             name: "hero_images"
@@ -150,7 +140,9 @@ collections:
               - {label: "Show Button", name: "show_button", widget: "boolean", required: false}
               - {label: "Button Text", name: "button_text", widget: "string", required: false}
               - {label: "Button Link", name: "button_link", widget: "string", required: false}
-
+              - {label: "Show Second Button", name: "show_second_button", widget: "boolean", required: false}
+              - {label: "Second Button Text", name: "second_button_text", widget: "string", required: false}
+              - {label: "Second Button Link", name: "second_button_link", widget: "string", required: false}
           - {label: "Show About Section", name: "show_about", widget: "boolean", required: false}
           - {label: "About Us", name: "about", widget: "text", required: false}
           - {label: "Address", name: "address", widget: "text", required: false}
@@ -162,7 +154,6 @@ collections:
           - {label: "Call Button Text", name: "call_button_text", widget: "string", required: false}
           - {label: "Show Enquire Button", name: "show_enquire_button", widget: "boolean", required: false}
           - {label: "Enquire Button Text", name: "enquire_button_text", widget: "string", required: false}
-
           - {label: "Show Categories Section", name: "show_categories", widget: "boolean", required: false}
           - label: "Categories"
             name: "categories"
@@ -175,7 +166,6 @@ collections:
               - {label: "Category Image", name: "image", widget: "image", required: false}
               - {label: "Category Color", name: "color", widget: "color", required: false}
               - {label: "Show Category", name: "show", widget: "boolean", required: false}
-
           - {label: "Show Products Section", name: "show_products", widget: "boolean", required: false}
           - label: "Products"
             name: "products"
@@ -193,7 +183,6 @@ collections:
               - {label: "Show Call Button", name: "show_call_button", widget: "boolean", required: false}
               - {label: "Show Enquire Button", name: "show_enquire_button", widget: "boolean", required: false}
               - {label: "Show Product", name: "show", widget: "boolean", required: false}
-
           - {label: "Show Gallery Section", name: "show_gallery", widget: "boolean", required: false}
           - label: "Gallery"
             name: "gallery"
@@ -203,7 +192,6 @@ collections:
             fields:
               - {label: "Photo", name: "image", widget: "image", required: false}
               - {label: "Caption", name: "caption", widget: "string", required: false}
-
           - {label: "Show Why Choose Us Section", name: "show_why_choose_us", widget: "boolean", required: false}
           - label: "Why Choose Us"
             name: "why_choose_us"
@@ -214,7 +202,6 @@ collections:
               - {label: "Icon / Emoji", name: "icon", widget: "string", required: false}
               - {label: "Title", name: "title", widget: "string", required: false}
               - {label: "Description", name: "description", widget: "text", required: false}
-
           - {label: "SEO Title", name: "seo_title", widget: "string", required: false}
           - {label: "SEO Description", name: "seo_description", widget: "text", required: false}
           - {label: "Footer Text", name: "footer_text", widget: "string", required: false}
