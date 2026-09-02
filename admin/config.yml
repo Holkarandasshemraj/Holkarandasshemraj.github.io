@@ -189,6 +189,29 @@ collections:
               - {label: Title, name: title, widget: string, required: false}
               - {label: Description, name: description, widget: text, required: false}
               - {label: Show Item, name: show, widget: boolean, required: false}
+          - {label: Footer Explore Title, name: footer_explore_title, widget: string, required: false}
+          - label: Footer Explore Links
+            name: footer_explore
+            widget: list
+            required: false
+            summary: '{{fields.label}}'
+            fields:
+              - {label: Label, name: label, widget: string, required: false}
+              - {label: Link, name: url, widget: string, required: false}
+              - {label: Show Link, name: show, widget: boolean, required: false}
+          - {label: Footer Brands Title, name: footer_brands_title, widget: string, required: false}
+          - {label: Footer Quick Links Title, name: footer_quick_links_title, widget: string, required: false}
+          - label: Footer Quick Links
+            name: footer_quick_links
+            widget: list
+            required: false
+            summary: '{{fields.label}}'
+            fields:
+              - {label: Label, name: label, widget: string, required: false}
+              - {label: Link, name: url, widget: string, required: false}
+              - {label: Show Link, name: show, widget: boolean, required: false}
+          - {label: Footer Contact Title, name: footer_contact_title, widget: string, required: false}
+          - {label: Show Footer, name: show_footer, widget: boolean, required: false}
           - {label: SEO Title, name: seo_title, widget: string, required: false}
           - {label: SEO Description, name: seo_description, widget: text, required: false}
           - {label: Footer Text, name: footer_text, widget: string, required: false}
