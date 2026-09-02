@@ -176,24 +176,35 @@ collections:
 
           - label: "Main Heading Size"
             name: "heading_size"
-            widget: "select"
+            widget: "number"
             required: false
-            options:
-              - "Small"
-              - "Medium"
-              - "Large"
-              - "Extra Large"
-            default: "Medium"
+            value_type: "int"
+            default: 34
+            min: 12
+            max: 80
 
           - label: "Body Text Size"
             name: "body_size"
+            widget: "number"
+            required: false
+            value_type: "int"
+            default: 16
+            min: 10
+            max: 30
+
+          - label: "Button Font"
+            name: "button_font"
             widget: "select"
             required: false
             options:
-              - "Small"
-              - "Medium"
-              - "Large"
-            default: "Medium"
+              - "Poppins"
+              - "Montserrat"
+              - "Nunito"
+              - "Roboto"
+              - "Arial"
+              - "Georgia"
+              - "Playfair Display"
+            default: "Poppins"
 
           - label: "Product Title Font"
             name: "product_title_font"
@@ -402,6 +413,7 @@ collections:
               - label: "Category Name"
                 name: "name"
                 widget: "string"
+                required: false
 
               - label: "Icon"
                 name: "icon"
@@ -421,6 +433,7 @@ collections:
               - label: "Show Category"
                 name: "show"
                 widget: "boolean"
+                required: false
                 default: true
 
           # PRODUCTS
@@ -440,10 +453,12 @@ collections:
               - label: "Product Name"
                 name: "name"
                 widget: "string"
+                required: false
 
               - label: "Category"
                 name: "category"
                 widget: "string"
+                required: false
 
               - label: "Photo"
                 name: "image"
@@ -453,10 +468,40 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
+
+              - label: "Price"
+                name: "price"
+                widget: "string"
+                required: false
+
+              - label: "Sale Price"
+                name: "sale_price"
+                widget: "string"
+                required: false
+
+              - label: "Show Price"
+                name: "show_price"
+                widget: "boolean"
+                required: false
+                default: false
+
+              - label: "Show Call Button"
+                name: "show_call_button"
+                widget: "boolean"
+                required: false
+                default: false
+
+              - label: "Show Enquire Button"
+                name: "show_enquire_button"
+                widget: "boolean"
+                required: false
+                default: true
 
               - label: "Show Product"
                 name: "show"
                 widget: "boolean"
+                required: false
                 default: true
 
           # GALLERY
@@ -476,6 +521,7 @@ collections:
               - label: "Photo"
                 name: "image"
                 widget: "image"
+                required: false
 
               - label: "Caption"
                 name: "caption"
@@ -504,10 +550,12 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
+                required: false
 
               - label: "Description"
                 name: "description"
                 widget: "text"
+                required: false
 
           # SEO
 
