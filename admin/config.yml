@@ -316,7 +316,6 @@ collections:
                 widget: "boolean"
                 required: false
                 default: false
-            required: false
 
           # ABOUT
 
@@ -403,7 +402,6 @@ collections:
               - label: "Category Name"
                 name: "name"
                 widget: "string"
-            required: false
 
               - label: "Icon"
                 name: "icon"
@@ -423,7 +421,6 @@ collections:
               - label: "Show Category"
                 name: "show"
                 widget: "boolean"
-            required: false
                 default: true
 
           # PRODUCTS
@@ -443,12 +440,10 @@ collections:
               - label: "Product Name"
                 name: "name"
                 widget: "string"
-            required: false
 
               - label: "Category"
                 name: "category"
                 widget: "string"
-            required: false
 
               - label: "Photo"
                 name: "image"
@@ -458,12 +453,10 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
-            required: false
 
               - label: "Show Product"
                 name: "show"
                 widget: "boolean"
-            required: false
                 default: true
 
           # GALLERY
@@ -483,7 +476,6 @@ collections:
               - label: "Photo"
                 name: "image"
                 widget: "image"
-            required: false
 
               - label: "Caption"
                 name: "caption"
@@ -512,12 +504,10 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
-            required: false
 
               - label: "Description"
                 name: "description"
                 widget: "text"
-            required: false
 
           # SEO
 
