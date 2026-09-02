@@ -45,7 +45,10 @@ product_title_size: 18
 product_description_size: 14
 navigation:
   home_label: Home
-  categories_label: Categories
+  shop_label: Shop
+  all_categories_label: All Categories
+  brands_label: Brands
+  all_brands_label: All Brands
   products_label: Products
   about_label: About
   gallery_label: Gallery
@@ -54,6 +57,9 @@ categories_title: Our Categories
 categories_subtitle: Everything you need, all in one place.
 products_title: Our Products
 products_subtitle: Find what you’re looking for.
+brands_title: Shop All Brands
+brands_subtitle: Explore products by brand.
+brands_button_text: View All Brands
 why_title: Why Choose Us?
 why_subtitle: Your trusted destination for learning, creativity and more.
 about_title: About Our Store
@@ -74,10 +80,10 @@ hero_images:
     gradient: false
     gradient_color: "#123b73"
     button_text: Explore Products
-    button_link: "#products"
+    button_link: products.html
     show_button: true
     second_button_text: Visit Our Store
-    second_button_link: "#contact"
+    second_button_link: contact.html
     show_second_button: true
   - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
     heading: Books for Every Interest
@@ -90,10 +96,10 @@ hero_images:
     gradient: false
     gradient_color: "#123b73"
     button_text: View Books
-    button_link: "#products"
+    button_link: products.html?category=Books
     show_button: true
     second_button_text: Visit Our Store
-    second_button_link: "#contact"
+    second_button_link: contact.html
     show_second_button: true
   - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
     heading: Stationery for Everyday Needs
@@ -106,10 +112,10 @@ hero_images:
     gradient: false
     gradient_color: "#123b73"
     button_text: Shop Stationery
-    button_link: "#products"
+    button_link: products.html?category=Stationery
     show_button: true
     second_button_text: Visit Our Store
-    second_button_link: "#contact"
+    second_button_link: contact.html
     show_second_button: true
   - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
     heading: Gifts, Toys & More
@@ -122,10 +128,10 @@ hero_images:
     gradient: false
     gradient_color: "#123b73"
     button_text: Explore More
-    button_link: "#products"
+    button_link: products.html
     show_button: true
     second_button_text: Visit Our Store
-    second_button_link: "#contact"
+    second_button_link: contact.html
     show_second_button: true
   - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
     heading: Learn. Create. Play.
@@ -138,10 +144,10 @@ hero_images:
     gradient: false
     gradient_color: "#123b73"
     button_text: Enquire Now
-    button_link: "#contact"
+    button_link: contact.html
     show_button: true
     second_button_text: Visit Our Store
-    second_button_link: "#contact"
+    second_button_link: contact.html
     show_second_button: true
 show_about: true
 about: >+
@@ -184,11 +190,30 @@ categories:
   - name: Science Goods
     icon: 🔬
     show: true
+show_brands: true
+brands:
+  - name: Classmate
+    description: Stationery and school essentials.
+    show: true
+  - name: Camlin
+    description: Art, writing and stationery products.
+    show: true
+  - name: Faber-Castell
+    description: Writing and creative products.
+    show: true
+  - name: DOMS
+    description: Stationery, art and school products.
+    show: true
+  - name: Staedtler
+    description: Writing, drawing and school products.
+    show: true
+  - name: Nataraj
+    description: Everyday writing and stationery products.
+    show: true
 show_products: true
 products:
   - name: Books
     category: Books
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/shiromani-kant-mo3fotg62ao-unsplash.jpg
     description: >+
       Explore a wide collection of books for students, children, and readers of
       all ages. From educational and academic books to storybooks and general
@@ -199,7 +224,6 @@ products:
     show: true
   - name: Stationery
     category: Stationery
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/volodymyr-hryshchenko-7_bz84zou7g-unsplash.jpg
     description: >+
       Find all your everyday stationery essentials in one place. We offer
       notebooks, pens, pencils, school supplies, art materials, and other useful
@@ -210,7 +234,6 @@ products:
     show: true
   - name: Sports
     category: Sports
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/cristina-anne-costello-rank-px49ii-unsplash.jpg
     description: >+
       Discover a range of sports products and accessories for students,
       beginners, and sports enthusiasts. From everyday sports essentials to
@@ -222,7 +245,6 @@ products:
     show: true
   - name: Science Goods
     category: Science Goods
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/girl-with-red-hat-6tkvyi11ocm-unsplash.jpg
     description: >+
       Explore a range of science products and educational materials for students
       and curious minds. Find useful items for science projects, experiments,
@@ -233,7 +255,6 @@ products:
     show: true
   - name: Gifts
     category: Gifts
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/val-vesa-sho9r-jomvy-unsplash.jpg
     description: >+
       Make every occasion special with our collection of thoughtful and
       attractive gifts. Discover fun, useful, and unique gift items perfect for
@@ -244,7 +265,6 @@ products:
     show: true
   - name: Toys
     category: Toys
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/huy-hung-trinh-zoybqt7ytlu-unsplash.jpg
     description: >+
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
@@ -262,14 +282,17 @@ why_choose_us:
     description: >+
       Books, stationery, gifts, toys, science goods and sports products under
       one roof.
+    show: true
   - icon: 🎯
     title: For Every Need
     description: |
       Products for students, families, children and everyday requirements.
+    show: true
   - icon: 📞
     title: Convenient Shopping
     description: |
       Find what you need easily and contact us directly for enquiries.
+    show: true
 seo_title: Holkaran Dass Hem Raj | Books, Stationery, Gifts & Toys in Narnaul
 seo_description: >
   Holkaran Dass Hem Raj, Narnaul – Shop for books, stationery, gifts, toys,
