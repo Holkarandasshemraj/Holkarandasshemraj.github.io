@@ -5,13 +5,13 @@ primary_color: "#e20d44"
 secondary_color: "#71de33"
 accent_color: "#f1c551"
 background_color: "#fffdf7"
+card_background_color: "#ffffff"
 text_color: "#17233c"
 heading_color: "#123b73"
 nav_text_color: "#ffffff"
-card_background_color: "#ffffff"
+button_text_color: "#ffffff"
 call_button_color: "#46b656"
 enquire_button_color: "#61418b"
-button_text_color: "#ffffff"
 font_family: Poppins
 body_font_weight: "400"
 body_font_style: normal
@@ -44,15 +44,15 @@ body_size: 16
 product_title_size: 18
 product_description_size: 14
 navigation:
-  home_label: Home
-  shop_label: Shop
-  all_categories_label: All Categories
   brands_label: Brands
-  all_brands_label: All Brands
-  products_label: Products
   about_label: About
   gallery_label: Gallery
+  shop_label: Shop
+  all_categories_label: All Categories
+  home_label: Home
   contact_label: Contact
+  products_label: Products
+  all_brands_label: All Brands
 categories_title: Our Categories
 categories_subtitle: Everything you need, all in one place.
 products_title: Our Products
@@ -69,88 +69,89 @@ map_title: Find Us
 contact_title: Visit Our Store
 show_hero: true
 hero_images:
-  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
-    heading: Holkaran Dass Hem Raj
-    text: Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.
-    show_overlay: true
-    overlay_color: "#123b73"
-    overlay_opacity: 0.45
+  - heading: Holkaran Dass Hem Raj
     blur: false
+    button_link: products.html
+    text: Books, stationery, gifts, toys, science goods and sports essentials — all
+      under one roof.
+    show_overlay: true
+    second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    button_text: Explore Products
-    button_link: products.html
+    overlay_color: "#123b73"
     show_button: true
-    second_button_text: Visit Our Store
-    second_button_link: contact.html
+    button_text: Explore Products
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
     show_second_button: true
-  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
-    heading: Books for Every Interest
+    second_button_link: contact.html
+    overlay_opacity: 0.45
+  - heading: Books for Every Interest
+    blur: false
+    button_link: products.html?category=Books
     text: Educational, academic, story and general reading books for all ages.
     show_overlay: true
-    overlay_color: "#123b73"
-    overlay_opacity: 0.45
-    blur: false
+    second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    button_text: View Books
-    button_link: products.html?category=Books
+    overlay_color: "#123b73"
     show_button: true
-    second_button_text: Visit Our Store
-    second_button_link: contact.html
+    button_text: View Books
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
     show_second_button: true
-  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
-    heading: Stationery for Everyday Needs
+    second_button_link: contact.html
+    overlay_opacity: 0.45
+  - heading: Stationery for Everyday Needs
+    blur: false
+    button_link: products.html?category=Stationery
     text: School, office, art and writing essentials in one convenient place.
     show_overlay: true
-    overlay_color: "#123b73"
-    overlay_opacity: 0.45
-    blur: false
+    second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    button_text: Shop Stationery
-    button_link: products.html?category=Stationery
+    overlay_color: "#123b73"
     show_button: true
-    second_button_text: Visit Our Store
-    second_button_link: contact.html
+    button_text: Shop Stationery
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
     show_second_button: true
-  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
-    heading: Gifts, Toys & More
+    second_button_link: contact.html
+    overlay_opacity: 0.45
+  - heading: Gifts, Toys & More
+    blur: false
+    button_link: products.html
     text: Fun and thoughtful choices for birthdays, celebrations and special moments.
     show_overlay: true
-    overlay_color: "#123b73"
-    overlay_opacity: 0.45
-    blur: false
+    second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    button_text: Explore More
-    button_link: products.html
+    overlay_color: "#123b73"
     show_button: true
-    second_button_text: Visit Our Store
-    second_button_link: contact.html
+    button_text: Explore More
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
     show_second_button: true
-  - image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
-    heading: Learn. Create. Play.
+    second_button_link: contact.html
+    overlay_opacity: 0.45
+  - heading: Learn. Create. Play.
+    blur: false
+    button_link: contact.html
     text: Science goods and sports essentials for curious and active minds.
     show_overlay: true
-    overlay_color: "#123b73"
-    overlay_opacity: 0.45
-    blur: false
+    second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    button_text: Enquire Now
-    button_link: contact.html
+    overlay_color: "#123b73"
     show_button: true
-    second_button_text: Visit Our Store
-    second_button_link: contact.html
+    button_text: Enquire Now
+    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
     show_second_button: true
+    second_button_link: contact.html
+    overlay_opacity: 0.45
 show_about: true
-about: >+
+about: >
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
   stationery, gifts, toys, science goods, and sports essentials.
 
@@ -167,9 +168,9 @@ whatsapp: "918053721234"
 maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
 timings: ""
 show_call_button: true
-call_button_text: "Call Now"
+call_button_text: Call Now
 show_enquire_button: true
-enquire_button_text: "Enquire on WhatsApp"
+enquire_button_text: Enquire on WhatsApp
 show_categories: true
 categories:
   - name: Stationery
@@ -190,7 +191,7 @@ categories:
   - name: Science Goods
     icon: 🔬
     show: true
-show_brands: true
+show_brands: false
 brands:
   - name: Classmate
     description: Stationery and school essentials.
@@ -214,7 +215,7 @@ show_products: true
 products:
   - name: Books
     category: Books
-    description: >+
+    description: >
       Explore a wide collection of books for students, children, and readers of
       all ages. From educational and academic books to storybooks and general
       reading, we offer books for every interest and need.
@@ -224,7 +225,7 @@ products:
     show: true
   - name: Stationery
     category: Stationery
-    description: >+
+    description: >
       Find all your everyday stationery essentials in one place. We offer
       notebooks, pens, pencils, school supplies, art materials, and other useful
       stationery products for students, offices, and everyday use.
@@ -234,7 +235,7 @@ products:
     show: true
   - name: Sports
     category: Sports
-    description: >+
+    description: >
       Discover a range of sports products and accessories for students,
       beginners, and sports enthusiasts. From everyday sports essentials to
       equipment for different games and activities, find everything you need to
@@ -245,7 +246,7 @@ products:
     show: true
   - name: Science Goods
     category: Science Goods
-    description: >+
+    description: >
       Explore a range of science products and educational materials for students
       and curious minds. Find useful items for science projects, experiments,
       models, and practical learning.
@@ -255,7 +256,7 @@ products:
     show: true
   - name: Gifts
     category: Gifts
-    description: >+
+    description: >
       Make every occasion special with our collection of thoughtful and
       attractive gifts. Discover fun, useful, and unique gift items perfect for
       birthdays, celebrations, festivals, and special moments.
@@ -265,7 +266,7 @@ products:
     show: true
   - name: Toys
     category: Toys
-    description: >+
+    description: >
       Discover a fun range of toys for children of different ages. From
       entertaining play items to creative and educational toys, our collection
       is designed to make playtime more enjoyable and engaging.
@@ -279,7 +280,7 @@ show_why_choose_us: true
 why_choose_us:
   - icon: 🏪
     title: Wide Range
-    description: >+
+    description: >
       Books, stationery, gifts, toys, science goods and sports products under
       one roof.
     show: true
