@@ -72,7 +72,8 @@ hero_images:
   - heading: Holkaran Dass Hem Raj
     blur: false
     button_link: products.html
-    text: Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.
+    text: Books, stationery, gifts, toys, science goods and sports essentials — all
+      under one roof.
     show_overlay: true
     second_button_text: Visit Our Store
     blur_amount: 0
@@ -164,7 +165,7 @@ address: |
   Narnaul, Haryana, District Mohindergarh – 123001
 phone: "8053721234"
 whatsapp: "918053721234"
-maps_link: https://maps.app.goo.gl/ZSar1f4dCoJ3P2fE6?g_st=ac
+maps_link: https://maps.app.goo.gl/jMpkf9x5FR9f8NKt7?g_st=ac
 timings: ""
 show_call_button: true
 call_button_text: Call Now
