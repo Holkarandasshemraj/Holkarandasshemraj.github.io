@@ -1,21 +1,21 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: Learn. Create. Play. Celebrate
 logo: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
-primary_color: "#e20d44"
-secondary_color: "#71de33"
-accent_color: "#f1c551"
+primary_color: "#c9788e"
+secondary_color: "#5dbab4"
+accent_color: "#e2b849"
 background_color: "#fffdf7"
 card_background_color: "#ffffff"
 text_color: "#17233c"
-heading_color: "#a92737"
+heading_color: "#263d8f"
 nav_text_color: "#ffffff"
 button_text_color: "#ffffff"
-call_button_color: "#46b656"
-enquire_button_color: "#61418b"
+call_button_color: "#459550"
+enquire_button_color: "#9ca799"
 font_family: Poppins
 body_font_weight: "400"
 body_font_style: normal
-heading_font: Nunito
+heading_font: Poppins
 heading_font_weight: "700"
 heading_font_style: normal
 hero_heading_font: Poppins
@@ -158,6 +158,7 @@ about: >
   We bring together quality products for learning, creativity, fun, and everyday needs, all under one roof. Whether you’re looking for school essentials, educational products, a thoughtful gift, or something fun for children, we aim to make your shopping experience easy and convenient.
 
   Visit us and discover something for every age, every interest, and every occasion.
+about_image: /images/uploads/tim-gouw-kigtvxqetxa-unsplash.jpg
 address: |
   Holkaran Dass Hem Raj,
 
@@ -284,18 +285,18 @@ show_gallery: false
 gallery: []
 show_why_choose_us: true
 why_choose_us:
-  - icon: 🏪
+  - icon: 🌍
     title: Wide Range
     description: >
       Books, stationery, gifts, toys, science goods and sports products under
       one roof.
     show: true
-  - icon: 🎯
+  - icon: 🎯✅️
     title: For Every Need
     description: |
       Products for students, families, children and everyday requirements.
     show: true
-  - icon: 📞
+  - icon: 🛍🛒
     title: Convenient Shopping
     description: |
       Find what you need easily and contact us directly for enquiries.
