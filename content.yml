@@ -74,7 +74,7 @@ hero_images:
     button_link: products.html
     text: Books, stationery, gifts, toys, science goods and sports essentials — all
       under one roof.
-    show_overlay: true
+    show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
@@ -86,27 +86,29 @@ hero_images:
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
+    show: true
   - heading: Books for Every Interest
     blur: false
     button_link: products.html?category=Books
     text: Educational, academic, story and general reading books for all ages.
-    show_overlay: true
+    show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
     gradient_color: "#123b73"
-    overlay_color: "#123b73"
+    overlay_color: ""
     show_button: true
     button_text: View Books
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/sandy-millar-s5pfhdxuxyw-unsplash.jpg
+    image: /images/uploads/nykeya-p-q1dduuo5-e-unsplash.jpg
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
+    show: true
   - heading: Stationery for Everyday Needs
     blur: false
     button_link: products.html?category=Stationery
     text: School, office, art and writing essentials in one convenient place.
-    show_overlay: true
+    show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
@@ -118,11 +120,12 @@ hero_images:
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
+    show: true
   - heading: Gifts, Toys & More
     blur: false
     button_link: products.html
     text: Fun and thoughtful choices for birthdays, celebrations and special moments.
-    show_overlay: true
+    show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
@@ -134,11 +137,12 @@ hero_images:
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
+    show: true
   - heading: Learn. Create. Play.
     blur: false
     button_link: contact.html
     text: Science goods and sports essentials for curious and active minds.
-    show_overlay: true
+    show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
@@ -146,10 +150,11 @@ hero_images:
     overlay_color: "#123b73"
     show_button: true
     button_text: Enquire Now
-    image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandass.github.io/main/images/uploads/declan-sun-fkjgygsjtko-unsplash.jpg
+    image: /images/uploads/amy-vann-8hwtktoa8i0-unsplash.jpg
     show_second_button: true
     second_button_link: contact.html
     overlay_opacity: 0.45
+    show: true
 show_about: true
 about: >
   Welcome to Holkaran Dass Hem Raj — your trusted destination for books,
