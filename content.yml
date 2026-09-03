@@ -8,6 +8,8 @@ background_color: "#fffdf7"
 card_background_color: "#ffffff"
 text_color: "#17233c"
 heading_color: "#263d8f"
+hero_heading_color: "#ae9393"
+hero_text_color: "#ccc7c7"
 nav_text_color: "#ffffff"
 button_text_color: "#ffffff"
 call_button_color: "#459550"
@@ -171,7 +173,7 @@ address: |
   Narnaul, Haryana, District Mohindergarh – 123001
 phone: "8053721234"
 whatsapp: "918053721234"
-maps_link: 28.0575441, 76.1008710
+maps_link: https://maps.app.goo.gl/sPUmbjFVCGuCuGzP6?g_st=ac
 timings: ""
 show_call_button: true
 call_button_text: Call Now
