@@ -26,7 +26,16 @@ collections:
           - {label: Background Color, name: background_color, widget: color, required: false}
           - {label: Card Background Color, name: card_background_color, widget: color, required: false}
           - {label: Text Color, name: text_color, widget: color, required: false}
-          - {label: Heading Color, name: heading_color, widget: color, required: false}
+          - {label: Heading Color (Global Default), name: heading_color, widget: color, required: false}
+          - {label: Hero Heading Color (Global Default), name: hero_heading_color, widget: color, required: false}
+          - {label: Hero Text Color (Global Default), name: hero_text_color, widget: color, required: false}
+          - {label: Section Heading Color (Global Default), name: section_heading_color, widget: color, required: false}
+          - {label: Categories Heading Color, name: categories_heading_color, widget: color, required: false}
+          - {label: Products Heading Color, name: products_heading_color, widget: color, required: false}
+          - {label: Brands Heading Color, name: brands_heading_color, widget: color, required: false}
+          - {label: Why Choose Us Heading Color, name: why_heading_color, widget: color, required: false}
+          - {label: About Heading Color, name: about_heading_color, widget: color, required: false}
+          - {label: Contact Heading Color, name: contact_heading_color, widget: color, required: false}
           - {label: Navigation Text Color, name: nav_text_color, widget: color, required: false}
           - {label: Button Text Color, name: button_text_color, widget: color, required: false}
           - {label: Call Button Color, name: call_button_color, widget: color, required: false}
@@ -100,7 +109,15 @@ collections:
               - {label: Show Slide, name: show, widget: boolean, required: false}
               - {label: Image, name: image, widget: image, required: false}
               - {label: Heading, name: heading, widget: string, required: false}
+              - {label: Heading Color, name: heading_color, widget: color, required: false}
+              - {label: Heading Font, name: heading_font, widget: select, required: false, options: [Poppins, Montserrat, Nunito, Roboto, Arial, Georgia, 'Playfair Display']}
+              - {label: Heading Weight, name: heading_font_weight, widget: select, required: false, options: ['300','400','500','600','700','800']}
+              - {label: Heading Style, name: heading_font_style, widget: select, required: false, options: [normal, italic]}
               - {label: Text, name: text, widget: text, required: false}
+              - {label: Text Color, name: text_color, widget: color, required: false}
+              - {label: Text Font, name: text_font, widget: select, required: false, options: [Poppins, Montserrat, Nunito, Roboto, Arial, Georgia]}
+              - {label: Text Weight, name: text_font_weight, widget: select, required: false, options: ['300','400','500','600','700','800']}
+              - {label: Text Style, name: text_font_style, widget: select, required: false, options: [normal, italic]}
               - {label: Show Overlay, name: show_overlay, widget: boolean, required: false}
               - {label: Overlay Color, name: overlay_color, widget: color, required: false}
               - {label: Overlay Opacity, name: overlay_opacity, widget: number, required: false, value_type: float, min: 0, max: 1, step: 0.05}
