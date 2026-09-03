@@ -8,6 +8,23 @@
     if(/^https?:\/\//.test(v))return v;
     return '/images/uploads/'+v.split('/').pop();
   }
+  function visualFixes(){
+    var s=document.getElementById('hdhr-visual-fixes');
+    if(!s){
+      s=document.createElement('style');
+      s.id='hdhr-visual-fixes';
+      s.textContent='.slide{overflow:hidden}.slide-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0}.slide-content{z-index:2}.slide-shade{z-index:1}.about-image{overflow:hidden}.about-image img,.about-img img{width:100%;height:100%;object-fit:cover;display:block}.about-image{min-height:340px}.about-img{overflow:hidden}.about-img img{min-height:340px} @media(max-width:760px){.slides{min-height:430px}.slide-content{padding:40px 4%}.about-image{min-height:280px}.about-img img{min-height:280px}}';
+      document.head.appendChild(s);
+    }
+    if(typeof data==='undefined')return;
+    var src=localImage(data.about_image);
+    if(src){
+      var home=document.querySelector('.about-image');
+      if(home){home.innerHTML='<img src="'+src.replace(/"/g,'&quot;')+'" alt="About our store">';}
+      var about=document.getElementById('aboutImage');
+      if(about)about.src=src;
+    }
+  }
   function patch(){
     if(typeof data==='undefined')return;
     window.imageUrl=localImage;
@@ -27,6 +44,7 @@
       if(typeof renderGallery==='function' && document.body.dataset.page==='gallery')renderGallery();
       if(typeof setupNav==='function')setupNav();
     }catch(e){console.error('HDHR UI patch:',e)}
+    visualFixes();
     renderSiteFooter();
   }
   window.renderSiteFooter=function(){
