@@ -78,14 +78,14 @@ hero_images:
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
-    gradient_color: "#123b73"
-    overlay_color: "#123b73"
-    show_button: true
+    gradient_color: ""
+    overlay_color: ""
+    show_button: false
     button_text: Explore Products
     image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
-    show_second_button: true
+    show_second_button: false
     second_button_link: contact.html
-    overlay_opacity: 0.45
+    overlay_opacity: ""
     show: true
   - heading: Books for Every Interest
     blur: false
@@ -95,14 +95,14 @@ hero_images:
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
-    gradient_color: "#123b73"
+    gradient_color: ""
     overlay_color: ""
-    show_button: true
+    show_button: false
     button_text: View Books
     image: /images/uploads/nykeya-p-q1dduuo5-e-unsplash.jpg
-    show_second_button: true
+    show_second_button: false
     second_button_link: contact.html
-    overlay_opacity: 0.45
+    overlay_opacity: ""
     show: true
   - heading: Stationery for Everyday Needs
     blur: false
@@ -112,14 +112,14 @@ hero_images:
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
-    gradient_color: "#123b73"
-    overlay_color: "#123b73"
-    show_button: true
+    gradient_color: ""
+    overlay_color: ""
+    show_button: false
     button_text: Shop Stationery
     image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/hannah-rodrigo-mf_3yznc6ug-unsplash.jpg
-    show_second_button: true
+    show_second_button: false
     second_button_link: contact.html
-    overlay_opacity: 0.45
+    overlay_opacity: ""
     show: true
   - heading: Gifts, Toys & More
     blur: false
@@ -129,14 +129,14 @@ hero_images:
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
-    gradient_color: "#123b73"
-    overlay_color: "#123b73"
-    show_button: true
+    gradient_color: ""
+    overlay_color: ""
+    show_button: false
     button_text: Explore More
     image: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/caroline-6f-dcqhdqnu-unsplash.jpg
-    show_second_button: true
+    show_second_button: false
     second_button_link: contact.html
-    overlay_opacity: 0.45
+    overlay_opacity: ""
     show: true
   - heading: Learn. Create. Play.
     blur: false
@@ -146,14 +146,14 @@ hero_images:
     second_button_text: Visit Our Store
     blur_amount: 0
     gradient: false
-    gradient_color: "#123b73"
-    overlay_color: "#123b73"
-    show_button: true
+    gradient_color: ""
+    overlay_color: ""
+    show_button: false
     button_text: Enquire Now
     image: /images/uploads/amy-vann-8hwtktoa8i0-unsplash.jpg
-    show_second_button: true
+    show_second_button: false
     second_button_link: contact.html
-    overlay_opacity: 0.45
+    overlay_opacity: ""
     show: true
 show_about: true
 about: >
