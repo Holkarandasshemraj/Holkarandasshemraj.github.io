@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hdhr.pages.dev/sitemap.xml
