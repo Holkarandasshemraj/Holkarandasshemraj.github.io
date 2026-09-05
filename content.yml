@@ -74,8 +74,7 @@ hero_images:
   - heading: Holkaran Dass Hem Raj
     blur: false
     button_link: products.html
-    text: Books, stationery, gifts, toys, science goods and sports essentials — all
-      under one roof.
+    text: Books, stationery, gifts, toys, science goods and sports essentials — all under one roof.
     show_overlay: false
     second_button_text: Visit Our Store
     blur_amount: 0
@@ -168,7 +167,7 @@ about: >
 about_image: /images/uploads/tim-gouw-kigtvxqetxa-unsplash.jpg
 address: |
   Holkaran Dass Hem Raj — Location 1
-  Azad Chowk, Gandhi Bazar, Chanduwara,
+  Azad Chowk, Gandhi Bazar,
   Narnaul, Mahendragarh, Haryana – 123001
 
   Holkaran Dass Hem Raj — Location 2
