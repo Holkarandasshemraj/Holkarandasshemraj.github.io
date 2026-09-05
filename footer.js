@@ -25,6 +25,18 @@
       if(about)about.src=src;
     }
   }
+  function patchStoreDetails(){
+    if(typeof data==='undefined'||!data.address)return;
+    var contact=document.querySelector('#contact .contact-card');
+    if(!contact)return;
+    var rows=contact.querySelectorAll('.contact-row');
+    if(!rows.length)return;
+    var addressBox=rows[0].querySelector('div');
+    if(addressBox){
+      var E=window.esc||function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+      addressBox.innerHTML='<strong>Address</strong>'+E(data.address).replace(/\n/g,'<br>');
+    }
+  }
   function patch(){
     if(typeof data==='undefined')return;
     window.imageUrl=localImage;
@@ -45,6 +57,7 @@
       if(typeof setupNav==='function')setupNav();
     }catch(e){console.error('HDHR UI patch:',e)}
     visualFixes();
+    patchStoreDetails();
     renderSiteFooter();
   }
   window.renderSiteFooter=function(){
