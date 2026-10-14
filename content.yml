@@ -1,19 +1,19 @@
 shop_name: Holkaran Dass Hem Raj
 tagline: Learn. Create. Play. Celebrate
 logo: https://raw.githubusercontent.com/Holkarandasshemraj/Holkarandasshemraj.github.io/main/images/uploads/file_00000000f9e48211ae9421db860baf41.png
-primary_color: "#c9788e"
-secondary_color: "#5dbab4"
-accent_color: "#e2b849"
-background_color: "#fffdf7"
+primary_color: "#0d347d"
+secondary_color: "#1767b7"
+accent_color: "#42d5e8"
+background_color: "#f7f9fc"
 card_background_color: "#ffffff"
-text_color: "#17233c"
-heading_color: "#263d8f"
-hero_heading_color: "#ae9393"
-hero_text_color: "#ccc7c7"
-nav_text_color: "#ffffff"
+text_color: "#17243b"
+heading_color: "#0b2452"
+hero_heading_color: "#ffffff"
+hero_text_color: "#dceaff"
+nav_text_color: "#0b2452"
 button_text_color: "#ffffff"
-call_button_color: "#459550"
-enquire_button_color: "#9ca799"
+call_button_color: "#0d347d"
+enquire_button_color: "#0f9f82"
 font_family: Poppins
 body_font_weight: "400"
 body_font_style: normal
